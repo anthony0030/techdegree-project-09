@@ -31,6 +31,19 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/source\/css\/_social-stats.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/_social-stats.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/source\/css\/_variables.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -73,13 +86,23 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/source\/js\/Chart.roundedBarCharts.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/docs\/js\/Chart.roundedBarCharts.min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/source\/js\/script.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/js\/script.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -92,9 +115,9 @@
 	"\/source\/svgs\/icon-bell.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-bell.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -102,9 +125,9 @@
 	"\/source\/svgs\/icon-dashboard.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-dashboard.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -112,9 +135,9 @@
 	"\/source\/svgs\/icon-facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-facebook.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -122,9 +145,9 @@
 	"\/source\/svgs\/icon-google-plus.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-google-plus.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -132,9 +155,9 @@
 	"\/source\/svgs\/icon-members.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-members.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -142,9 +165,9 @@
 	"\/source\/svgs\/icon-settings.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-settings.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -152,9 +175,9 @@
 	"\/source\/svgs\/icon-twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-twitter.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -162,9 +185,9 @@
 	"\/source\/svgs\/icon-visits.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-visits.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -179,7 +202,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 543325802
+	"lastBuiltDate": 543415231
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

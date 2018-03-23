@@ -4,11 +4,64 @@ html(lang='en')
     meta(charset='utf-8')
     title Placeholder Title
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
     link(rel='stylesheet', href='css/styles.css')
-    include _favicon
+    //- include _favicon
   body
-    headder
+    header
     main
-    footer
-    script
-      include js/script.js
+      h5 Mobile Users
+      div.contain
+        canvas#chart-doughnut
+      h5 DAILY TRAFFIC
+      div.contain
+        canvas#chart-bar
+
+
+
+
+  table.social-stat-container
+    tr
+      th(rowspan="2")
+        div.social-icon--twitter
+      th.social-icon-name Twiter
+    tr
+      td.social-icon-data 10,345
+
+
+  table.social-stat-container
+    tr
+      th(rowspan="2")
+        div.social-icon--facebook
+      th.social-icon-name Facebook
+    tr
+      td.social-icon-data 8,739
+
+
+  table.social-stat-container
+    tr
+      th(rowspan="2")
+        div.social-icon--google
+      th.social-icon-name Google+
+    tr
+      td.social-icon-data 2,530
+
+
+
+
+
+
+
+
+
+  footer
+    script( src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"
+            integrity="sha256-9YAuB2VnFZNJ+lKfpaQ3dKQT9/C0j3VUla76hHbiVF8="
+            crossorigin="anonymous"
+          )
+    script( src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
+            integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ="
+            crossorigin="anonymous"
+          )
+    script(src="js/Chart.roundedBarCharts.min.js")
+    script(src="js/script.js")
