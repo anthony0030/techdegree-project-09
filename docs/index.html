@@ -13,7 +13,7 @@
       <div class="grid__row">
         <div class="grid__col--12">
           <div class="contain">
-            <h5>DAILY TRAFFIC</h5>
+            <h5>Daily Traffic</h5>
             <canvas id="chart-line"></canvas>
           </div>
         </div>
@@ -21,7 +21,7 @@
       <div class="grid__row">
         <div class="grid__col--6">
           <div class="contain">
-            <h5>DAILY TRAFFIC</h5>
+            <h5>Daily Traffic</h5>
             <canvas id="chart-bar"></canvas>
           </div>
         </div>
@@ -86,11 +86,20 @@
         <div class="grid__col--6">
           <div class="contain">
             <h5>Mesaage User</h5>
+            <form>
+              <input id="username" type="text" name="name" placeholder="Search for User" class="form__input">
+              <textarea name="textarea" rows="5" cols="45" placeholder="Write something here" class="form__input"></textarea>
+              <input type="submit" value="Send" class="btn--default">
+            </form>
           </div>
         </div>
         <div class="grid__col--6">
           <div class="contain">
             <h5>Settings</h5>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" id="myonoffswitch" checked class="onoffswitch-checkbox">
+              <label for="myonoffswitch" class="onoffswitch-label"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+            </div>
           </div>
         </div>
       </div>
