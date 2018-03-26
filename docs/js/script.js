@@ -1,3 +1,30 @@
+new Chart(document.getElementById("chart-line"), {
+  type: 'line',
+  data: [75, 100, 175, 125, 225, 200, 100]
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 new Chart(document.getElementById("chart-doughnut"), {
   type: 'doughnut',
   data: {
@@ -68,7 +95,7 @@ new Chart(document.getElementById("chart-bar"), {
       yAxes: [{
         gridLines: {
           drawTicks: false,
-          // offsetGridLines: true,
+          offsetGridLines: true,
         },
 
 

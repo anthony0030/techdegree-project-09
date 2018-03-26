@@ -1,57 +1,204 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.social-stat-container {
-  border: 1px solid #D1D1D1;
-  border-radius: 4px;
-  display: inline-block;
-  background-color: #FBFBFB;
-  margin-top: 15px;
-  margin-left: 15px; }
+@import url(../bower_components/normalize-css/normalize.css);
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-.social-icon-name {
-  font-size: 16px;
-  width: 130px;
-  text-align: left;
-  color: #7377BD;
-  padding-bottom: 0;
-  padding-top: 10px; }
+.centered, .grid {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
 
-.social-icon-data {
-  font-size: 30px;
-  color: #666;
-  padding-bottom: 10px; }
-
-.social-icon--twitter, .social-icon--facebook, .social-icon--google {
-  background-color: #7377BD;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  background-size: 60%;
-  background-position: 50% 50%;
-  width: 50px;
-  height: 50px;
-  margin: 11px; }
-
-.social-icon--twitter {
-  background-image: url(../svgs/icon-twitter.svg);
-  background-position: 50% 65%; }
-
-.social-icon--facebook {
-  background-image: url(../svgs/icon-facebook.svg); }
-
-.social-icon--google {
-  background-image: url(../svgs/icon-google-plus.svg); }
+.srt {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+.container {
+  margin: 0;
+  width: 80%;
+  padding-top: 2.5em;
+  margin: auto; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 100; }
 
 div.contain {
   width: 50%;
   height: 50%; }
 
+.img, .img--logo, .img--frame, .img--avatar {
+  max-width: 100%;
+  margin: 0 auto;
+  align-self: center; }
+  .img--logo {
+    align-self: center; }
+  .img--frame {
+    border: 12px solid white;
+    outline: 1px solid #cdcdcd;
+    padding: 0.3125em solid #797e83; }
+  .img--avatar {
+    border-radius: 50%; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.form__input {
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 5px solid #58e1c1;
+  margin-bottom: 20px; }
+  .form__input:focus {
+    outline: none; }
+
+.form__label--hidden {
+  display: none; }
+
+.btn, .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.625em;
+  margin: 0.625em 0; }
+  .btn[type="submit"], [type="submit"].btn--default, [type="submit"].btn--success, [type="submit"].btn--error, [type="submit"].btn--warning, [type="submit"].btn--info {
+    width: 100%; }
+  .btn:focus, .btn--default:focus, .btn--success:focus, .btn--error:focus, .btn--warning:focus, .btn--info:focus {
+    outline: none; }
+  .btn--default {
+    background-color: #51ddfc; }
+    .btn--default:active {
+      -moz-box-shadow: inset 0 0 10px #04bbe3;
+      -webkit-box-shadow: inset 0 0 10px #04bbe3;
+      box-shadow: inset 0 0 10px #04bbe3; }
+  .btn--success {
+    background-color: #62cc82; }
+    .btn--success:active {
+      -moz-box-shadow: inset 0 0 10px #319750;
+      -webkit-box-shadow: inset 0 0 10px #319750;
+      box-shadow: inset 0 0 10px #319750; }
+  .btn--error {
+    background-color: #e4757b; }
+    .btn--error:active {
+      -moz-box-shadow: inset 0 0 10px #cb2831;
+      -webkit-box-shadow: inset 0 0 10px #cb2831;
+      box-shadow: inset 0 0 10px #cb2831; }
+  .btn--warning {
+    background-color: #ff774e; }
+    .btn--warning:active {
+      -moz-box-shadow: inset 0 0 10px #e73600;
+      -webkit-box-shadow: inset 0 0 10px #e73600;
+      box-shadow: inset 0 0 10px #e73600; }
+  .btn--info {
+    background-color: #9278c3; }
+    .btn--info:active {
+      -moz-box-shadow: inset 0 0 10px #5e4293;
+      -webkit-box-shadow: inset 0 0 10px #5e4293;
+      box-shadow: inset 0 0 10px #5e4293; }
+  @media (min-width: 1100px) {
+    .btn, .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
+      width: 9.375em; } }
+
+.grid {
+  width: 90%; }
+  [class*="grid__col--"] > .grid {
+    width: 100%; }
+  @media (min-width: 1100px) {
+    .grid {
+      max-width: 1050px; } }
+
+@media (min-width: 769px) {
+  .grid__col--1 {
+    width: 6.5%; }
+  .grid__col--2 {
+    width: 15%; }
+  .grid__col--3 {
+    width: 23.5%; }
+  .grid__col--4 {
+    width: 32%; }
+  .grid__col--5 {
+    width: 40.5%; }
+  .grid__col--6 {
+    width: 49%; }
+  .grid__col--7 {
+    width: 57.5%; }
+  .grid__col--8 {
+    width: 66%; }
+  .grid__col--9 {
+    width: 74.5%; }
+  .grid__col--10 {
+    width: 83%; }
+  .grid__col--11 {
+    width: 91.5%; }
+  .grid__col--12 {
+    width: 100%; } }
+
+[class^="grid__col--"] {
+  padding: 0.625em;
+  display: flex;
+  justify-content: space-around; }
+  @media (min-width: 1px) and (max-width: 768px) {
+    [class^="grid__col--"] {
+      margin-top: 0.75em;
+      margin-bottom: 0.75em;
+      flex-direction: column;
+      justify-content: center; } }
+
+@media (min-width: 1100px) {
+  .grid__row {
+    display: flex;
+    justify-content: space-between; } }
+
+.grid__col--3.theme__colors {
+  background-color: #dfb2ee; }
+
+.grid__col--4.theme__colors {
+  background-color: #7ee6fd; }
+
+.grid__col--5.theme__colors {
+  background-color: #88d9a0; }
+
+.grid__col--6.theme__colors {
+  background-color: #3fabca; }
+
+.grid__col--7.theme__colors {
+  background-color: #ec9fa3; }
+
+.grid__col--8.theme__colors {
+  background-color: #fd9e84; }
+
+.grid__col--12.theme__colors {
+  background-color: #7fe8d2; }
+
+.grid__row {
+  border-bottom: 1px solid red; }
+
+[class^="grid__col--"] {
+  border-left: 1px solid red; }
+
 .social-stat-container {
   border: 1px solid #D1D1D1;
   border-radius: 4px;
@@ -92,4 +239,5 @@ div.contain {
 
 .social-icon--google {
   background-image: url(../svgs/icon-google-plus.svg); }
+
 /*# sourceMappingURL=styles.css.map */

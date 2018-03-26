@@ -10,41 +10,80 @@ html(lang='en')
   body
     header
     main
-      h5 Mobile Users
-      div.contain
-        canvas#chart-doughnut
-      h5 DAILY TRAFFIC
-      div.contain
-        canvas#chart-bar
+
+
+
+      div.grid__row
+        div.grid__col--12
+          div.contain
+            h5 DAILY TRAFFIC
+            canvas#chart-line
+
+
+
+      div.grid__row
+        div.grid__col--6
+          div.contain
+            h5 DAILY TRAFFIC
+            canvas#chart-bar
+
+        div.grid__col--6
+          div.contain
+            h5 Mobile Users
+            canvas#chart-doughnut
+
+
+      div.grid__row
+        div.grid__col--12
+          h5 Social Status
+          table.social-stat-container
+            tr
+              th(rowspan="2")
+                div.social-icon--twitter
+              th.social-icon-name Twiter
+            tr
+              td.social-icon-data 10,345
+
+          table.social-stat-container
+            tr
+              th(rowspan="2")
+                div.social-icon--facebook
+              th.social-icon-name Facebook
+            tr
+              td.social-icon-data 8,739
+
+          table.social-stat-container
+            tr
+              th(rowspan="2")
+                div.social-icon--google
+              th.social-icon-name Google+
+            tr
+              td.social-icon-data 2,530
+
+
+      div.grid__row
+        div.grid__col--6
+          div.contain
+            h5 New Members
+
+
+        div.grid__col--6
+          div.contain
+            h5 Recent Activity
+
+      div.grid__row
+        div.grid__col--6
+          div.contain
+            h5 Mesaage User
+
+
+        div.grid__col--6
+          div.contain
+            h5 Settings
 
 
 
 
-  table.social-stat-container
-    tr
-      th(rowspan="2")
-        div.social-icon--twitter
-      th.social-icon-name Twiter
-    tr
-      td.social-icon-data 10,345
-
-
-  table.social-stat-container
-    tr
-      th(rowspan="2")
-        div.social-icon--facebook
-      th.social-icon-name Facebook
-    tr
-      td.social-icon-data 8,739
-
-
-  table.social-stat-container
-    tr
-      th(rowspan="2")
-        div.social-icon--google
-      th.social-icon-name Google+
-    tr
-      td.social-icon-data 2,530
 
 
 

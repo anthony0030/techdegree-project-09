@@ -1,0 +1,28 @@
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+// Forms:
+// .form
+// .form__label--hidden
+// .form__input
+
+
+.form
+  @include flex(flex,column)
+  width: 100%
+
+
+
+.form__input
+  margin: 0 auto
+  width: 100%
+  height: 40px
+  border: none
+  border-bottom: 5px solid $color-accent
+  margin-bottom: 20px
+  &:focus
+    outline: none
+
+.form__label--hidden
+  display: none

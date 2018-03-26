@@ -1,0 +1,17 @@
+/* ----------------------------*/
+/* Screen size indicator Start */
+/* ----------------------------*/
+body::before
+  color: red
+  position: fixed
+  top: 0
+  left: 0
+  @media(min-width: 320px)
+    content: "MOBILE"
+  @media(min-width: 768px)
+    content: "TABLET"
+  @media(min-width: 1024px)
+    content: "DESKTOP"
+/* ----------------------------*/
+/* Screen size indicator end   */
+/* ----------------------------*/

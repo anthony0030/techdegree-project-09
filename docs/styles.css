@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.social-stat-container {
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: #FBFBFB;
+  margin-top: 15px;
+  margin-left: 15px; }
+
+.social-icon-name {
+  font-size: 16px;
+  width: 130px;
+  text-align: left;
+  color: #7377BD;
+  padding-bottom: 0;
+  padding-top: 10px; }
+
+.social-icon-data {
+  font-size: 30px;
+  color: #666;
+  padding-bottom: 10px; }
+
+.social-icon--twitter, .social-icon--facebook, .social-icon--google {
+  background-color: #7377BD;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-size: 60%;
+  background-position: 50% 50%;
+  width: 50px;
+  height: 50px;
+  margin: 11px; }
+
+.social-icon--twitter {
+  background-image: url(../svgs/icon-twitter.svg);
+  background-position: 50% 65%; }
+
+.social-icon--facebook {
+  background-image: url(../svgs/icon-facebook.svg); }
+
+.social-icon--google {
+  background-image: url(../svgs/icon-google-plus.svg); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100; }
+
+div.contain {
+  width: 50%;
+  height: 50%; }
+/*# sourceMappingURL=styles.css.map */
