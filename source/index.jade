@@ -84,11 +84,14 @@ html(lang='en')
         div.grid__col--6
           div.contain
             h5 Settings
-            div(class="onoffswitch")
-                input(type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked)
-                label(class="onoffswitch-label" for="myonoffswitch")
-                    span(class="onoffswitch-inner")
-                    span(class="onoffswitch-switch")
+
+
+            p Send Email Notifications
+            div.onoffswitch  
+                input#email-notifications.onoffswitch-checkbox(type="checkbox" name="onoffswitch" checked) 
+                label.onoffswitch-label(for="email-notifications")
+                    span.onoffswitch-inner
+                    span.onoffswitch-switch
 
 
 
