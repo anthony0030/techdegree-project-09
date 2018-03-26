@@ -65,13 +65,3 @@
   // margin-bottom: em(50px)
   @include mq(large)
     @include flex(flex, $just:space-between)
-
-// =============================================================================
-// Grid Coloring
-// =============================================================================
-
-
-// Generate grid color display classes
-@each $value, $color in $grid-colors
-  .#{$value}.theme__colors
-    background-color: $color

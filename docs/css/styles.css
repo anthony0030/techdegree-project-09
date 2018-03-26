@@ -172,31 +172,10 @@ div.contain {
     display: flex;
     justify-content: space-between; } }
 
-.grid__col--3.theme__colors {
-  background-color: #dfb2ee; }
-
-.grid__col--4.theme__colors {
-  background-color: #7ee6fd; }
-
-.grid__col--5.theme__colors {
-  background-color: #88d9a0; }
-
-.grid__col--6.theme__colors {
-  background-color: #3fabca; }
-
-.grid__col--7.theme__colors {
-  background-color: #ec9fa3; }
-
-.grid__col--8.theme__colors {
-  background-color: #fd9e84; }
-
-.grid__col--12.theme__colors {
-  background-color: #7fe8d2; }
-
 .grid__row {
   border-bottom: 1px solid red; }
 
-[class^="grid__col--"] {
+[class^="grid__col--"] + [class^="grid__col--"] {
   border-left: 1px solid red; }
 
 .social-stat-container {
