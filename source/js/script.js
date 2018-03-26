@@ -1,5 +1,5 @@
 new Chart(document.getElementById("chart-line"), {
-  type: 'line',
+  type: "line",
   data: [75, 100, 175, 125, 225, 200, 100]
 });
 
@@ -26,7 +26,7 @@ new Chart(document.getElementById("chart-line"), {
 
 
 new Chart(document.getElementById("chart-doughnut"), {
-  type: 'doughnut',
+  type: "doughnut",
   data: {
     labels: [
       "Desctops",
@@ -42,9 +42,9 @@ new Chart(document.getElementById("chart-doughnut"), {
         15,
       ],
       backgroundColor: [
-        '#7377BD',
-        '#82C890',
-        '#75B0BE',
+        "#7377BD",
+        "#82C890",
+        "#75B0BE",
         ],
     }]
   },
@@ -55,7 +55,7 @@ new Chart(document.getElementById("chart-doughnut"), {
           boxWidth: 13,
           padding: 40,
       },
-        position: 'right',
+        position: "right",
         reverse: true,
         display: true,
       }
@@ -65,13 +65,13 @@ new Chart(document.getElementById("chart-doughnut"), {
 
 
 new Chart(document.getElementById("chart-bar"), {
-  type: 'bar',
+  type: "bar",
   data: {
     labels: ["S","M","T","W","T","F","S"],
     datasets: [{
       label: "DAILY TRAFFIC",
-      backgroundColor: '#7377BD',
-      // borderColor: '#000000',
+      backgroundColor: "#7377BD",
+      // borderColor: "#000000",
       data: [75, 100, 175, 125, 225, 200, 100],
     }]
   },
