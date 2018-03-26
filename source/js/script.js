@@ -1,27 +1,58 @@
 new Chart(document.getElementById("chart-line"), {
   type: "line",
-  data: [75, 100, 175, 125, 225, 200, 100]
+  data: {
+    labels: [" ","16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+      label: "Users",
+      data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2000],
+      fill: true,
+      borderColor: "rgb(75, 192, 192)",
+      lineTension: 0
+    }]
+  },
+  options: {
+
+
+
+    cornerRadius: 7,
+    fullCornerRadius: false,
+
+    legend: {
+      display: false
+    },
+
+
+    scales: {
+
+      yAxes: [{
+        gridLines: {
+          drawTicks: false,
+          offsetGridLines: true,
+        },
+
+
+        ticks: {
+          // Min: 0,
+          stepSize: 500,
+          beginAtZero: true,
+        },
+
+
+
+      }],
+
+      xAxes: [{
+        gridLines: {
+          drawTicks: false,
+          offsetGridLines: true,
+        },
+        barPercentage: 0.5,
+      }]
+
+
+    } //scales
+  } //options
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -67,11 +98,11 @@ new Chart(document.getElementById("chart-doughnut"), {
 new Chart(document.getElementById("chart-bar"), {
   type: "bar",
   data: {
-    labels: ["S","M","T","W","T","F","S"],
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
       label: "DAILY TRAFFIC",
       backgroundColor: "#7377BD",
-      // borderColor: "#000000",
+      borderColor: "rgb(75, 192, 192)",
       data: [75, 100, 175, 125, 225, 200, 100],
     }]
   },
