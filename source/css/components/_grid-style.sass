@@ -14,9 +14,31 @@
 
 
 
+
+
+div.contain
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding: 5px
+  @include mq(large)
+    padding: 60px
+
+
+
+
 .grid__row
-  border-bottom: 1px solid red
+  border-bottom: 1px solid $iron
+
+main
+  [class^="grid__col--"] + [class^="grid__col--"]
+    border-top: 1px solid $iron
 
 @include mq(large)
-  [class^="grid__col--"] + [class^="grid__col--"]
-    border-left: 1px solid red
+  main
+    [class^="grid__col--"] + [class^="grid__col--"]
+      border-left: 1px solid $iron
+      border-top: none
+
+
+
