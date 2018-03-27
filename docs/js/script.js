@@ -6,7 +6,8 @@ new Chart(document.getElementById("chart-line"), {
       label: "Users",
       data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2000],
       fill: true,
-      borderColor: "rgb(75, 192, 192)",
+      borderColor: "rgb(115, 119, 189)",
+      backgroundColor: "rgba(115, 119, 189, 0.2)",
       lineTension: 0
     }]
   },
