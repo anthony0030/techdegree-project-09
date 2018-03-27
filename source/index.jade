@@ -135,43 +135,58 @@ html(lang='en')
 
 
         div.grid__col--6
-          div.contain
+          div.contain.recent_activity
             h5 Recent Activity
             ul
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-data-new
-                    p.user_name-new Victoria Chambers  comented on you greatness
-                    p.user_email-new 4 hoursago
+                  div.recent_activity
+                    p.recent_activity-data Victoria Chambers comented on your greatness
+                    p.recent_activity-time 4 hours ago
+                  div.recent_activity
+                    p.recent_activity-carrot >
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.recent_activity
+                    p.recent_activity-data Victoria Chambers comented on your greatness
+                    p.recent_activity-time 4 hours ago
+                  div.recent_activity
+                    p.recent_activity-carrot >
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.recent_activity
+                    p.recent_activity-data Victoria Chambers comented on your greatness
+                    p.recent_activity-time 4 hours ago
+                  div.recent_activity
+                    p.recent_activity-carrot >
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.recent_activity
+                    p.recent_activity-data Victoria Chambers comented on your greatness
+                    p.recent_activity-time 4 hours ago
+                  div.recent_activity
+                    p.recent_activity-carrot >
 
 
 
 
-              //- li
-              //-   a.user
-              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-              //-     div.user-data-new
-              //-       p.user_name-new Victoria Chambers
-              //-       p.user_email-new user@server.com
-              //-     div.user-data-new
-              //-       p 10/05/15
-              //- li
-              //-   a.user
-              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-              //-     div.user-data-new
-              //-       p.user_name-new Victoria Chambers
-              //-       p.user_email-new user@server.com
-              //-     div.user-data-new
-              //-       p 10/05/15
-              //- li
-              //-   a.user
-              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-              //-     div.user-data-new
-              //-       p.user_name-new Victoria Chambers
-              //-       p.user_email-new user@server.com
-              //-     div.user-data-new
-              //-       p 10/05/15
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       div.grid__row
@@ -205,8 +220,6 @@ html(lang='en')
                       span.onoffswitch-inner
                       span.onoffswitch-switch
 
-
-  
             include jade_partials/_timezones
             div
               input.btn--default(value="SAVE")

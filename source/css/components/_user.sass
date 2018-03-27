@@ -10,14 +10,27 @@ a.user
   margin-right: 10px
   vertical-align: middle
 
-.user-data-new
+.recent_activity-carrot
+  display: none
+
+.user-data-new, .recent_activity
   display: inline-block
   vertical-align: middle
   min-width: 150px
 
-p.user_name-new, p.user_email-new
+p.user_name-new, p.user_email-new, p.recent_activity-data, p.recent_activity-time
   margin: 0
 
-div.new_members
+p.recent_activity-data
+  max-width: 300px
+
+
+div.new_members, div.recent_activity
   li
     margin-bottom: 15px
+
+
+
+@include mq(large)
+  p.recent_activity-data
+    max-width: 500px
