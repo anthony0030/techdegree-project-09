@@ -9,6 +9,19 @@ html(lang='en')
     //- include _favicon
   body
     header
+      div.grid__row
+        div.grid__col--2
+          h1.logo
+            a(href="#") 
+              span.bold Your
+              span.light App
+                sup TM
+        div.grid__col--2
+        div.grid__col--2
+        div.grid__col--2
+        div.grid__col--2
+        div.grid__col--2
+          p test
     main
 
 
@@ -26,7 +39,6 @@ html(lang='en')
           div.contain
             h5 Daily Traffic
             canvas#chart-bar
-
         div.grid__col--6
           div.contain
             h5 Mobile Users
@@ -85,13 +97,29 @@ html(lang='en')
           div.contain
             h5 Settings
 
+            div.row
+              label._50(for="email-notifications") Send Email Notifications
+              div.onoffswitch
+                  input.onoffswitch-checkbox(id="email-notifications" type="checkbox" name="onoffswitch" checked) 
+                  label.onoffswitch-label(for="email-notifications")
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+            br
+            br
+            div.row
+              label._50(for="public-profile") Set Profile to Public
+              div.onoffswitch
+                  input.onoffswitch-checkbox(id="public-profile" type="checkbox" name="onoffswitch" checked) 
+                  label.onoffswitch-label(for="public-profile")
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
 
-            p Send Email Notifications
-            div.onoffswitch  
-                input#email-notifications.onoffswitch-checkbox(type="checkbox" name="onoffswitch" checked) 
-                label.onoffswitch-label(for="email-notifications")
-                    span.onoffswitch-inner
-                    span.onoffswitch-switch
+
+  
+            include jade_partials/_timezones
+            div
+              input.btn--default(value="SAVE")
+              input.btn--disabled(value="CANCEL")
 
 
 
