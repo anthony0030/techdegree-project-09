@@ -10,19 +10,39 @@ html(lang='en')
   body
     header
       div.grid__row
-        div.grid__col--2
+        div.grid__col--2.flex__alighn--left
           h1.logo
             a(href="#") 
               span.bold Your
               span.light App
-                sup TM
+                sup &trade;
+        div.grid__col--2.notification-big
+          include svgs/g/ic_notifications_white_24px.svg
         div.grid__col--2
-        div.grid__col--2
-        div.grid__col--2
-        div.grid__col--2
-        div.grid__col--2
-          p test
+          a.user
+            img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+            p.user_name Josh Sullivan
     main
+
+
+      div.nav__side--bg
+      nav.nav__side
+        ul
+          li.current
+            a
+              include svgs/g/ic_web_white_24px.svg
+          li
+            a
+              include svgs/g/ic_supervisor_account_white_24px.svg
+          li
+            a
+              include svgs/g/ic_assessment_white_24px.svg
+          li
+            a
+              include svgs/g/ic_settings_white_24px.svg
+          li.notification-small
+            a
+              include svgs/g/ic_notifications_white_24px.svg
 
 
 
@@ -75,13 +95,84 @@ html(lang='en')
 
       div.grid__row
         div.grid__col--6
-          div.contain
+          div.contain.new_members
             h5 New Members
+            ul
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-data-new
+                    p.user_name-new Victoria Chambers
+                    p.user_email-new user@server.com
+                  div.user-data-new
+                    p 10/05/15
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-data-new
+                    p.user_name-new Victoria Chambers
+                    p.user_email-new user@server.com
+                  div.user-data-new
+                    p 10/05/15
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-data-new
+                    p.user_name-new Victoria Chambers
+                    p.user_email-new user@server.com
+                  div.user-data-new
+                    p 10/05/15
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-data-new
+                    p.user_name-new Victoria Chambers
+                    p.user_email-new user@server.com
+                  div.user-data-new
+                    p 10/05/15
+
+
 
 
         div.grid__col--6
           div.contain
             h5 Recent Activity
+            ul
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-data-new
+                    p.user_name-new Victoria Chambers  comented on you greatness
+                    p.user_email-new 4 hoursago
+
+
+
+
+              //- li
+              //-   a.user
+              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+              //-     div.user-data-new
+              //-       p.user_name-new Victoria Chambers
+              //-       p.user_email-new user@server.com
+              //-     div.user-data-new
+              //-       p 10/05/15
+              //- li
+              //-   a.user
+              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+              //-     div.user-data-new
+              //-       p.user_name-new Victoria Chambers
+              //-       p.user_email-new user@server.com
+              //-     div.user-data-new
+              //-       p 10/05/15
+              //- li
+              //-   a.user
+              //-     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+              //-     div.user-data-new
+              //-       p.user_name-new Victoria Chambers
+              //-       p.user_email-new user@server.com
+              //-     div.user-data-new
+              //-       p 10/05/15
+
 
       div.grid__row
         div.grid__col--6

@@ -362,6 +362,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/source\/css\/components\/_user.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_user.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/source\/css\/development\/_index.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -530,6 +543,56 @@
 		"oAP": "\/docs\/mockups",
 		"oF": 0
 		},
+	"\/source\/svgs\/g\/ic_assessment_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/g\/ic_assessment_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/g\/ic_notifications_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/g\/ic_notifications_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/g\/ic_settings_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/g\/ic_settings_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/g\/ic_supervisor_account_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/g\/ic_supervisor_account_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/g\/ic_web_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/g\/ic_web_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/svgs\/icon-arrow-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -630,7 +693,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 543825518
+	"lastBuiltDate": 543835886
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

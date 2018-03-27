@@ -10,19 +10,42 @@
   <body>
     <header>
       <div class="grid__row">
-        <div class="grid__col--2">
-          <h1 class="logo"><a href="#"> <span class="bold">Your</span><span class="light">App<sup>TM</sup></span></a></h1>
+        <div class="grid__col--2 flex__alighn--left">
+          <h1 class="logo"><a href="#"> <span class="bold">Your</span><span class="light">App<sup>&trade;</sup></span></a></h1>
         </div>
-        <div class="grid__col--2"></div>
-        <div class="grid__col--2"></div>
-        <div class="grid__col--2"></div>
-        <div class="grid__col--2"></div>
-        <div class="grid__col--2">
-          <p>test</p>
+        <div class="grid__col--2 notification-big"><svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+</svg>
         </div>
+        <div class="grid__col--2"><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+            <p class="user_name">Josh Sullivan</p></a></div>
       </div>
     </header>
     <main>
+      <div class="nav__side--bg"></div>
+      <nav class="nav__side">
+        <ul>
+          <li class="current"><a><svg class="nav--icon" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></a></li>
+          <li><a><svg class="nav--icon" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z"/>
+</svg></a></li>
+          <li><a><svg class="nav--icon" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></a></li>
+          <li><a><svg class="nav--icon" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+</svg></a></li>
+          <li class="notification-small"><a><svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+</svg></a></li>
+        </ul>
+      </nav>
       <div class="grid__row">
         <div class="grid__col--12">
           <div class="contain">
@@ -85,13 +108,55 @@
       </div>
       <div class="grid__row">
         <div class="grid__col--6">
-          <div class="contain">
+          <div class="contain new_members">
             <h5>New Members</h5>
+            <ul>
+              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+                  <div class="user-data-new">
+                    <p class="user_name-new">Victoria Chambers</p>
+                    <p class="user_email-new">user@server.com</p>
+                  </div>
+                  <div class="user-data-new">
+                    <p>10/05/15</p>
+                  </div></a></li>
+              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+                  <div class="user-data-new">
+                    <p class="user_name-new">Victoria Chambers</p>
+                    <p class="user_email-new">user@server.com</p>
+                  </div>
+                  <div class="user-data-new">
+                    <p>10/05/15</p>
+                  </div></a></li>
+              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+                  <div class="user-data-new">
+                    <p class="user_name-new">Victoria Chambers</p>
+                    <p class="user_email-new">user@server.com</p>
+                  </div>
+                  <div class="user-data-new">
+                    <p>10/05/15</p>
+                  </div></a></li>
+              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+                  <div class="user-data-new">
+                    <p class="user_name-new">Victoria Chambers</p>
+                    <p class="user_email-new">user@server.com</p>
+                  </div>
+                  <div class="user-data-new">
+                    <p>10/05/15</p>
+                  </div></a></li>
+            </ul>
           </div>
         </div>
         <div class="grid__col--6">
           <div class="contain">
             <h5>Recent Activity</h5>
+            <ul>
+              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
+                  <div class="user-data-new">
+                    <p class="user_name-new">Victoria Chambers  comented on you greatness</p>
+                    <p class="user_email-new">4 hoursago</p>
+                  </div></a></li>
+              
+            </ul>
           </div>
         </div>
       </div>

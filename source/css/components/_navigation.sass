@@ -7,52 +7,92 @@
 //  Main Styles
 //---------------------------
 
+header
+  .notification-big
+    display: none
 
-// .nav
-//   @include flex(flex,column)
-//   margin-top: 1.5em
+h1.logo
+  text-align: center
 
-// .nav li
-//   padding: em(12px)
 
-// .nav a
-//   display: block
-//   border-radius: $br--rounded
-//   color: $grey
-//   font-size: 1.125em
-//   font-weight: 300
-//   text-align: center
-//   padding: .4em
-//   text-decoration: none
-//   &:hover
-//     color: $white
-//     background-color: $color-accent
-//   &:focus
-//     outline-color: transparent
 
-// // --------------------------
-// //  Media Queries
-// //---------------------------
+
+.nav
+  @include flex(flex,column)
+  margin-top: 1.5em
+  margin-top: 0
+  align-self: center
+  li
+    padding-left: 1.5em
+    padding-right: 1.5em
+    display: inline-block
+    &:hover svg
+      fill: #FFF
+
+.nav__side
+  @extend .nav
+  height: 60px
+  width: 100%
+  margin-top: -12px
+  background-color: $east-bay
+  .notification-small svg
+    fill: #FFF
+  svg
+    height: 100%
+    width: auto
+    margin-top: 18px
+    margin-bottom: 9px
+    fill: rgba(255,255,255,0.7)
+  li.current
+    border: 3px solid transparent
+    border-bottom-color: $de-york
+    border-radius: 4px
+    svg
+      fill: #FFF
+
+
+.nav__side--bg
+  @extend .nav__side
+  display: none
+  position: absolute
+
+
+
+// --------------------------
+//  Media Queries
+//---------------------------
 
 // @include mq(medium)
 
-//   .img--logo
-//     width: 140px
-
-//   .nav
-//     @include flex($direction:row, $just:space-between)
-//     margin-top: 3em
 
 
-// @include mq(large)
+@include mq(large)
 
-//   .img--logo
-//     margin-right: auto
+  header
+    .notification-big
+      display: block
 
-//   .nav
-//     margin-top: 0
-//     align-self: center
+  .nav
+    li
+      padding-left: .65em
+      padding-right: .65em
+      &.current
+        border-bottom-color: transparent
+        border-left-color: $de-york
 
-//   .nav li
-//     margin-left: .65em
-//     margin-right: .65em
+
+  .nav__side
+    position: fixed
+    margin-top: 0
+    width: 60px
+    height: 100vh
+    .notification-small
+      display: none
+    svg
+      height: auto
+      width: 100%
+
+  .nav__side--bg
+    display: block
+    position: absolute
+

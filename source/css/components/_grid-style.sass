@@ -1,3 +1,12 @@
+.flex__alighn
+  &--left
+    justify-content: left
+  &--center
+    justify-content: center
+  &--right
+    justify-content: right
+
+
 .row
   display: flex
   margin-bottom: 40px
@@ -8,5 +17,6 @@
 .grid__row
   border-bottom: 1px solid red
 
-[class^="grid__col--"] + [class^="grid__col--"]
-  border-left: 1px solid red
+@include mq(large)
+  [class^="grid__col--"] + [class^="grid__col--"]
+    border-left: 1px solid red
