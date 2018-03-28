@@ -27,11 +27,15 @@ new Chart(document.getElementById("chart-line"), {
       fill: true,
       borderColor: "rgb(115, 119, 189)",
       backgroundColor: "rgba(115, 119, 189, 0.2)",
-      lineTension: 0
+      lineTension: 0,
+      pointRadius: 4,
+      pointStyle: "circle",
+      pointBorderColor: "#7377bd",
+      pointBorderWidth: 4,
+      pointBackgroundColor: "#fff"
     }]
   },
   options: {
-
 
 
     cornerRadius: 7,
@@ -122,7 +126,6 @@ new Chart(document.getElementById("chart-bar"), {
     datasets: [{
       label: "DAILY TRAFFIC",
       backgroundColor: "#7377BD",
-      borderColor: "rgb(75, 192, 192)",
       data: [75, 100, 175, 125, 225, 200, 100],
     }]
   },
