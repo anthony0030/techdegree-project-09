@@ -1,3 +1,22 @@
+
+
+// add the X button to the alerts and makes it close the alert
+var alerts = document.querySelectorAll("[class^='alert']");
+for (var i = 0; i < alerts.length; i++) {
+  var span = document.createElement("SPAN");
+  span.classList.add("closebtn");
+  var x = document.createTextNode(String.fromCharCode(215));
+  span.appendChild(x);
+  span.onclick = function(){
+    // console.log(this.parentElement)
+    this.parentElement.style.display = "none";
+  }
+  alerts[i].appendChild(span);
+}
+
+
+
+// chart builder
 new Chart(document.getElementById("chart-line"), {
   type: "line",
   data: {

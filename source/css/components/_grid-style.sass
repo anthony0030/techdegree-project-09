@@ -14,18 +14,17 @@
 
 
 
-
-
 div.contain
   width: 100%
   display: flex
   flex-direction: column
   padding: 5px
-  @include mq(large)
-    padding: 60px
 
-
-
+.no-margin
+  margin-top: 0
+  margin-right: 0
+  margin-bottom: 0
+  margin-left: 0
 
 .grid__row
   border-bottom: 1px solid $iron
@@ -40,5 +39,8 @@ main
       border-left: 1px solid $iron
       border-top: none
 
+    [class^="grid__col--"]:first-child
+      // background-color: red
+      margin-left: 60px
 
 

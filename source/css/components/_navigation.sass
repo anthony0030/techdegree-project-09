@@ -7,14 +7,38 @@
 //  Main Styles
 //---------------------------
 
+
 header
-  .notification-big
-    display: none
+  position: fixed
+  top: 0
+  width: 100vw
+  @include mq(large)
+    position: unset
+    width: unset
+
+main
+  margin-top: 250px
+
+
+.notification-big
+  display: none
 
 h1.logo
   text-align: center
 
 
+svg.bell
+  width: 33.219px
+  height: 33.219px
+
+
+.hidden-bell
+  @extend .bell
+  position: fixed
+  top: 15px
+  z-index: -1
+  svg
+    fill: #FFF !important
 
 
 .nav
@@ -23,26 +47,27 @@ h1.logo
   margin-top: 0
   align-self: center
   li
-    padding-left: 1.5em
-    padding-right: 1.5em
+    padding-left: 1.1em
+    padding-right: 1.1em
     display: inline-block
     &:hover svg
       fill: #FFF
 
 .nav__side
   @extend .nav
-  height: 60px
+  height: 69px
   width: 100%
-  margin-top: -12px
   background-color: $east-bay
   .notification-small svg
     fill: #FFF
   svg
-    height: 100%
-    width: auto
+    height: 33px
     margin-top: 18px
     margin-bottom: 9px
     fill: rgba(255,255,255,0.7)
+  ul
+    display: flex
+    justify-content: space-around
   li.current
     border: 3px solid transparent
     border-bottom-color: $de-york
@@ -55,6 +80,7 @@ h1.logo
   @extend .nav__side
   display: none
   position: absolute
+  z-index: -2
 
 
 
@@ -67,6 +93,9 @@ h1.logo
 
 
 @include mq(large)
+
+  main
+    margin-top: 0
 
   header
     .notification-big
@@ -85,12 +114,14 @@ h1.logo
     position: fixed
     margin-top: 0
     width: 60px
-    height: 100vh
+    height: 170vh
+    ul
+      flex-direction: column
     .notification-small
       display: none
     svg
-      height: auto
-      width: 100%
+      // height: 40px
+      // width: 100%
 
   .nav__side--bg
     display: block

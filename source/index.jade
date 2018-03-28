@@ -2,59 +2,89 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Placeholder Title
+    title YourApp&trade;
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
     link(rel='stylesheet', href='css/styles.css')
     //- include _favicon
   body
+    div(style="display:none")
+      include svgs/icon-bell.svg
     header
       div.grid__row
-        div.grid__col--2.flex__alighn--left
+        div.grid__col--2
           h1.logo
             a(href="#") 
               span.bold Your
               span.light App
                 sup &trade;
-        div.grid__col--2.notification-big
-          include svgs/g/ic_notifications_white_24px.svg
-        div.grid__col--2
+        div.grid__col--2.no-margin
+          a.notification-big
+            svg.bell
+              use(xlink:href="#bell")
+        div.grid__col--3.no-margin
           a.user
             img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
             p.user_name Josh Sullivan
-    main
 
 
       div.nav__side--bg
+        ul
+          li
+            a.hidden-bell
+              svg.bell
+                use(xlink:href="#bell")
+
       nav.nav__side
         ul
           li.current
-            a
-              include svgs/g/ic_web_white_24px.svg
+            a(href="#dashboard-area")
+              include svgs/icon-dashboard.svg
           li
-            a
-              include svgs/g/ic_supervisor_account_white_24px.svg
+            a(href="#members-area")
+              include svgs/icon-members.svg
           li
-            a
-              include svgs/g/ic_assessment_white_24px.svg
+            a(href="#visits-area")
+              include svgs/icon-visits.svg
           li
-            a
-              include svgs/g/ic_settings_white_24px.svg
+            a(href="#settings-area")
+              include svgs/icon-settings.svg
           li.notification-small
             a
-              include svgs/g/ic_notifications_white_24px.svg
+              svg.bell
+                use(xlink:href="#bell")
+
+    main
+
+      
+      div.grid__row
+        div.grid__col--12.no-margin
+          div.contain
+            h2 Dashboard
+            input(type="text" placeholder="Serch")
+
+      div.grid__row
+        div.grid__col--12.no-margin
+          div.contain
+            div.alert This is an alert
+            div.alert--default This is a default alert
+            div.alert--disabled This is a disabled alert
+            div.alert--success This is a success alert
+            div.alert--error This is an error alert
+            div.alert--warning This is a warning alert
+            div.alert--info This is an info alert
 
 
 
       div.grid__row
-        div.grid__col--12
+        div.grid__col--12.no-margin
           div.contain
             h5 Daily Traffic
             canvas#chart-line
 
 
 
-      div.grid__row
+      div#dashboard-area.grid__row
         div.grid__col--6
           div.contain
             h5 Daily Traffic
@@ -63,7 +93,7 @@ html(lang='en')
           div.contain
             h5 Mobile Users
             canvas#chart-doughnut
-
+          
 
       div.grid__row
         div.grid__col--12
@@ -92,8 +122,8 @@ html(lang='en')
             tr
               td.social-icon-data 2,530
 
-
-      div.grid__row
+      
+      div#members-area.grid__row
         div.grid__col--6
           div.contain.new_members
             h5 New Members
@@ -105,7 +135,7 @@ html(lang='en')
                     p.user_name-new Victoria Chambers
                     p.user_email-new user@server.com
                   div.user-data-new
-                    p 10/05/15
+                    p.user-data-event-time 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
@@ -113,7 +143,7 @@ html(lang='en')
                     p.user_name-new Victoria Chambers
                     p.user_email-new user@server.com
                   div.user-data-new
-                    p 10/05/15
+                    p.user-data-event-time 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
@@ -121,7 +151,7 @@ html(lang='en')
                     p.user_name-new Victoria Chambers
                     p.user_email-new user@server.com
                   div.user-data-new
-                    p 10/05/15
+                    p.user-data-event-time 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
@@ -129,7 +159,7 @@ html(lang='en')
                     p.user_name-new Victoria Chambers
                     p.user_email-new user@server.com
                   div.user-data-new
-                    p 10/05/15
+                    p.user-data-event-time 10/05/15
 
 
 
@@ -200,7 +230,7 @@ html(lang='en')
 
 
         div.grid__col--6
-          div.contain
+          div#settings-area.contain
             h5 Settings
 
             div.row
