@@ -56,8 +56,8 @@ new Chart(document.getElementById("chart-line"), {
 
 
         ticks: {
-          // Min: 0,
-
+          Min: 0,
+          suggestedMax: 2500,
           stepSize: 500,
           beginAtZero: true,
           callback: function(value, index, values) {
