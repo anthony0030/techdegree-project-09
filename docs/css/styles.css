@@ -398,17 +398,6 @@ svg.bell, svg.hidden-bell {
       flex-direction: column;
       justify-content: center; } }
 
-@media (min-width: 769px) {
-  Column media queries {
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px; }
-    Column media queries + Column media queries {
-      margin-left: 2%; }
-    Column media queries:last-of-type {
-      float: right; } }
-
 @media (min-width: 1100px) {
   .grid__row {
     display: flex;
@@ -453,13 +442,31 @@ main [class^="grid__col--"] + [class^="grid__col--"] {
   main [class^="grid__col--"]:first-child {
     margin-left: 60px; } }
 
+.all-social-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+@media (min-width: 769px) {
+  .all-social-stats {
+    flex-direction: row;
+    justify-content: space-around; }
+  .social-stats-col {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .social-stats-title {
+    margin: 0; } }
+
 .social-stat-container {
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   display: inline-block;
   background-color: #fbfbfb;
-  margin-top: 15px;
-  margin-left: 15px; }
+  margin-top: 15px; }
+  @media (min-width: 1100px) {
+    .social-stat-container {
+      margin-left: 15px; } }
 
 .social-icon-name {
   font-size: 16px;

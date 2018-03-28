@@ -1,11 +1,33 @@
 // Social icons
+.all-social-stats
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+@include mq(medium)
+  .all-social-stats
+    flex-direction: row
+    justify-content: space-around
+  .social-stats-col
+    flex-direction: column
+    padding-top: 30px
+    padding-bottom: 30px
+
+  .social-stats-title
+    margin: 0
+
+    .social-stat-container
+
+
+
 .social-stat-container
   border: 1px solid #D1D1D1
   border-radius: 4px
   display: inline-block
   background-color: $alabaster
   margin-top: 15px
-  margin-left: 15px
+  @include mq(large)
+    margin-left: 15px
 
 .social-icon-name
   font-size: 16px
