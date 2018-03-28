@@ -57,8 +57,12 @@ new Chart(document.getElementById("chart-line"), {
 
         ticks: {
           // Min: 0,
+
           stepSize: 500,
           beginAtZero: true,
+          callback: function(value, index, values) {
+            if(value != 0) return value
+          }
         },
 
 
@@ -157,6 +161,9 @@ new Chart(document.getElementById("chart-bar"), {
           // Min: 0,
           stepSize: 50,
           beginAtZero: true,
+          callback: function(value, index, values) {
+            if(value != 0) return value
+          }
         },
 
 
