@@ -9,7 +9,7 @@
 
 .row
   display: flex
-  margin-bottom: 40px
+  margin-bottom: 15px
   width: 100%
 
 
@@ -21,17 +21,18 @@ div.contain
   padding: 5px
 
 .no-margin
-  margin-top: 0
-  margin-right: 0
-  margin-bottom: 0
-  margin-left: 0
+  margin-top: 0 !important
+  margin-right: 0 !important
+  margin-bottom: 0 !important
+  margin-left: 0 !important
 
 .grid__row
   border-bottom: 1px solid $iron
 
-main
-  [class^="grid__col--"] + [class^="grid__col--"]
-    border-top: 1px solid $iron
+@include mq(small)
+  main
+    [class^="grid__col--"] + [class^="grid__col--"]
+      border-top: 1px solid $iron
 
 @include mq(large)
   main
