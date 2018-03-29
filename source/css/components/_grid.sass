@@ -50,7 +50,7 @@
     margin-bottom: em(12px)
     @include flex($direction:column, $just:center)
 
-// Column media queries
+  // Column media queries
   @include mq(medium)
     @include doubly(percentage($g-gutter-width / $context))
     float: left
@@ -63,5 +63,5 @@
 // grid row styles
 .grid__row
   // margin-bottom: em(50px)
-  @include mq(large)
+  @include mq(medium)
     @include flex(flex, $just:space-between)
