@@ -1,0 +1,26 @@
+.dashboard__title
+  color: $steel
+  font-weight: $font-weight--thin
+  font-size: 24px
+  text-align: center
+  margin: 0
+  @include mq(medium)
+  margin: 20px 0
+
+
+.serarch
+  display: flex
+  // background-color: red
+  background-color: $alabaster
+  justify-content: flex-end
+
+.serarch--box
+  @extend %no-focus-outline
+  align-self: center
+  width: 95%
+  height: 40px
+  padding: 10px
+  border: none
+  border: 1px solid $grey--light
+  border-radius: $br--rounded
+  background: url(../svgs/icon-search.svg) no-repeat scroll center right;

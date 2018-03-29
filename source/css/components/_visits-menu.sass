@@ -1,0 +1,19 @@
+.visits-list
+  align-self: flex-end
+
+
+.visits__option
+  color: $grey
+  text-decoration: bold
+  display: inline-block
+  padding: 5px 10px
+  border-radius: 20px
+  font-weight: $font-weight--bold
+  &:hover:not([class$=active])
+    background-color: $grey--light
+  & + &
+    margin-left: 10px
+  @include m(active)
+    @extend .visits__option
+    color: #FFF
+    background-color: $color-accent

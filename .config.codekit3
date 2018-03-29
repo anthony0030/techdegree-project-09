@@ -336,6 +336,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/source\/css\/components\/_search.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_search.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/source\/css\/components\/_social-stats.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -384,6 +397,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/docs\/css\/components\/_user.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/css\/components\/_visits-menu.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_visits-menu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -556,62 +582,42 @@
 		"oAP": "\/docs\/mockups",
 		"oF": 0
 		},
-	"\/source\/svgs\/g\/ic_assessment_white_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/docs\/svgs\/g\/ic_assessment_white_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/source\/svgs\/g\/ic_notifications_white_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/docs\/svgs\/g\/ic_notifications_white_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/source\/svgs\/g\/ic_settings_white_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/docs\/svgs\/g\/ic_settings_white_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/source\/svgs\/g\/ic_supervisor_account_white_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/docs\/svgs\/g\/ic_supervisor_account_white_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/source\/svgs\/g\/ic_web_white_24px.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "\/docs\/svgs\/g\/ic_web_white_24px.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/source\/svgs\/icon-arrow-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/docs\/svgs\/icon-arrow-down.svg",
 		"oF": 1,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/icon-arrow-left.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/icon-arrow-left.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/icon-arrow-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/icon-arrow-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/source\/svgs\/icon-arrow-up.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/docs\/svgs\/icon-arrow-up.svg",
+		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -666,6 +672,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/source\/svgs\/icon-search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/docs\/svgs\/icon-search.svg",
+		"oF": 1,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/source\/svgs\/icon-settings.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -706,7 +722,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 543926077
+	"lastBuiltDate": 543941274
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

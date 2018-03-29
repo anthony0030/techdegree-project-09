@@ -10,23 +10,26 @@ html(lang='en')
   body
     div(style="display:none")
       include svgs/icon-bell.svg
+      include svgs/icon-arrow-right.svg
+
     header
-      div.grid__row
-        div.grid__col--2
+      div.grid__row.menu--row
+        div.grid__col--2.logo--col
           h1.logo
             a(href="#") 
               span.bold Your
               span.light App
                 sup &trade;
-        div.grid__col--2.no-margin
+        div.grid__col--1.notification--col
           a.notification-big
             svg.bell
               use(xlink:href="#bell")
-        div.grid__col--3.no-margin
-          a.user
+        div.grid__col--3.no-margin.user_curent--col
+          a.user_curent
             img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
             p.user_name Josh Sullivan
 
+    main
 
       div.nav__side--bg
         ul
@@ -41,7 +44,7 @@ html(lang='en')
             a(href="#dashboard-area")
               include svgs/icon-dashboard.svg
           li
-            a(href="#members-area")
+            a(onClick="document.getElementById('members-area').scrollIntoView(true);")
               include svgs/icon-members.svg
           li
             a(href="#visits-area")
@@ -54,17 +57,17 @@ html(lang='en')
               svg.bell
                 use(xlink:href="#bell")
 
-    main
 
       
       div.grid__row
-        div.grid__col--12.no-margin
-          div.contain
-            h2 Dashboard
-            input(type="text" placeholder="Serch")
+        div.grid__col--3
+          h2.dashboard__title Dashboard
+        div.grid__col--9.serarch
+          input.serarch--box(type="text" placeholder="Search")
+
 
       div.grid__row
-        div.grid__col--12.no-margin
+        div.grid__col--12
           div.contain
             div.alert This is an alert
             div.alert--default This is a default alert
@@ -77,9 +80,14 @@ html(lang='en')
 
 
       div.grid__row
-        div.grid__col--12.no-margin
+        div.grid__col--12
           div.contain
             h5 Daily Traffic
+            ul.visits-list
+              li.visits__option Hourly
+              li.visits__option Daily
+              li.visits__option--active Weekly
+              li.visits__option Monthly
             canvas#chart-line
 
 
@@ -132,35 +140,44 @@ html(lang='en')
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-data-new
-                    p.user_name-new Victoria Chambers
-                    p.user_email-new user@server.com
-                  div.user-data-new
-                    p.user-data-event-time 10/05/15
+                  div.user-details
+                    p.user-title Victoria Chambers
+                    p.user-subtitle user@server.com
+                  div.user-data-right
+                    p 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-data-new
-                    p.user_name-new Victoria Chambers
-                    p.user_email-new user@server.com
-                  div.user-data-new
-                    p.user-data-event-time 10/05/15
+                  div.user-details
+                    p.user-title Victoria Chambers
+                    p.user-subtitle user@server.com
+                  div.user-data-right
+                    p 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-data-new
-                    p.user_name-new Victoria Chambers
-                    p.user_email-new user@server.com
-                  div.user-data-new
-                    p.user-data-event-time 10/05/15
+                  div.user-details
+                    p.user-title Victoria Chambers
+                    p.user-subtitle user@server.com
+                  div.user-data-right
+                    p 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-data-new
-                    p.user_name-new Victoria Chambers
-                    p.user_email-new user@server.com
-                  div.user-data-new
-                    p.user-data-event-time 10/05/15
+                  div.user-details
+                    p.user-title Victoria Chambers
+                    p.user-subtitle user@server.com
+                  div.user-data-right
+                    p 10/05/15
+              li
+                a.user
+                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+                  div.user-details
+                    p.user-title Victoria Chambers
+                    p.user-subtitle user@server.com
+                  div.user-data-right
+                    p 10/05/15
+
 
 
 
@@ -172,37 +189,11 @@ html(lang='en')
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.recent_activity
-                    p.recent_activity-data Victoria Chambers comented on your greatness
-                    p.recent_activity-time 4 hours ago
-                  div.recent_activity
-                    p.recent_activity-carrot >
-              li
-                a.user
-                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.recent_activity
-                    p.recent_activity-data Victoria Chambers comented on your greatness
-                    p.recent_activity-time 4 hours ago
-                  div.recent_activity
-                    p.recent_activity-carrot >
-              li
-                a.user
-                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.recent_activity
-                    p.recent_activity-data Victoria Chambers comented on your greatness
-                    p.recent_activity-time 4 hours ago
-                  div.recent_activity
-                    p.recent_activity-carrot >
-              li
-                a.user
-                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.recent_activity
-                    p.recent_activity-data Victoria Chambers comented on your greatness
-                    p.recent_activity-time 4 hours ago
-                  div.recent_activity
-                    p.recent_activity-carrot >
-
-
+                  div.user-details
+                    p.user-title Victoria Chambers likes somthing
+                    p.user-subtitle 1 month ago
+                  div.user-data-right
+                    p.recent_activity-carrot &gt;
 
 
 

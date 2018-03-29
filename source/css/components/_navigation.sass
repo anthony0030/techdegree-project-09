@@ -22,9 +22,13 @@ main
 
 .notification-big
   display: none
+  border-right: 2px solid $east-bay
+  padding-right: 10px
 
-h1.logo
-  text-align: center
+.notification--col
+  padding: 0 !important
+  margin: 0 !important
+
 
 
 svg.bell
@@ -36,7 +40,7 @@ svg.bell
   @extend .bell
   position: fixed
   top: 15px
-  z-index: -1
+  z-index: 2
   svg
     fill: #FFF !important
 
@@ -58,6 +62,8 @@ svg.bell
   height: 69px
   width: 100%
   background-color: $east-bay
+  position: fixed
+  top: 158px
   .notification-small svg
     fill: #FFF
   svg
@@ -80,7 +86,6 @@ svg.bell
   @extend .nav__side
   display: none
   position: absolute
-  z-index: -2
 
 
 
@@ -88,8 +93,9 @@ svg.bell
 //  Media Queries
 //---------------------------
 
-// @include mq(medium)
-
+@include mq(medium)
+  .nav__side
+    top: 70px
 
 
 @include mq(large)
@@ -97,9 +103,9 @@ svg.bell
   main
     margin-top: 0
 
-  header
-    .notification-big
-      display: block
+
+  .notification-big
+    display: block
 
   .nav
     li
@@ -109,21 +115,23 @@ svg.bell
         border-bottom-color: transparent
         border-left-color: $de-york
 
+  .notification--col
+    align-items: center
+    justify-content: flex-end
 
   .nav__side
-    position: fixed
+    top: 70px
     margin-top: 0
     width: 60px
-    height: 170vh
+    height: 250vh
     ul
       flex-direction: column
     .notification-small
       display: none
-    svg
-      // height: 40px
-      // width: 100%
 
   .nav__side--bg
     display: block
     position: absolute
 
+  .menu--row
+    height: 70px

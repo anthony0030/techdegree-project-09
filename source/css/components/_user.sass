@@ -1,9 +1,20 @@
-a.user
+.user_curent--col
+  justify-content: unset !important
+
+.user_curent
   align-self: center
+
+
+.user
+  align-self: center
+  display: block
+  margin-bottom: 20px
+
 
 .user_name
   display: inline-block
   color: #FFF
+  vertical-align: middle
 
 .user_image
   @extend .img--avatar
@@ -11,26 +22,41 @@ a.user
   vertical-align: middle
 
 .recent_activity-carrot
+  transform: scale(1, 1.5)
+  font-size: 30px
+  font-size: 20px
+  font-weight: $font-weight--light
   display: none
-
-.user-data-new, .recent_activity
-  display: inline-block
-  vertical-align: middle
-  min-width: 150px
-
-p.user_name-new, p.user_email-new, p.recent_activity-data, p.recent_activity-time
   margin: 0
 
-p.recent_activity-data
-  max-width: 300px
 
+.user-details
+  display: inline-block
+  vertical-align: middle
 
-div.new_members, div.recent_activity
-  li
-    margin-bottom: 15px
+.new_members li:last-child .user,
+.recent_activity li:last-child .user
+  border-bottom: none
 
+.user-data-right
+  display: inline-block
+  vertical-align: middle
+  float: right
 
+.recent_activity-data,
+.recent_activity-time,
+.user-title,
+.user-subtitle
+  margin: 0
+
+.recent_activity
+  margin-bottom: 15px
 
 @include mq(large)
-  p.recent_activity-data
+  .user
+    padding-bottom: 20px
+    border-bottom: 1px solid $grey--light
+  .recent_activity-data
     max-width: 500px
+  .recent_activity-carrot
+    display: inline-block
