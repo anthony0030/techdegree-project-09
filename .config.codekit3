@@ -556,12 +556,52 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/source\/js\/chart-bar.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/chart-bar.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/source\/js\/chart-doughnut.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/chart-doughnut.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/source\/js\/chart-line.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/chart-line.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/source\/js\/Chart.roundedBarCharts.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 2,
 		"oAP": "\/docs\/js\/Chart.roundedBarCharts.min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/source\/js\/randomUser.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/docs\/js\/randomUser.js",
 		"oF": 1,
 		"sC": 3,
 		"tS": 0
@@ -722,7 +762,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 543941274
+	"lastBuiltDate": 544028658
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

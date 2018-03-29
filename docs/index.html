@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>YourApp&trade;</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -152,7 +153,7 @@
       </div>
       <div class="grid__row">
         <div class="grid__col--12">
-          <div class="contain">
+          <div id="alerts" class="contain">
             <div class="alert">This is an alert</div>
             <div class="alert--default">This is a default alert</div>
             <div class="alert--disabled">This is a disabled alert</div>
@@ -167,11 +168,11 @@
         <div class="grid__col--12">
           <div class="contain">
             <h5>Daily Traffic</h5>
-            <ul class="visits-list">
-              <li class="visits__option">Hourly</li>
-              <li class="visits__option">Daily</li>
-              <li class="visits__option--active">Weekly</li>
-              <li class="visits__option">Monthly</li>
+            <ul id="all-options" class="visits-list">
+              <li onClick="drawLineChartHourly()" id="hourly-option" class="visits__option">Hourly</li>
+              <li onClick="drawLineChartDaily()" id="daily-option" class="visits__option">Daily</li>
+              <li onClick="drawLineChartWeekly()" id="weekly-option" class="visits__option">Weekly</li>
+              <li onClick="drawLineChartMonthly()" id="monthly-option" class="visits__option">Monthly</li>
             </ul>
             <canvas id="chart-line"></canvas>
           </div>
@@ -235,46 +236,38 @@
         <div class="grid__col--6">
           <div class="contain new_members">
             <h5>New Members</h5>
-            <ul>
+            <ul id="new-members">
               <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
                   <div class="user-details">
                     <p class="user-title">Victoria Chambers</p>
-                    <p class="user-subtitle">user@server.com</p>
+                    <p class="user-subtitle">victoria.chambers80@example.com</p>
                   </div>
                   <div class="user-data-right">
-                    <p>10/05/15</p>
+                    <p class="user-data-right-title">10/05/15</p>
                   </div></a></li>
               <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
                   <div class="user-details">
-                    <p class="user-title">Victoria Chambers</p>
-                    <p class="user-subtitle">user@server.com</p>
+                    <p class="user-title">Dale Byrd</p>
+                    <p class="user-subtitle">dalebyrd52@example.com</p>
                   </div>
                   <div class="user-data-right">
-                    <p>10/05/15</p>
+                    <p class="user-data-right-title">10/05/15</p>
                   </div></a></li>
               <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
                   <div class="user-details">
-                    <p class="user-title">Victoria Chambers</p>
-                    <p class="user-subtitle">user@server.com</p>
+                    <p class="user-title">Dawn Wood</p>
+                    <p class="user-subtitle">dawn.wood16@example.com</p>
                   </div>
                   <div class="user-data-right">
-                    <p>10/05/15</p>
+                    <p class="user-data-right-title">10/05/15</p>
                   </div></a></li>
               <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
                   <div class="user-details">
-                    <p class="user-title">Victoria Chambers</p>
-                    <p class="user-subtitle">user@server.com</p>
+                    <p class="user-title">Dan Oliver</p>
+                    <p class="user-subtitle">dano.liver82@example.com</p>
                   </div>
                   <div class="user-data-right">
-                    <p>10/05/15</p>
-                  </div></a></li>
-              <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
-                  <div class="user-details">
-                    <p class="user-title">Victoria Chambers</p>
-                    <p class="user-subtitle">user@server.com</p>
-                  </div>
-                  <div class="user-data-right">
-                    <p>10/05/15</p>
+                    <p class="user-data-right-title">10/05/15</p>
                   </div></a></li>
             </ul>
           </div>
@@ -282,7 +275,7 @@
         <div class="grid__col--6">
           <div class="contain recent_activity">
             <h5>Recent Activity</h5>
-            <ul>
+            <ul id="new-activity">
               <li><a class="user"><img src="https://randomuser.me/api/portraits/men/86.jpg" class="user_image">
                   <div class="user-details">
                     <p class="user-title">Victoria Chambers likes somthing</p>
@@ -302,7 +295,7 @@
             <form>
               <input id="username" type="text" name="name" placeholder="Search for User" class="form__input">
               <textarea name="textarea" rows="5" cols="45" placeholder="Write something here" class="form__input"></textarea>
-              <input type="submit" value="Send" class="btn--default">
+              <input type="submit" value="Send" onsubmit="event.preventDefault(); sendMessage();" class="btn--default">
             </form>
           </div>
         </div>
@@ -423,5 +416,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
     <script src="js/Chart.roundedBarCharts.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/randomUser.js"></script>
+    <script src="js/chart-line.js"></script>
+    <script src="js/chart-bar.js"></script>
+    <script src="js/chart-doughnut.js"></script>
   </footer>
 </html>

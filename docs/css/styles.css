@@ -28,7 +28,7 @@
   overflow-x: hidden;
   user-select: none; }
 
-p, label, h1, h2, h3, h5 {
+a, div, p, label, h1, ul, li, h2, h3, h5 {
   overflow-y: hidden; }
 
 a {
@@ -154,6 +154,10 @@ h1 {
 h5 {
   text-transform: uppercase;
   color: #666666; }
+
+.email {
+  color: #7377bd;
+  user-select: text; }
 
 .form {
   display: flex;
@@ -626,7 +630,8 @@ h1.logo {
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
-  transition: 0.3s; }
+  transition: 0.3s;
+  overflow: hidden; }
   .closebtn:hover {
     color: black; }
 

@@ -4,6 +4,7 @@ html(lang='en')
     meta(charset='utf-8')
     title YourApp&trade;
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
     link(rel='stylesheet', href='css/styles.css')
     //- include _favicon
@@ -68,7 +69,7 @@ html(lang='en')
 
       div.grid__row
         div.grid__col--12
-          div.contain
+          div#alerts.contain
             div.alert This is an alert
             div.alert--default This is a default alert
             div.alert--disabled This is a disabled alert
@@ -83,11 +84,11 @@ html(lang='en')
         div.grid__col--12
           div.contain
             h5 Daily Traffic
-            ul.visits-list
-              li.visits__option Hourly
-              li.visits__option Daily
-              li.visits__option--active Weekly
-              li.visits__option Monthly
+            ul#all-options.visits-list
+              li(onClick="drawLineChartHourly()")#hourly-option.visits__option Hourly
+              li(onClick="drawLineChartDaily()")#daily-option.visits__option Daily
+              li(onClick="drawLineChartWeekly()")#weekly-option.visits__option Weekly
+              li(onClick="drawLineChartMonthly()")#monthly-option.visits__option Monthly
             canvas#chart-line
 
 
@@ -136,47 +137,39 @@ html(lang='en')
         div.grid__col--6
           div.contain.new_members
             h5 New Members
-            ul
+            ul#new-members
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
                   div.user-details
                     p.user-title Victoria Chambers
-                    p.user-subtitle user@server.com
+                    p.user-subtitle victoria.chambers80@example.com
                   div.user-data-right
-                    p 10/05/15
+                    p.user-data-right-title 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
                   div.user-details
-                    p.user-title Victoria Chambers
-                    p.user-subtitle user@server.com
+                    p.user-title Dale Byrd
+                    p.user-subtitle dalebyrd52@example.com
                   div.user-data-right
-                    p 10/05/15
+                    p.user-data-right-title 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
                   div.user-details
-                    p.user-title Victoria Chambers
-                    p.user-subtitle user@server.com
+                    p.user-title Dawn Wood
+                    p.user-subtitle dawn.wood16@example.com
                   div.user-data-right
-                    p 10/05/15
+                    p.user-data-right-title 10/05/15
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
                   div.user-details
-                    p.user-title Victoria Chambers
-                    p.user-subtitle user@server.com
+                    p.user-title Dan Oliver
+                    p.user-subtitle dano.liver82@example.com
                   div.user-data-right
-                    p 10/05/15
-              li
-                a.user
-                  img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-                  div.user-details
-                    p.user-title Victoria Chambers
-                    p.user-subtitle user@server.com
-                  div.user-data-right
-                    p 10/05/15
+                    p.user-data-right-title 10/05/15
 
 
 
@@ -185,7 +178,7 @@ html(lang='en')
         div.grid__col--6
           div.contain.recent_activity
             h5 Recent Activity
-            ul
+            ul#new-activity
               li
                 a.user
                   img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
@@ -218,7 +211,7 @@ html(lang='en')
             form
               input.form__input(id="username" type="text" name="name" placeholder="Search for User")
               textarea.form__input(name="textarea" rows="5" cols="45" placeholder="Write something here")
-              input.btn--default(type="submit" value="Send")
+              input.btn--default(type="submit" value="Send" onsubmit="event.preventDefault(); sendMessage();")
 
 
         div.grid__col--6
@@ -271,3 +264,14 @@ html(lang='en')
           )
     script(src="js/Chart.roundedBarCharts.min.js")
     script(src="js/script.js")
+    script(src="js/randomUser.js")
+    script(src="js/chart-line.js")
+    script(src="js/chart-bar.js")
+    script(src="js/chart-doughnut.js")
+
+
+
+
+
+
+
