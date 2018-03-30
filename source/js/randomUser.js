@@ -1,7 +1,8 @@
 const newMemberContainer = document.getElementById("new-members")
 const newActivityContainer = document.getElementById("new-activity")
+const userCurent = document.getElementById("user_curent");
 
-const numberOfRandomusers = 4;
+const numberOfRandomusers = 5;
 const $randomUsers = genRandUsers()
 var $randomUserData;
 
@@ -31,7 +32,9 @@ function genRandUsers(){
       // console.log(data);
       newMemberContainer.innerHTML = "";
       newActivityContainer.innerHTML = "";
-      for (i = 0; i < numberOfRandomusers; i++){
+      userCurent.innerHTML = "";
+      randomCurrentUser()
+      for (i = 1; i < numberOfRandomusers; i++){
         $randomUserData = $randomUsers.responseJSON.results[i];
         printNewMember()
         printNewMemberActivity()
@@ -144,3 +147,29 @@ function printNewMemberActivity(){
 //       p.user-subtitle 1 month ago
 //     div.user-data-right
 //       p.recent_activity-carrot &gt;
+
+
+
+function randomCurrentUser(){
+
+  $randomUserData = $randomUsers.responseJSON.results[0];
+
+  const a = document.createElement("A");
+  a.classList.add("user_curent");
+
+  const img = document.createElement("IMG");
+  img.setAttribute('src', $randomUserData.picture.large);
+  img.classList.add("user_image");
+  a.appendChild(img);
+
+  const userName = document.createElement("P");
+  userName.classList.add("user_name");
+  userName.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last)));
+  a.appendChild(userName);
+
+  userCurent.appendChild(a);
+}
+
+
+
+
