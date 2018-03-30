@@ -28,7 +28,10 @@
   overflow-x: hidden;
   user-select: none; }
 
-a, div, p, label, h1, ul, li, h2, h3, h5 {
+h1, h2, h3, h4, h5,
+a, div, p, label,
+ol, ul, li,
+tr, th {
   overflow-y: hidden; }
 
 a {
