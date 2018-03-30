@@ -196,7 +196,8 @@ textarea.form__input {
   padding: 0.625em;
   margin: 0.625em; }
   .btn[type="submit"], [type="submit"].btn--default, [type="submit"].btn--disabled, [type="submit"].btn--success, [type="submit"].btn--error, [type="submit"].btn--warning, [type="submit"].btn--info {
-    width: 100%; }
+    width: 100%;
+    margin: 0.625em 0; }
   .btn:focus, .btn--default:focus, .btn--disabled:focus, .btn--success:focus, .btn--error:focus, .btn--warning:focus, .btn--info:focus {
     outline: none; }
   .btn--default {
