@@ -336,6 +336,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/source\/css\/components\/_scrollbar.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_scrollbar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/source\/css\/components\/_search.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -593,6 +606,16 @@
 		"oA": 2,
 		"oAP": "\/docs\/js\/Chart.roundedBarCharts.min.js",
 		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/source\/js\/prog-scrol.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/prog-scrol.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},

@@ -41,7 +41,11 @@ html(lang='en')
 
       nav.nav__side
         ul
-          li.current
+          li.notification-small
+            a(href="#alerts")
+              svg.bell
+                use(xlink:href="#bell")
+          li
             a(href="#dashboard-area")
               include svgs/icon-dashboard.svg
           li
@@ -53,10 +57,10 @@ html(lang='en')
           li
             a(href="#settings-area")
               include svgs/icon-settings.svg
-          li.notification-small
-            a(href="#alerts")
-              svg.bell
-                use(xlink:href="#bell")
+
+        div.headergrid__row
+          div.progress-container
+            div#myBar.progress-bar
 
 
       
@@ -288,6 +292,7 @@ html(lang='en')
           )
     script(src="js/Chart.roundedBarCharts.min.js")
     script(src="js/script.js")
+    script(src="js/prog-scrol.js")
     script(src="js/randomUser.js")
     script(src="js/chart-line.js")
     script(src="js/chart-bar.js")

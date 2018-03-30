@@ -57,7 +57,11 @@
       </div>
       <nav class="nav__side">
         <ul>
-          <li class="current"><a href="#dashboard-area"><?xml version="1.0" encoding="utf-8"?>
+          <li class="notification-small"><a href="#alerts">
+              <svg class="bell">
+                <use xlink:href="#bell"></use>
+              </svg></a></li>
+          <li><a href="#dashboard-area"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -137,11 +141,12 @@
 </g>
 </svg>
 </a></li>
-          <li class="notification-small"><a href="#alerts">
-              <svg class="bell">
-                <use xlink:href="#bell"></use>
-              </svg></a></li>
         </ul>
+        <div class="headergrid__row">
+          <div class="progress-container">
+            <div id="myBar" class="progress-bar"></div>
+          </div>
+        </div>
       </nav>
       <div class="grid__row">
         <div class="grid__col--3">
@@ -440,6 +445,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
     <script src="js/Chart.roundedBarCharts.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/prog-scrol.js"></script>
     <script src="js/randomUser.js"></script>
     <script src="js/chart-line.js"></script>
     <script src="js/chart-bar.js"></script>
