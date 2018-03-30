@@ -22,7 +22,7 @@ html(lang='en')
               span.light App
                 sup &trade;
         div.grid__col--1.notification--col
-          a.notification-big
+          a(href="#alerts").notification-big
             svg.bell
               use(xlink:href="#bell")
         div.grid__col--3.no-margin.user_curent--col
@@ -35,7 +35,7 @@ html(lang='en')
       div.nav__side--bg
         ul
           li
-            a.hidden-bell
+            a(href="#alerts").hidden-bell
               svg.bell
                 use(xlink:href="#bell")
 
@@ -54,7 +54,7 @@ html(lang='en')
             a(href="#settings-area")
               include svgs/icon-settings.svg
           li.notification-small
-            a
+            a(href="#alerts")
               svg.bell
                 use(xlink:href="#bell")
 
