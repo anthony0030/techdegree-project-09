@@ -41,7 +41,7 @@ function drawLineChartHourly() {
         yAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           ticks: {
             Min: 0,
@@ -56,7 +56,7 @@ function drawLineChartHourly() {
         xAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           barPercentage: 0.5,
         }]
@@ -72,7 +72,7 @@ function drawLineChartDaily() {
       labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       datasets: [{
         label: "Users",
-        data: [200, 500, 50, 300, 800, 1000, 900],
+        data: [0, 200, 500, 50, 300, 800, 1000],
         fill: true,
         borderColor: "rgb(115, 119, 189)",
         backgroundColor: "rgba(115, 119, 189, 0.2)",
@@ -94,7 +94,7 @@ function drawLineChartDaily() {
         yAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           ticks: {
             Min: 0,
@@ -109,7 +109,7 @@ function drawLineChartDaily() {
         xAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           barPercentage: 0.5,
         }]
@@ -149,7 +149,7 @@ function drawLineChartWeekly() {
         yAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           ticks: {
             Min: 0,
@@ -164,7 +164,7 @@ function drawLineChartWeekly() {
         xAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           barPercentage: 0.5,
         }]
@@ -204,7 +204,7 @@ function drawLineChartMonthly() {
         yAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           ticks: {
             Min: 0,
@@ -219,7 +219,7 @@ function drawLineChartMonthly() {
         xAxes: [{
           gridLines: {
             drawTicks: false,
-            offsetGridLines: true,
+            // offsetGridLines: true,
           },
           barPercentage: 0.5,
         }]
