@@ -23,7 +23,7 @@ function genRandUsers(){
       newMemberContainer.innerHTML = "";
       for (i = 0; i < numberOfRandomusers; i++)
         printNewMember(i)
-    }
+    } 
   });
 }
 
@@ -76,7 +76,7 @@ function printNewMember(x){
 //     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
 //     div.user-details
 //       p.user-title Dale Byrd
-//       p.user-subtitle dalebyrd52@example.com
+//       p.user-subtitle.email dalebyrd52@example.com
 //     div.user-data-right
 //       p 10/05/15
 
@@ -86,4 +86,11 @@ function printNewMember(x){
 
 
 
-
+// li
+//   a.user
+//     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+//     div.user-details
+//       p.user-title Victoria Chambers likes somthing
+//       p.user-subtitle 1 month ago
+//     div.user-data-right
+//       p.recent_activity-carrot &gt;
