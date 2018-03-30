@@ -41,7 +41,7 @@ drawLineChartWeekly()
 
 
 // this prints out alerts
-function alertGen(say, style="default"){
+function alertGen(say="Alert", style="default"){
   var alert = document.createElement("DIV");
   var alertText = document.createTextNode(say);
   alert.appendChild(alertText);
