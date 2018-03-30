@@ -1,5 +1,7 @@
 const alertContainer = document.getElementById("alerts");
 const sendMessageButton = document.getElementById("sendMsg");
+const saveButton = document.getElementById("saveBtn");
+const cancelButton = document.getElementById("cancelBtn");
 
 // Close Button
 const closeButton = document.createElement("SPAN");
@@ -15,10 +17,22 @@ alertContainer.addEventListener("click", function(event){
 });
 
 
-
+// event listener foer the save button
 sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   alertGen('Mesage Sent Sucsesfully!', 'success');
+});
+
+// event listener foer the save button
+saveButton.addEventListener("click", function(event){
+  event.preventDefault();
+  alertGen('Settings have been saved', 'success');
+});
+
+// event listener foer the cancel button
+cancelButton.addEventListener("click", function(event){
+  event.preventDefault();
+  alertGen('Settings have been reset', 'error');
 });
 
 
