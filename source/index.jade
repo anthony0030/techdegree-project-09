@@ -211,7 +211,7 @@ html(lang='en')
             form
               input.form__input(id="username" type="text" name="name" placeholder="Search for User")
               textarea.form__input(name="textarea" rows="5" cols="45" placeholder="Write something here")
-              input.btn--default(type="submit" value="Send" onsubmit="event.preventDefault(); sendMessage();")
+              button#sendMsg.btn--default(type="submit") Send
 
 
         div.grid__col--6
@@ -237,8 +237,8 @@ html(lang='en')
 
             include jade_partials/_timezones
             div
-              input.btn--default(value="SAVE")
-              input.btn--disabled(value="CANCEL")
+              button.btn--default SAVE
+              button.btn--disabled CANCEL
 
 
 
