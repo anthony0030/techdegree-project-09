@@ -2,6 +2,7 @@ const alertContainer = document.getElementById("alerts");
 const sendMessageButton = document.getElementById("sendMsg");
 const saveButton = document.getElementById("saveBtn");
 const cancelButton = document.getElementById("cancelBtn");
+const notificationCircle = document.getElementsByClassName("notification-circle")[0]
 
 // Close Button
 const closeButton = document.createElement("SPAN");
@@ -13,8 +14,20 @@ closeButton.appendChild(closeButtonText);
 alertContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
     event.target.parentNode.parentNode.removeChild(event.target.parentNode)
+    checkAlerts()
   }
 });
+
+
+function checkAlerts(){
+  if(alertContainer.children.length === 0)
+    notificationCircle.style.fill="rgba(0,0,0,0)"
+  else
+    notificationCircle.style.fill="#82c890"
+}
+
+
+
 
 
 // event listener foer the save button
@@ -51,6 +64,7 @@ document.getElementById("weekly-option").className = "visits__option--active";
 drawLineChartWeekly()
 
 
+checkAlerts()
 }); // end of document reddy
 
 
@@ -62,4 +76,5 @@ function alertGen(say="Alert", style="default"){
   alert.appendChild(closeButton.cloneNode(true));
   alert.classList.add("alert--" + style);
   alertContainer.appendChild(alert)
+  checkAlerts()
 }
