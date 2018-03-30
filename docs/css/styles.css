@@ -184,6 +184,7 @@ textarea.form__input {
   height: 125px; }
 
 .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
+  flex-grow: 1;
   display: inline-block;
   width: 100%;
   text-transform: uppercase;
@@ -193,7 +194,7 @@ textarea.form__input {
   cursor: pointer;
   text-align: center;
   padding: 0.625em;
-  margin: 0.625em 0; }
+  margin: 0.625em; }
   .btn[type="submit"], [type="submit"].btn--default, [type="submit"].btn--disabled, [type="submit"].btn--success, [type="submit"].btn--error, [type="submit"].btn--warning, [type="submit"].btn--info {
     width: 100%; }
   .btn:focus, .btn--default:focus, .btn--disabled:focus, .btn--success:focus, .btn--error:focus, .btn--warning:focus, .btn--info:focus {
@@ -465,6 +466,12 @@ svg.bell, svg.hidden-bell {
   .grid__row {
     display: flex;
     justify-content: space-between; } }
+
+.flex {
+  display: flex; }
+  @media (min-width: 320px) and (max-width: 768px) {
+    .flex {
+      flex-direction: column; } }
 
 .flex__alighn--left {
   justify-content: left; }
