@@ -28,7 +28,7 @@ new Chart(document.getElementById("chart-bar"), {
       yAxes: [{
         gridLines: {
           drawTicks: false,
-          offsetGridLines: true,
+          // offsetGridLines: true,
         },
 
 
