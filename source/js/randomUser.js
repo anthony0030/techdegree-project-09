@@ -1,6 +1,7 @@
 const newMemberContainer = document.getElementById("new-members")
 const newActivityContainer = document.getElementById("new-activity")
 const userCurent = document.getElementById("user_curent");
+const members = [];
 
 const numberOfRandomusers = 5;
 const $randomUsers = genRandUsers()
@@ -36,6 +37,7 @@ function genRandUsers(){
       randomCurrentUser()
       for (i = 1; i < numberOfRandomusers; i++){
         $randomUserData = $randomUsers.responseJSON.results[i];
+        members.push(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last))
         printNewMember()
         printNewMemberActivity()
       }
@@ -149,6 +151,7 @@ function printNewMemberActivity(){
 //       p.recent_activity-carrot &gt;
 
 
+// Generates the curent random user
 
 function randomCurrentUser(){
 
@@ -172,4 +175,14 @@ function randomCurrentUser(){
 
 
 
+
+
+
+
+// auto clompleat function for sending a message
+$( function() {
+  $( "#username" ).autocomplete({
+    source: members
+  });
+});
 
