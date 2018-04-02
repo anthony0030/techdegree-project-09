@@ -415,7 +415,8 @@ svg.bell, svg.hidden-bell {
       display: none; }
   .nav__side--bg {
     display: block;
-    position: absolute; }
+    position: absolute;
+    height: 300vh; }
   .menu--row {
     height: 70px; } }
 
