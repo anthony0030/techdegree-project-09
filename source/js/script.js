@@ -20,6 +20,16 @@ const $randomUsers = genRandUsers()
 var $randomUserData;
 
 
+
+const timezoneSelector = document.getElementById("timezone-selector")
+const emailNotifications = document.getElementById("email-notifications")
+const publicProfile = document.getElementById("public-profile")
+
+
+
+
+
+
 //Close Button
 const closeButton = document.createElement("SPAN");
 const closeButtonText = document.createTextNode(String.fromCharCode(215));
@@ -51,6 +61,11 @@ function checkAlerts(){
 // event listener foer the save button
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
+
+  localStorage.setItem("SendEmailNotifications", emailNotifications.value)
+  localStorage.setItem("publicProfile", publicProfile.value)
+  localStorage.setItem("timezone", timezoneSelector.value)
+
   alertGen('Settings have been saved', 'success');
 });
 
