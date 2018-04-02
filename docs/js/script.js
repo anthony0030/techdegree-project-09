@@ -21,9 +21,9 @@ var $randomUserData;
 
 
 
-const timezoneSelector = document.getElementById("timezone-selector")
 const emailNotifications = document.getElementById("email-notifications")
 const publicProfile = document.getElementById("public-profile")
+const timezoneSelector = document.getElementById("timezone-selector")
 
 
 
@@ -62,8 +62,8 @@ function checkAlerts(){
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
 
-  localStorage.setItem("SendEmailNotifications", emailNotifications.value)
-  localStorage.setItem("publicProfile", publicProfile.value)
+  localStorage.setItem("SendEmailNotifications", emailNotifications.checked)
+  localStorage.setItem("publicProfile", publicProfile.checked)
   localStorage.setItem("timezone", timezoneSelector.value)
 
   alertGen('Settings have been saved', 'success');
@@ -74,6 +74,14 @@ cancelButton.addEventListener("click", function(event){
   event.preventDefault();
   alertGen('Settings have been reset', 'error');
 });
+
+
+
+function setSettings(){
+  emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
+  publicProfile.checked = toBoolean(localStorage.publicProfile);
+  timezoneSelector.value = localStorage.timezone;
+}
 
 
 
@@ -95,6 +103,7 @@ $(userMsg).on('change', function() {
   isValidMsg()
 });
 
+
 // event listener for the send message button
 sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
@@ -105,6 +114,10 @@ sendMessageButton.addEventListener("click", function(event){
 
 
 
+function toBoolean(string){
+  if(string === "true") return true
+  if(string === "false") return false
+}
 
 
 
@@ -120,6 +133,9 @@ function dateConverter(date){ //converts "2014-12-11 14:35:49" into 11/12/14
 function capitalizeFirstLetter(string) { // converts anthony into Anthony 
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+
+
 
 
 function randomNumber(min=0, max=10){
@@ -381,6 +397,7 @@ $( document ).ready(function() {
     drawLineChartWeekly()
 
 
+    setSettings()
     checkAlerts()
 });
 

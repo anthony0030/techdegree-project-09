@@ -21,9 +21,9 @@ var $randomUserData;
 
 
 
-const timezoneSelector = document.getElementById("timezone-selector")
 const emailNotifications = document.getElementById("email-notifications")
 const publicProfile = document.getElementById("public-profile")
+const timezoneSelector = document.getElementById("timezone-selector")
 
 
 
@@ -62,8 +62,8 @@ function checkAlerts(){
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
 
-  localStorage.setItem("SendEmailNotifications", emailNotifications.value)
-  localStorage.setItem("publicProfile", publicProfile.value)
+  localStorage.setItem("SendEmailNotifications", emailNotifications.checked)
+  localStorage.setItem("publicProfile", publicProfile.checked)
   localStorage.setItem("timezone", timezoneSelector.value)
 
   alertGen('Settings have been saved', 'success');
@@ -77,6 +77,11 @@ cancelButton.addEventListener("click", function(event){
 
 
 
+function setSettings(){
+  emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
+  publicProfile.checked = toBoolean(localStorage.publicProfile);
+  timezoneSelector.value = localStorage.timezone;
+}
 
 $(userName).on('change', function() { 
   console.log("on change called isValidUser()")
@@ -105,6 +110,10 @@ sendMessageButton.addEventListener("click", function(event){
 
 
 
+function toBoolean(string){
+  if(string === "true") return true
+  if(string === "false") return false
+}
 
 
 
@@ -381,6 +390,7 @@ $( document ).ready(function() {
     drawLineChartWeekly()
 
 
+    setSettings()
     checkAlerts()
 });
 
