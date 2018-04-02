@@ -72,19 +72,21 @@ saveButton.addEventListener("click", function(event){
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
+  setSettings()
   alertGen('Settings have been reset', 'error');
 });
 
 
 
 function setSettings(){
+  if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true")
+  if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true")
+  if(localStorage.timezone === undefined) localStorage.setItem("timezone", "")
+
   emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
   publicProfile.checked = toBoolean(localStorage.publicProfile);
   timezoneSelector.value = localStorage.timezone;
 }
-
-
-
 
 $(userName).on('change', function() { 
   console.log("on change called isValidUser()")
@@ -102,7 +104,6 @@ $(userMsg).on('change', function() {
   console.log("on change called isValidMsg()")
   isValidMsg()
 });
-
 
 // event listener for the send message button
 sendMessageButton.addEventListener("click", function(event){
@@ -133,9 +134,6 @@ function dateConverter(date){ //converts "2014-12-11 14:35:49" into 11/12/14
 function capitalizeFirstLetter(string) { // converts anthony into Anthony 
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-
-
 
 
 function randomNumber(min=0, max=10){

@@ -72,12 +72,17 @@ saveButton.addEventListener("click", function(event){
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
+  setSettings()
   alertGen('Settings have been reset', 'error');
 });
 
 
 
 function setSettings(){
+  if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true")
+  if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true")
+  if(localStorage.timezone === undefined) localStorage.setItem("timezone", "")
+
   emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
   publicProfile.checked = toBoolean(localStorage.publicProfile);
   timezoneSelector.value = localStorage.timezone;
