@@ -312,12 +312,12 @@ function isValidMsg(){
 
 
 $( document ).ready(function() {
-    
-      // // add the X button to the alerts
-      // var alerts = document.querySelectorAll("[class^='alert']");
-      // for (var i = 0; i < alerts.length; i++) {
-      //   alerts[i].appendChild(closeButton.cloneNode(true));
-      // }
+
+  // add the X button to the alerts that have benn added with jade
+  var alerts = document.querySelectorAll("[class^='alert']");
+  for (var i = 0; i < alerts.length; i++) {
+    alerts[i].appendChild(closeButton.cloneNode(true));
+  }
 
   alertGen('This is an alert');
   alertGen('This is a default alert', 'default');
