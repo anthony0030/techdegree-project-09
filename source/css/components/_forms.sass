@@ -26,12 +26,13 @@
   border-radius: $br--rounded
 
 
-.form__input--valid
+
+.form__input--valid, .parsley-success
   @extend .form__input
   border: 2px solid rgba(0,255,0,0.5)
   background-color: rgba(0,255,0,0.1)
 
-.form__input--invalid
+.form__input--invalid, .parsley-error
   @extend .form__input
   border: 2px solid rgba(255,0,0,0.5)
   background-color: rgba(255,0,0,0.1)

@@ -20,7 +20,7 @@
   position: absolute;
   width: 1px; }
 
-.form__input:focus, .form__input--valid:focus, .form__input--invalid:focus, .timezone-selector:focus, .serarch--box:focus {
+.form__input:focus, .form__input--valid:focus, .parsley-success:focus, .form__input--invalid:focus, .parsley-error:focus, .timezone-selector:focus, .serarch--box:focus {
   outline: none; }
 
 * {
@@ -167,7 +167,7 @@ h5 {
   flex-direction: column;
   width: 100%; }
 
-.form__input, .form__input--valid, .form__input--invalid {
+.form__input, .form__input--valid, .parsley-success, .form__input--invalid, .parsley-error {
   padding: 10px;
   margin: 0 auto;
   width: 100%;
@@ -177,18 +177,18 @@ h5 {
   border: 1px solid #d1d1d1;
   border-radius: 4px; }
 
-.form__input--valid {
+.form__input--valid, .parsley-success {
   border: 2px solid rgba(0, 255, 0, 0.5);
   background-color: rgba(0, 255, 0, 0.1); }
 
-.form__input--invalid {
+.form__input--invalid, .parsley-error {
   border: 2px solid rgba(255, 0, 0, 0.5);
   background-color: rgba(255, 0, 0, 0.1); }
 
 .form__label--hidden {
   display: none; }
 
-textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid {
+textarea.form__input, textarea.form__input--valid, textarea.parsley-success, textarea.form__input--invalid, textarea.parsley-error {
   height: 125px; }
 
 .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
