@@ -391,8 +391,29 @@ $( document ).ready(function() {
   alertGen('This is an info alert', 'info');
 
     // set the default view of the chart
-    document.getElementById("weekly-option").className = "visits__option--active";
-    drawLineChartWeekly()
+
+    switch (localStorage.dailyTraficView){
+      case "hourly":
+        document.getElementById("hourly-option").className = "visits__option--active";
+        drawLineChartHourly()
+      break;
+
+      case "daily":
+        document.getElementById("daily-option").className = "visits__option--active";
+        drawLineChartDaily()
+      break;
+
+      case "weekly":
+        document.getElementById("weekly-option").className = "visits__option--active";
+        drawLineChartWeekly()
+      break;
+
+      case "monthly":
+        document.getElementById("monthly-option").className = "visits__option--active";
+        drawLineChartMonthly()
+      break;
+    }
+
 
 
     setSettings()
