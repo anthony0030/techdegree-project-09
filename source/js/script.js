@@ -110,6 +110,8 @@ sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   if(isValidUser() && isValidMsg()){
     alertGen('Mesage Sent Sucsesfully!', 'success');
+    userName.value = ""
+    userMsg.value = ""
   }
 });
 
