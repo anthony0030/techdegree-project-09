@@ -221,11 +221,6 @@ function isValidUser(){
 
 
 
-// $("#mesaage__user--form").parsley();
-
-
-
-
 
 
 
