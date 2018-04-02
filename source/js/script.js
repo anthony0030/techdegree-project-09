@@ -260,12 +260,15 @@ function randomCurrentUser(){
 
 
 // this prints out alerts
-function alertGen(say="Alert", style="default"){
+function alertGen(say="Alert", style){
   var alert = document.createElement("DIV");
   var alertText = document.createTextNode(say);
   alert.appendChild(alertText);
   alert.appendChild(closeButton.cloneNode(true));
-  alert.classList.add("alert--" + style);
+  if(style)
+    alert.classList.add("alert--" + style);
+  else
+    alert.classList.add("alert");
   alertContainer.appendChild(alert)
   checkAlerts()
 }
