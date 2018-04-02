@@ -198,6 +198,11 @@ $(userName).on( "autocompleteselect", function( event, ui ) {
 });
 
 
+$(userMsg).on('change', function() { 
+  console.log("on change called isValidMsg()")
+  isValidMsg()
+});
+
 
 function isValidUser(){
   console.log(userName.value)
@@ -222,6 +227,19 @@ function isValidUser(){
 
 
 
+function isValidMsg(){
+  console.log(userMsg.value)
+  if(userMsg.value.trim() !== ""){
+    console.log("is a valid message")
+    userMsg.className = "form__input--valid"
+    return true
+  }
+  else{
+    console.log("NOT a valid message")
+    userMsg.className = "form__input--invalid"
+    return false
+  }
+}
 
 
 
