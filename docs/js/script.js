@@ -107,6 +107,9 @@ function capitalizeFirstLetter(string) { // converts anthony into Anthony
 }
 
 
+function randomNumber(min=0, max=10){
+  return Math.round(Math.random() * (max - min) + min);
+}
 
 
 
@@ -207,7 +210,7 @@ function printNewMemberActivity(){
 
   const userSubtitle = document.createElement("P");
   userSubtitle.classList.add("user-subtitle");
-  userSubtitle.appendChild(document.createTextNode("1 Day Ago"));
+  userSubtitle.appendChild(document.createTextNode(genRandomDay()));
   userDetails.appendChild(userSubtitle);
 
   const userDataRight = document.createElement("DIV");
@@ -223,6 +226,14 @@ function printNewMemberActivity(){
 }
 
 
+function genRandomDay(){
+   days = "Day"
+  const number = randomNumber(1,7);
+  if(number > 1) days += "s"
+
+  return number + " " + days + " ago"
+
+}
 
 
 
