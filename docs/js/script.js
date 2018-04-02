@@ -205,7 +205,7 @@ function printNewMemberActivity(){
 
   const userTitle = document.createElement("P");
   userTitle.classList.add("user-title");
-  userTitle.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last)));
+  userTitle.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last) + " " +genRandomActivity() ));
   userDetails.appendChild(userTitle);
 
   const userSubtitle = document.createElement("P");
@@ -224,6 +224,14 @@ function printNewMemberActivity(){
 
   newActivityContainer.appendChild(li);
 }
+// li
+//   a.user
+//     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+//     div.user-details
+//       p.user-title Victoria Chambers likes somthing
+//       p.user-subtitle 1 month ago
+//     div.user-data-right
+//       p.recent_activity-carrot &gt;
 
 
 function genRandomDay(){
@@ -236,15 +244,16 @@ function genRandomDay(){
 }
 
 
+function genRandomActivity(){
+  const activityes = ["liked" , "hated", "comented on"]
+  const activity = activityes[randomNumber(0, activityes.length-1)]
+  const things = ["Post", "Comment", "Photo", "Status"]
+  const thing = things[randomNumber(0, things.length-1)]
+  const thatPerson = members[randomNumber(0, members.length-1)]
 
-// li
-//   a.user
-//     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-//     div.user-details
-//       p.user-title Victoria Chambers likes somthing
-//       p.user-subtitle 1 month ago
-//     div.user-data-right
-//       p.recent_activity-carrot &gt;
+  return activity + " " + thatPerson + "'s " + thing
+}
+
 
 
 // Generates the curent random user
