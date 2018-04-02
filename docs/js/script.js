@@ -30,11 +30,6 @@ function checkAlerts(){
 
 
 
-// event listener foer the save button
-sendMessageButton.addEventListener("click", function(event){
-  event.preventDefault();
-  alertGen('Mesage Sent Sucsesfully!', 'success');
-});
 
 // event listener foer the save button
 saveButton.addEventListener("click", function(event){

@@ -203,6 +203,15 @@ $(userMsg).on('change', function() {
   isValidMsg()
 });
 
+// event listener for the send message button
+sendMessageButton.addEventListener("click", function(event){
+  event.preventDefault();
+  if(isValidUser() && isValidMsg()){
+    alertGen('Mesage Sent Sucsesfully!', 'success');
+  }
+});
+
+
 
 function isValidUser(){
   console.log(userName.value)
