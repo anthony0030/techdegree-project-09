@@ -180,9 +180,19 @@ function randomCurrentUser(){
 
 
 // auto clompleat function for sending a message
-$( function() {
-  $( "#username" ).autocomplete({
-    source: members
-  });
-});
+
+$("#username").autocomplete({source: members});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
