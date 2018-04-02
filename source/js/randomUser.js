@@ -3,6 +3,9 @@ const newActivityContainer = document.getElementById("new-activity")
 const userCurent = document.getElementById("user_curent");
 const members = [];
 
+const userName = document.getElementById("userName")
+const userMsg = document.getElementById("userMsg")
+
 const numberOfRandomusers = 5;
 const $randomUsers = genRandUsers()
 var $randomUserData;
@@ -180,9 +183,45 @@ function randomCurrentUser(){
 
 
 // auto clompleat function for sending a message
+$(userName).autocomplete({source: members});
 
-$("#username").autocomplete({source: members});
 
+$(userName).on('change', function() { 
+  console.log("on change called isValidUser()")
+  isValidUser()
+});
+
+
+$(userName).on( "autocompleteselect", function( event, ui ) {
+  console.log("autocompleteselect called isValidUser()")
+  isValidUser()
+});
+
+
+
+function isValidUser(){
+  console.log(userName.value)
+  console.log(members.indexOf(userName.value))
+  if(members.indexOf(userName.value) >= 0){
+    console.log(userName.value + " is a user")
+    userName.className = "form__input--valid"
+    return true
+  }
+  else{
+      userName.className = "form__input--invalid"
+      return false
+    if(userName.value.trim() !== "")
+      console.log(userName.value + " is NOT a user")
+    else
+      console.log("Please enter a user name")
+  }
+}
+
+
+
+
+
+// $("#mesaage__user--form").parsley();
 
 
 
