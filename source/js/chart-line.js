@@ -10,9 +10,11 @@ document.getElementById("all-options").addEventListener("click", function(event)
 });
 
 
+if(localStorage.dailyTraficView === undefined) localStorage.setItem("SendEmailNotifications", "weekly")
 
 
 function drawLineChartHourly() {
+  localStorage.setItem("dailyTraficView", "hourly")
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -66,6 +68,7 @@ function drawLineChartHourly() {
 }
 
 function drawLineChartDaily() {
+  localStorage.setItem("dailyTraficView", "daily")
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -121,6 +124,7 @@ function drawLineChartDaily() {
 
 
 function drawLineChartWeekly() {
+  localStorage.setItem("dailyTraficView", "weekly")
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -176,6 +180,7 @@ function drawLineChartWeekly() {
 
 
 function drawLineChartMonthly() {
+  localStorage.setItem("dailyTraficView", "monthly")
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
