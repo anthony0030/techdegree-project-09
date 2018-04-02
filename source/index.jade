@@ -235,6 +235,9 @@ html(lang='en')
               input#userName.form__input(type="text" name="name" placeholder="Search for User")
               textarea#userMsg.form__input(name="textarea" rows="5" cols="45" placeholder="Write something here")
               button#sendMsg.btn--default(type="submit") Send
+              ul#messageErrors
+                li#messageErrors_user.alert--error
+                li#messageErrors_msg.alert--error
 
 
         div.grid__col--6

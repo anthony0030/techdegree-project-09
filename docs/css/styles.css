@@ -191,6 +191,9 @@ h5 {
 textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid {
   height: 125px; }
 
+#messageErrors_msg, #messageErrors_user {
+  display: none; }
+
 .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
   flex-grow: 1;
   display: inline-block;

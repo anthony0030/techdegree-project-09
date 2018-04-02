@@ -11,6 +11,9 @@ const members = [];
 
 const userName = document.getElementById("userName")
 const userMsg = document.getElementById("userMsg")
+const messageErrors = document.getElementById("messageErrors")
+const messageErrors_msg = document.getElementById("messageErrors_msg")
+const messageErrors_user = document.getElementById("messageErrors_user")
 
 const numberOfRandomusers = 5;
 const $randomUsers = genRandUsers()
@@ -278,34 +281,45 @@ function alertGen(say="Alert", style){
 $(userName).autocomplete({source: members});
 
 function isValidUser(){
+  messageErrors_user.innerHTML= "You need to enter a user name"
   console.log(userName.value)
   console.log(members.indexOf(userName.value))
   if(members.indexOf(userName.value) >= 0){
     console.log(userName.value + " is a user")
     userName.className = "form__input--valid"
+    messageErrors_user.style.display = "none"
     return true
   }
   else{
+      messageErrors_user.style.display = "flex"
       userName.className = "form__input--invalid"
-      return false
-    if(userName.value.trim() !== "")
+    if(userName.value.trim() !== ""){
       console.log(userName.value + " is NOT a user")
-    else
+      messageErrors_user.innerHTML= userName.value + " is NOT a user"
+      return false
+    }
+    else{
       console.log("Please enter a user name")
+      messageErrors_user.innerHTML= "You need to enter a user name"
+      return false
+    }
   }
 }
 
 
 function isValidMsg(){
+  messageErrors_msg.innerHTML = "The mesage can't be blank"
   console.log(userMsg.value)
   if(userMsg.value.trim() !== ""){
     console.log("is a valid message")
     userMsg.className = "form__input--valid"
+    messageErrors_msg.style.display = "none"
     return true
   }
   else{
     console.log("NOT a valid message")
     userMsg.className = "form__input--invalid"
+    messageErrors_msg.style.display = "flex"
     return false
   }
 }

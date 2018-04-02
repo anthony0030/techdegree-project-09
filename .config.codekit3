@@ -619,16 +619,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/js\/randomUser.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 2,
-		"oAP": "\/docs\/js\/randomUser.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
 	"\/source\/js\/script.js": {
 		"ft": 64,
 		"ma": 0,
@@ -785,7 +775,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 544359011
+	"lastBuiltDate": 544371215
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
