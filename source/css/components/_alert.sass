@@ -1,5 +1,5 @@
 .alert
-  padding: 10px 20px
+  padding: 10px 0 10px 20px
   background-color: #000
   color: white
   display: flex
@@ -11,6 +11,10 @@
       @extend .alert
       background-color: $color
 
+[class ^= "alert"]
+  .title, .text
+    margin: 0
+    display: contents
 
 .closebtn
   color: white
@@ -20,5 +24,6 @@
   cursor: pointer
   transition: 0.3s
   overflow: hidden
+  min-width: 40px
   &:hover
     color: black

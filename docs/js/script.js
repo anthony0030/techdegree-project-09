@@ -332,30 +332,40 @@ function randomCurrentUser(){
   userCurent.appendChild(a);
 }
 
+function alertFactory(title, say, style){
+  var alertContainer = document.createElement("DIV");
+  var titleContainer = document.createElement("H4")
+  var textContainer = document.createElement("P")
 
-
-
-function alertFactory(say, style){
-  var alert = document.createElement("DIV");
+  var titleText = document.createTextNode(title+" ");
   var alertText = document.createTextNode(say);
-  alert.appendChild(alertText);
-  alert.appendChild(closeButton.cloneNode(true));
-  if(style)
-    alert.classList.add("alert--" + style);
-  else
-    alert.classList.add("alert");
-  return alert
+
+  titleContainer.appendChild(titleText);
+  textContainer.appendChild(alertText);
+
+  titleContainer.classList.add("title");
+  textContainer.classList.add("text");
+
+  alertContainer.appendChild(titleContainer);
+  alertContainer.appendChild(textContainer);
+
+  alertContainer.appendChild(closeButton.cloneNode(true));
+
+  if(style) { alertContainer.classList.add("alert--" + style); }
+  else { alertContainer.classList.add("alert"); }
+
+  return alertContainer;
 }
 
 // this prints out alerts
-function alertGen(say="Alert", style){
-  var alert = alertFactory(say, style)
+function alertGen(title, say, style){
+  var alert = alertFactory(title, say, style)
   alertContainer.appendChild(alert);
 }
 
 
-function notiGen(say, style){
-  var notification = alertFactory(say, style)
+function notiGen(title, say, style){
+  var notification = alertFactory(title, say, style)
   NotificationsContainer.appendChild(notification);
   checkNotifications();
 }
@@ -425,18 +435,18 @@ $( document ).ready(function() {
   }
 
 
-  alertGen("Alert", "default");
-  // alertGen("This is an alert");
-  // alertGen("This is a default alert", "default");
-  // alertGen("This is a disabled alert", "disabled");
-  // alertGen("This is a success alert", "success");
-  // alertGen("This is an error alert", "error");
-  // alertGen("This is a warning alert", "warning");
-  // alertGen("This is an info alert", "info");
+  alertGen("Alert", "Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id doloro id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.", "default");
+  // alertGen("Alert", "This is an alert");
+  // alertGen("Alert", "This is a default alert", "default");
+  // alertGen("Alert", "This is a disabled alert", "disabled");
+  // alertGen("Alert", "This is a success alert", "success");
+  // alertGen("Alert", "This is an error alert", "error");
+  // alertGen("Alert", "This is a warning alert", "warning");
+  // alertGen("Alert", "This is an info alert", "info");
 
-  notiGen("Server Quota Reached", "error")
-  notiGen("Your Subscription Has Been Renewed", "success")
-  
+  notiGen("Error!", "Server Quota Reached", "error")
+  notiGen("", "Your Subscription Has Been Renewed", "success")
+
     // set the default view of the chart
 
     switch (localStorage.dailyTraficView){

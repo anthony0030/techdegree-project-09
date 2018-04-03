@@ -630,7 +630,7 @@ h1.logo {
       width: 100%; } }
 
 .alert, .alert--default, .alert--disabled, .alert--success, .alert--error, .alert--warning, .alert--info {
-  padding: 10px 20px;
+  padding: 10px 0 10px 20px;
   background-color: #000;
   color: white;
   display: flex;
@@ -650,6 +650,10 @@ h1.logo {
   .alert--info {
     background-color: #39add1; }
 
+[class^="alert"] .title, [class^="alert"] .text {
+  margin: 0;
+  display: contents; }
+
 .closebtn {
   color: white;
   align-self: center;
@@ -657,7 +661,8 @@ h1.logo {
   font-size: 20px;
   cursor: pointer;
   transition: 0.3s;
-  overflow: hidden; }
+  overflow: hidden;
+  min-width: 40px; }
   .closebtn:hover {
     color: black; }
 
