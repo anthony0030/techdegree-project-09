@@ -576,13 +576,16 @@ div.contain {
 
 .social-icon--twitter {
   background-image: url(../svgs/icon-twitter.svg);
+  background-color: #25A0EF;
   background-position: 50% 65%; }
 
 .social-icon--facebook {
-  background-image: url(../svgs/icon-facebook.svg); }
+  background-image: url(../svgs/icon-facebook.svg);
+  background-color: #3B5998; }
 
 .social-icon--google {
-  background-image: url(../svgs/icon-google-plus.svg); }
+  background-image: url(../svgs/icon-google-plus.svg);
+  background-color: #E24335; }
 
 .timezone-selector {
   appearance: none;
