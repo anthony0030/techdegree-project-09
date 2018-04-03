@@ -47,7 +47,6 @@ closeButton.appendChild(closeButtonText);
 alertContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-    checkAlerts();
   }
 });
 
@@ -60,6 +59,7 @@ modalContainer.addEventListener("click", function(event){
     }
     else{
       event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+      checkNotifications();
     }
   }
 });
@@ -73,8 +73,8 @@ modalContainer.addEventListener("click", function(event){
 
 
 // if there are alerts make the green circle aprire on the bell
-function checkAlerts(){
-  if(alertContainer.children.length === 0)
+function checkNotifications(){
+  if(NotificationsContainer.children.length === 0)
     notificationCircle.style.fill="rgba(0,0,0,0)";
   else
     notificationCircle.style.fill="#82c890";
@@ -351,13 +351,13 @@ function alertFactory(say, style){
 function alertGen(say="Alert", style){
   var alert = alertFactory(say, style)
   alertContainer.appendChild(alert);
-  checkAlerts();
 }
 
 
 function notiGen(say, style){
   var notification = alertFactory(say, style)
   NotificationsContainer.appendChild(notification);
+  checkNotifications();
 }
 
 
@@ -460,7 +460,7 @@ $( document ).ready(function() {
 
 
     setSettings();
-    checkAlerts();
+    checkNotifications();
 });
 
 
