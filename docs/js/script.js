@@ -31,6 +31,7 @@ const timezoneSelector = document.getElementById("timezone-selector");
 // Modal
 const modalContainer = document.getElementById("modals");
 const modalNotifications = document.getElementById("notifications");
+//  onclick="displayModal(modalNotifications);"
 function displayModal(modalToDisplay){ modalToDisplay.style.display = "block"; }
 
 
@@ -56,12 +57,10 @@ modalContainer.addEventListener("click", function(event){
   }
 });
 
-//  onclick="displayModal(modalNotifications);"
-
 // Hide modal when a user clicks out side of the modal
-window.addEventListener("click", function(event){
-  console.log(event.target.className)
-  if (event.target.className === "modal") {
+modalContainer.addEventListener("click", function(event){
+  // const eventTarg = event.target.className
+  if (event.target.className.split("--")[0] === "modal") {
     event.target.style.display = "none";
   }
 })
