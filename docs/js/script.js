@@ -146,7 +146,7 @@ function randomNumber(min=0, max=10){
 
 function genRandUsers(){
   return $.ajax({
-    url: "https://randomuser.me/api/?results=+numberOfRandomusers",
+    url: "https://randomuser.me/api/?results="+numberOfRandomusers,
     dataType: "json",
     success: function(data) {
       // console.log(data);
