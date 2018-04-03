@@ -335,12 +335,7 @@ function randomCurrentUser(){
 
 
 
-function alertFactory(say stye){
-
-}
-
-// this prints out alerts
-function alertGen(say="Alert", style){
+function alertFactory(say, style){
   var alert = document.createElement("DIV");
   var alertText = document.createTextNode(say);
   alert.appendChild(alertText);
@@ -349,21 +344,20 @@ function alertGen(say="Alert", style){
     alert.classList.add("alert--" + style);
   else
     alert.classList.add("alert");
+  return alert
+}
+
+// this prints out alerts
+function alertGen(say="Alert", style){
+  var alert = alertFactory(say, style)
   alertContainer.appendChild(alert);
   checkAlerts();
 }
 
 
 function notiGen(say, style){
-  var alert = document.createElement("DIV");
-  var alertText = document.createTextNode(say);
-  alert.appendChild(alertText);
-  alert.appendChild(closeButton.cloneNode(true));
-  if(style)
-    alert.classList.add("alert--" + style);
-  else
-    alert.classList.add("alert");
-  NotificationsContainer.appendChild(alert);
+  var notification = alertFactory(say, style)
+  NotificationsContainer.appendChild(notification);
 }
 
 
