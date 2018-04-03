@@ -53,13 +53,18 @@ alertContainer.addEventListener("click", function(event){
 // Event listener to hide the modal when the closebutton is pressed
 modalContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
-    event.target.parentNode.parentNode.parentNode.style.display = "none";
+    if(event.target.parentNode.className === "modal__header"){
+      console.log("close modal")
+      event.target.parentNode.parentNode.parentNode.style.display = "none";
+    }
+    else{
+      event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+    }
   }
 });
 
 // Hide modal when a user clicks out side of the modal
 modalContainer.addEventListener("click", function(event){
-  // const eventTarg = event.target.className
   if (event.target.className.split("--")[0] === "modal") {
     event.target.style.display = "none";
   }
@@ -401,6 +406,7 @@ $( document ).ready(function() {
     alerts[i].appendChild(closeButton.cloneNode(true));
   }
 
+  // add the X button to the modals that have benn added with jade
   const models = document.querySelectorAll("[class='modal__header']");
   for (var i = 0; i < models.length; i++) {
     models[i].appendChild(closeButton.cloneNode(true));
