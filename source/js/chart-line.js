@@ -56,7 +56,7 @@ function drawLineChartHourly() {
             stepSize: 50,
             beginAtZero: true,
             callback: function(value, index, values) {
-              if (value != 0) return value
+              if (value !== 0) {return value;}
             }
           },
         }],
@@ -110,7 +110,7 @@ function drawLineChartDaily() {
             stepSize: 50,
             beginAtZero: true,
             callback: function(value, index, values) {
-              if (value != 0) return value
+              if (value !== 0) {return value;}
             }
           },
         }],
@@ -166,7 +166,7 @@ function drawLineChartWeekly() {
             stepSize: 500,
             beginAtZero: true,
             callback: function(value, index, values) {
-              if (value != 0) return value
+              if (value !== 0) {return value;}
             }
           },
         }],
@@ -222,7 +222,7 @@ function drawLineChartMonthly() {
             stepSize: 50,
             beginAtZero: true,
             callback: function(value, index, values) {
-              if (value != 0) return value
+              if (value !== 0) {return value;}
             }
           },
         }],
