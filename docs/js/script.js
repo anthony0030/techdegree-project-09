@@ -434,6 +434,9 @@ $( document ).ready(function() {
   // alertGen("This is a warning alert", "warning");
   // alertGen("This is an info alert", "info");
 
+  notiGen("Server Quota Reached", "error")
+  notiGen("Your Subscription Has Been Renewed", "success")
+  
     // set the default view of the chart
 
     switch (localStorage.dailyTraficView){
