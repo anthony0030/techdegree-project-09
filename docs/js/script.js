@@ -425,13 +425,14 @@ $( document ).ready(function() {
   }
 
 
-  alertGen("This is an alert");
-  alertGen("This is a default alert", "default");
-  alertGen("This is a disabled alert", "disabled");
-  alertGen("This is a success alert", "success");
-  alertGen("This is an error alert", "error");
-  alertGen("This is a warning alert", "warning");
-  alertGen("This is an info alert", "info");
+  alertGen("Alert", "default");
+  // alertGen("This is an alert");
+  // alertGen("This is a default alert", "default");
+  // alertGen("This is a disabled alert", "disabled");
+  // alertGen("This is a success alert", "success");
+  // alertGen("This is an error alert", "error");
+  // alertGen("This is a warning alert", "warning");
+  // alertGen("This is an info alert", "info");
 
     // set the default view of the chart
 
