@@ -1,17 +1,16 @@
 if(localStorage.dailyTraficView === undefined){
-  localStorage.setItem("dailyTraficView", "weekly")
+  localStorage.setItem("dailyTraficView", "weekly");
   document.getElementById("weekly-option").className = "visits__option--active";
 }
 
 
 document.getElementById("all-options").addEventListener("click", function(event){
-  if(event.target.tagName.toLowerCase() === 'li'){
+  if(event.target.tagName.toLowerCase() === "li"){
     clickedLi = event.target;
     var ul = document.getElementById("all-options");
     var curentActive = ul.getElementsByClassName("visits__option--active")[0];
     curentActive.className = "visits__option";
     clickedLi.className = "visits__option--active";
-    console.log(curentActive);
   }
 });
 
@@ -19,7 +18,7 @@ document.getElementById("all-options").addEventListener("click", function(event)
 
 
 function drawLineChartHourly() {
-  localStorage.setItem("dailyTraficView", "hourly")
+  localStorage.setItem("dailyTraficView", "hourly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -73,7 +72,7 @@ function drawLineChartHourly() {
 }
 
 function drawLineChartDaily() {
-  localStorage.setItem("dailyTraficView", "daily")
+  localStorage.setItem("dailyTraficView", "daily");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -129,7 +128,7 @@ function drawLineChartDaily() {
 
 
 function drawLineChartWeekly() {
-  localStorage.setItem("dailyTraficView", "weekly")
+  localStorage.setItem("dailyTraficView", "weekly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -185,7 +184,7 @@ function drawLineChartWeekly() {
 
 
 function drawLineChartMonthly() {
-  localStorage.setItem("dailyTraficView", "monthly")
+  localStorage.setItem("dailyTraficView", "monthly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
