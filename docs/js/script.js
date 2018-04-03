@@ -2,28 +2,28 @@ const alertContainer = document.getElementById("alerts");
 const sendMessageButton = document.getElementById("sendMsg");
 const saveButton = document.getElementById("saveBtn");
 const cancelButton = document.getElementById("cancelBtn");
-const notificationCircle = document.getElementsByClassName("notification-circle")[0]
+const notificationCircle = document.getElementsByClassName("notification-circle")[0];
 
-const newMemberContainer = document.getElementById("new-members")
-const newActivityContainer = document.getElementById("new-activity")
+const newMemberContainer = document.getElementById("new-members");
+const newActivityContainer = document.getElementById("new-activity");
 const userCurent = document.getElementById("user_curent");
 const members = [];
 
-const userName = document.getElementById("userName")
-const userMsg = document.getElementById("userMsg")
-const messageErrors = document.getElementById("messageErrors")
-const messageErrors_msg = document.getElementById("messageErrors_msg")
-const messageErrors_user = document.getElementById("messageErrors_user")
+const userName = document.getElementById("userName");
+const userMsg = document.getElementById("userMsg");
+const messageErrors = document.getElementById("messageErrors");
+const messageErrors_msg = document.getElementById("messageErrors_msg");
+const messageErrors_user = document.getElementById("messageErrors_user");
 
 const numberOfRandomusers = 5;
-const $randomUsers = genRandUsers()
+const $randomUsers = genRandUsers();
 var $randomUserData;
 
 
 
-const emailNotifications = document.getElementById("email-notifications")
-const publicProfile = document.getElementById("public-profile")
-const timezoneSelector = document.getElementById("timezone-selector")
+const emailNotifications = document.getElementById("email-notifications");
+const publicProfile = document.getElementById("public-profile");
+const timezoneSelector = document.getElementById("timezone-selector");
 
 
 
@@ -40,8 +40,8 @@ closeButton.appendChild(closeButtonText);
 // Event listener to remove the alerts when the closebutton is pressed
 alertContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
-    event.target.parentNode.parentNode.removeChild(event.target.parentNode)
-    checkAlerts()
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+    checkAlerts();
   }
 });
 
@@ -52,9 +52,9 @@ alertContainer.addEventListener("click", function(event){
 // if there are alerts make the green circle aprire on the bell
 function checkAlerts(){
   if(alertContainer.children.length === 0)
-    notificationCircle.style.fill="rgba(0,0,0,0)"
+    notificationCircle.style.fill="rgba(0,0,0,0)";
   else
-    notificationCircle.style.fill="#82c890"
+    notificationCircle.style.fill="#82c890";
 }
 
 
@@ -62,9 +62,9 @@ function checkAlerts(){
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
 
-  localStorage.setItem("SendEmailNotifications", emailNotifications.checked)
-  localStorage.setItem("publicProfile", publicProfile.checked)
-  localStorage.setItem("timezone", timezoneSelector.value)
+  localStorage.setItem("SendEmailNotifications", emailNotifications.checked);
+  localStorage.setItem("publicProfile", publicProfile.checked);
+  localStorage.setItem("timezone", timezoneSelector.value);
 
   alertGen('Settings have been saved', 'success');
 });
@@ -72,16 +72,16 @@ saveButton.addEventListener("click", function(event){
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
-  setSettings()
+  setSettings();
   alertGen('Settings have been reset', 'error');
 });
 
 
 
 function setSettings(){
-  if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true")
-  if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true")
-  if(localStorage.timezone === undefined) localStorage.setItem("timezone", "")
+  if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true");
+  if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true");
+  if(localStorage.timezone === undefined) localStorage.setItem("timezone", "");
 
   emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
   publicProfile.checked = toBoolean(localStorage.publicProfile);
@@ -89,20 +89,20 @@ function setSettings(){
 }
 
 $(userName).on('change', function() { 
-  console.log("on change called isValidUser()")
-  isValidUser()
+  console.log("on change called isValidUser()");
+  isValidUser();
 });
 
 
 $(userName).on( "autocompleteselect", function( event, ui ) {
-  console.log("autocompleteselect called isValidUser()")
-  isValidUser()
+  console.log("autocompleteselect called isValidUser()");
+  isValidUser();
 });
 
 
 $(userMsg).on('change', function() { 
-  console.log("on change called isValidMsg()")
-  isValidMsg()
+  console.log("on change called isValidMsg()");
+  isValidMsg();
 });
 
 // event listener for the send message button
@@ -110,27 +110,27 @@ sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   if(isValidUser() && isValidMsg()){
     alertGen('Mesage Sent Sucsesfully!', 'success');
-    userName.value = ""
-    userMsg.value = ""
+    userName.value = "";
+    userMsg.value = "";
   }
 });
 
 
 
 function toBoolean(string){
-  if(string === "true") return true
-  if(string === "false") return false
+  if(string === "true") return true;
+  if(string === "false") return false;
 }
 
 
 
 function dateConverter(date){ //converts "2014-12-11 14:35:49" into 11/12/14
-  const splitDate = date.split("-")
-  const year = splitDate[0].substring(2)
-  const month = splitDate[1]
-  const splitDay = splitDate[2].split(" ")
-  const day = splitDay[0]
-  return day + "/" + month + "/" + year
+  const splitDate = date.split("-");
+  const year = splitDate[0].substring(2);
+  const month = splitDate[1];
+  const splitDay = splitDate[2].split(" ");
+  const day = splitDay[0];
+  return day + "/" + month + "/" + year;
 }
 
 function capitalizeFirstLetter(string) { // converts anthony into Anthony 
@@ -156,9 +156,9 @@ function genRandUsers(){
       randomCurrentUser()
       for (i = 1; i < numberOfRandomusers; i++){
         $randomUserData = $randomUsers.responseJSON.results[i];
-        members.push(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last))
-        printNewMember()
-        printNewMemberActivity()
+        members.push(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last));
+        printNewMember();
+        printNewMemberActivity();
       }
     }
   });
@@ -266,23 +266,23 @@ function printNewMemberActivity(){
 
 
 function genRandomDay(){
-   days = "Day"
+  days = "Day";
   const number = randomNumber(1,7);
-  if(number > 1) days += "s"
+  if(number > 1) days += "s";
 
-  return number + " " + days + " ago"
+  return number + " " + days + " ago";
 
 }
 
 
 function genRandomActivity(){
-  const activityes = ["liked" , "hated", "comented on"]
-  const activity = activityes[randomNumber(0, activityes.length-1)]
-  const things = ["Post", "Comment", "Photo", "Status"]
-  const thing = things[randomNumber(0, things.length-1)]
-  const thatPerson = members[randomNumber(0, members.length-1)]
+  const activityes = ["liked" , "hated", "comented on"];
+  const activity = activityes[randomNumber(0, activityes.length-1)];
+  const things = ["Post", "Comment", "Photo", "Status"];
+  const thing = things[randomNumber(0, things.length-1)];
+  const thatPerson = members[randomNumber(0, members.length-1)];
 
-  return activity + " " + thatPerson + "'s " + thing
+  return activity + " " + thatPerson + "'s " + thing;
 }
 
 
@@ -323,8 +323,8 @@ function alertGen(say="Alert", style){
     alert.classList.add("alert--" + style);
   else
     alert.classList.add("alert");
-  alertContainer.appendChild(alert)
-  checkAlerts()
+  alertContainer.appendChild(alert);
+  checkAlerts();
 }
 
 
@@ -332,46 +332,46 @@ function alertGen(say="Alert", style){
 $(userName).autocomplete({source: members});
 
 function isValidUser(){
-  messageErrors_user.innerHTML= "You need to enter a user name"
-  console.log(userName.value)
-  console.log(members.indexOf(userName.value))
+  messageErrors_user.innerHTML= "You need to enter a user name";
+  console.log(userName.value);
+  console.log(members.indexOf(userName.value));
   if(members.indexOf(userName.value) >= 0){
-    console.log(userName.value + " is a user")
-    userName.className = "form__input--valid"
-    messageErrors_user.style.display = "none"
-    return true
+    console.log(userName.value + " is a user");
+    userName.className = "form__input--valid";
+    messageErrors_user.style.display = "none";
+    return true;
   }
   else{
-      messageErrors_user.style.display = "flex"
-      userName.className = "form__input--invalid"
+      messageErrors_user.style.display = "flex";
+      userName.className = "form__input--invalid";
     if(userName.value.trim() !== ""){
-      console.log(userName.value + " is NOT a user")
-      messageErrors_user.innerHTML= userName.value + " is NOT a user"
-      return false
+      console.log(userName.value + " is NOT a user");
+      messageErrors_user.innerHTML= userName.value + " is NOT a user";
+      return false;
     }
     else{
       console.log("Please enter a user name")
-      messageErrors_user.innerHTML= "You need to enter a user name"
-      return false
+      messageErrors_user.innerHTML= "You need to enter a user name";
+      return false;
     }
   }
 }
 
 
 function isValidMsg(){
-  messageErrors_msg.innerHTML = "The mesage can't be blank"
+  messageErrors_msg.innerHTML = "The mesage can't be blank";
   console.log(userMsg.value)
   if(userMsg.value.trim() !== ""){
-    console.log("is a valid message")
-    userMsg.className = "form__input--valid"
-    messageErrors_msg.style.display = "none"
-    return true
+    console.log("is a valid message");
+    userMsg.className = "form__input--valid";
+    messageErrors_msg.style.display = "none";
+    return true;
   }
   else{
-    console.log("NOT a valid message")
-    userMsg.className = "form__input--invalid"
-    messageErrors_msg.style.display = "flex"
-    return false
+    console.log("NOT a valid message");
+    userMsg.className = "form__input--invalid";
+    messageErrors_msg.style.display = "flex";
+    return false;
   }
 }
 
@@ -397,29 +397,29 @@ $( document ).ready(function() {
     switch (localStorage.dailyTraficView){
       case "hourly":
         document.getElementById("hourly-option").className = "visits__option--active";
-        drawLineChartHourly()
+        drawLineChartHourly();
       break;
 
       case "daily":
         document.getElementById("daily-option").className = "visits__option--active";
-        drawLineChartDaily()
+        drawLineChartDaily();
       break;
 
       case "weekly":
         document.getElementById("weekly-option").className = "visits__option--active";
-        drawLineChartWeekly()
+        drawLineChartWeekly();
       break;
 
       case "monthly":
         document.getElementById("monthly-option").className = "visits__option--active";
-        drawLineChartMonthly()
+        drawLineChartMonthly();
       break;
     }
 
 
 
-    setSettings()
-    checkAlerts()
+    setSettings();
+    checkAlerts();
 });
 
 
