@@ -24,7 +24,7 @@ html(lang='en')
               span.light App
                 sup &trade;
         div.grid__col--1.notification--col
-          a(href="#alerts").notification-big
+          a(onclick="displayModal(modalNotifications);").notification-big
             svg.bell
               use(xlink:href="#bell")
         div#user_curent.grid__col--3.no-margin.user_curent--col
@@ -37,14 +37,14 @@ html(lang='en')
       div.nav__side--bg
         ul
           li
-            a(href="#alerts").hidden-bell
+            a(onclick="displayModal(modalNotifications);").hidden-bell
               svg.bell
                 use(xlink:href="#bell")
 
       nav.nav__side
         ul
           li.notification-small
-            a(href="#alerts")
+            a(onclick="displayModal(modalNotifications);")
               svg.bell
                 use(xlink:href="#bell")
           li
@@ -266,6 +266,18 @@ html(lang='en')
               button#saveBtn.btn--default SAVE
               button#cancelBtn.btn--disabled CANCEL
 
+
+              div#modals
+                div#notifications.modal
+                  div.modal__content
+                    div.modal__header
+                      h2 Modal Header
+                      //- span.closebtn &times;
+                    div.modal__body
+                      p Some text in the Modal Body
+                      p Some other text...
+                    div.modal__footer
+                      h3 Modal Footer
 
 
 

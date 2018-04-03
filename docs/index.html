@@ -40,7 +40,7 @@
         <div class="grid__col--2 logo--col">
           <h1 class="logo"><a href="#"> <span class="bold">Your</span><span class="light">App<sup>&trade;</sup></span></a></h1>
         </div>
-        <div class="grid__col--1 notification--col"><a href="#alerts" class="notification-big">
+        <div class="grid__col--1 notification--col"><a onclick="displayModal(modalNotifications);" class="notification-big">
             <svg class="bell">
               <use xlink:href="#bell"></use>
             </svg></a></div>
@@ -51,7 +51,7 @@
     <main>
       <div class="nav__side--bg">
         <ul>
-          <li><a href="#alerts" class="hidden-bell">
+          <li><a onclick="displayModal(modalNotifications);" class="hidden-bell">
               <svg class="bell">
                 <use xlink:href="#bell"></use>
               </svg></a></li>
@@ -59,7 +59,7 @@
       </div>
       <nav class="nav__side">
         <ul>
-          <li class="notification-small"><a href="#alerts">
+          <li class="notification-small"><a onclick="displayModal(modalNotifications);">
               <svg class="bell">
                 <use xlink:href="#bell"></use>
               </svg></a></li>
@@ -432,6 +432,22 @@
             <div class="flex">
               <button id="saveBtn" class="btn--default">SAVE</button>
               <button id="cancelBtn" class="btn--disabled">CANCEL</button>
+              <div id="modals">
+                <div id="notifications" class="modal">
+                  <div class="modal__content">
+                    <div class="modal__header">
+                      <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal__body">
+                      <p>Some text in the Modal Body</p>
+                      <p>Some other text...</p>
+                    </div>
+                    <div class="modal__footer">
+                      <h3>Modal Footer</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

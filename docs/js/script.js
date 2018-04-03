@@ -28,6 +28,10 @@ const timezoneSelector = document.getElementById("timezone-selector");
 
 
 
+// Modal
+const modalContainer = document.getElementById("modals");
+const modalNotifications = document.getElementById("notifications");
+function displayModal(modalToDisplay){ modalToDisplay.style.display = "block"; }
 
 
 //Close Button
@@ -45,8 +49,22 @@ alertContainer.addEventListener("click", function(event){
   }
 });
 
+// Event listener to hide the modal when the closebutton is pressed
+modalContainer.addEventListener("click", function(event){
+  if(event.target.className === "closebtn"){
+    event.target.parentNode.parentNode.parentNode.style.display = "none";
+  }
+});
 
+//  onclick="displayModal(modalNotifications);"
 
+// Hide modal when a user clicks out side of the modal
+window.addEventListener("click", function(event){
+  console.log(event.target.className)
+  if (event.target.className === "modal") {
+    event.target.style.display = "none";
+  }
+})
 
 
 // if there are alerts make the green circle aprire on the bell
@@ -383,6 +401,12 @@ $( document ).ready(function() {
   for (var i = 0; i < alerts.length; i++) {
     alerts[i].appendChild(closeButton.cloneNode(true));
   }
+
+  const models = document.querySelectorAll("[class='modal__header']");
+  for (var i = 0; i < models.length; i++) {
+    models[i].appendChild(closeButton.cloneNode(true));
+  }
+
 
   alertGen("This is an alert");
   alertGen("This is a default alert", "default");
