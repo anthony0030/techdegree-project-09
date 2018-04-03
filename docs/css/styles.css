@@ -724,7 +724,7 @@ h1.logo {
     display: none; } }
 
 /* The Modal (background) */
-.modal__header, .modal__body, .modal__footer {
+.modal__header, .modal__footer {
   padding: 1.5px 16px; }
 
 .modal, .modal--default, .modal--disabled, .modal--success, .modal--error, .modal--warning, .modal--info {
@@ -751,6 +751,7 @@ h1.logo {
     justify-content: space-between;
     background-color: #000; }
   .modal__body {
+    padding: 25px 16px;
     color: #666666; }
   .modal__footer {
     background-color: #000; }
