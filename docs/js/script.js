@@ -31,6 +31,7 @@ const timezoneSelector = document.getElementById("timezone-selector");
 // Modal
 const modalContainer = document.getElementById("modals");
 const modalNotifications = document.getElementById("notifications");
+const NotificationsContainer = document.getElementById("notifications__container");
 //  onclick="displayModal(modalNotifications);"
 function displayModal(modalToDisplay){ modalToDisplay.style.display = "block"; }
 
@@ -334,6 +335,9 @@ function randomCurrentUser(){
 
 
 
+function alertFactory(say stye){
+
+}
 
 // this prints out alerts
 function alertGen(say="Alert", style){
@@ -348,6 +352,20 @@ function alertGen(say="Alert", style){
   alertContainer.appendChild(alert);
   checkAlerts();
 }
+
+
+function notiGen(say, style){
+  var alert = document.createElement("DIV");
+  var alertText = document.createTextNode(say);
+  alert.appendChild(alertText);
+  alert.appendChild(closeButton.cloneNode(true));
+  if(style)
+    alert.classList.add("alert--" + style);
+  else
+    alert.classList.add("alert");
+  NotificationsContainer.appendChild(alert);
+}
+
 
 
 // auto clompleat function for sending a message
