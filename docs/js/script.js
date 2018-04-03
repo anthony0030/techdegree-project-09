@@ -66,14 +66,14 @@ saveButton.addEventListener("click", function(event){
   localStorage.setItem("publicProfile", publicProfile.checked);
   localStorage.setItem("timezone", timezoneSelector.value);
 
-  alertGen(Settings have been saved, success);
+  alertGen("Settings have been saved", "success");
 });
 
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
   setSettings();
-  alertGen(Settings have been reset, error);
+  alertGen("Settings have been reset", "error");
 });
 
 
@@ -88,7 +88,7 @@ function setSettings(){
   timezoneSelector.value = localStorage.timezone;
 }
 
-$(userName).on(change, function() { 
+$(userName).on("change", function() { 
   console.log("on change called isValidUser()");
   isValidUser();
 });
@@ -100,7 +100,7 @@ $(userName).on( "autocompleteselect", function( event, ui ) {
 });
 
 
-$(userMsg).on(change, function() { 
+$(userMsg).on("change", function() { 
   console.log("on change called isValidMsg()");
   isValidMsg();
 });
@@ -109,7 +109,7 @@ $(userMsg).on(change, function() {
 sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   if(isValidUser() && isValidMsg()){
-    alertGen(Mesage Sent Sucsesfully!, success);
+    alertGen("Mesage Sent Sucsesfully!", "success");
     userName.value = "";
     userMsg.value = "";
   }
@@ -146,8 +146,8 @@ function randomNumber(min=0, max=10){
 
 function genRandUsers(){
   return $.ajax({
-    url: https://randomuser.me/api/?results=+numberOfRandomusers,
-    dataType: json,
+    url: "https://randomuser.me/api/?results=+numberOfRandomusers",
+    dataType: "json",
     success: function(data) {
       // console.log(data);
       newMemberContainer.innerHTML = "";
@@ -175,7 +175,7 @@ function printNewMember(){
   li.appendChild(a);
 
   const img = document.createElement("IMG");
-  img.setAttribute(src, $randomUserData.picture.large);
+  img.setAttribute("src", $randomUserData.picture.large);
   img.classList.add("user_image");
   a.appendChild(img);
 
@@ -226,7 +226,7 @@ function printNewMemberActivity(){
   li.appendChild(a);
 
   const img = document.createElement("IMG");
-  img.setAttribute(src, $randomUserData.picture.large);
+  img.setAttribute("src", $randomUserData.picture.large);
   img.classList.add("user_image");
   a.appendChild(img);
 
@@ -282,7 +282,7 @@ function genRandomActivity(){
   const thing = things[randomNumber(0, things.length-1)];
   const thatPerson = members[randomNumber(0, members.length-1)];
 
-  return activity + " " + thatPerson + "s " + thing;
+  return activity + " " + thatPerson + "'s " + thing;
 }
 
 
