@@ -725,7 +725,7 @@ h1.logo {
 
 /* The Modal (background) */
 .modal__header, .modal__body, .modal__footer {
-  padding: 2px 16px; }
+  padding: 1.5px 16px; }
 
 .modal, .modal--default, .modal--disabled, .modal--success, .modal--error, .modal--warning, .modal--info {
   display: none;
