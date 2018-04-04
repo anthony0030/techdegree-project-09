@@ -60,7 +60,8 @@ a {
   cursor: pointer !important; }
 
 header {
-  background-color: #7377bd; }
+  background-color: #7377bd;
+  z-index: 10; }
   header .grid__row {
     border-bottom: none; }
   header a {
@@ -373,6 +374,7 @@ svg.bell, svg.hidden-bell {
   flex-direction: column;
   margin-top: 1.5em;
   margin-top: 0;
+  z-index: 10;
   align-self: center; }
   .nav li, .nav__side li, .nav__side--bg li {
     padding-left: 1.1em;
