@@ -1,16 +1,3 @@
-document.getElementById("all-options").addEventListener("click", function(event){
-  if(event.target.tagName.toLowerCase() === "li"){
-    clickedLi = event.target;
-    var ul = document.getElementById("all-options");
-    var curentActive = ul.getElementsByClassName("visits__option--active")[0];
-    curentActive.className = "visits__option";
-    clickedLi.className = "visits__option--active";
-  }
-});
-
-
-
-
 function drawLineChartHourly() {
   localStorage.setItem("dailyTraficView", "hourly");
   new Chart(document.getElementById("chart-line"), {

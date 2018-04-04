@@ -63,6 +63,8 @@ closeButton.classList.add("closebtn");
 closeButton.appendChild(closeButtonText);
 
 
+const listOfDailyTraficViews = document.getElementById("all-options");
+
 // event listener for the search box to search google
 searchGoogleButton.addEventListener("click", function(event){
   event.preventDefault();
@@ -194,6 +196,16 @@ sendMessageButton.addEventListener("click", function(event){
   }
 });
 
+
+// sets the class on the dayly trafic view that is cliked
+listOfDailyTraficViews.addEventListener("click", function(event){
+  if(event.target.tagName.toLowerCase() === "li"){
+    clickedLi = event.target;
+    var curentActive = listOfDailyTraficViews.getElementsByClassName("visits__option--active")[0];
+    curentActive.className = "visits__option";
+    clickedLi.className = "visits__option--active";
+  }
+});
 
 
 // convert a true || false string to boolean 
