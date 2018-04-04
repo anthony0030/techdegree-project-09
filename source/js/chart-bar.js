@@ -5,7 +5,7 @@ new Chart(document.getElementById("chart-bar"), {
     datasets: [{
       label: "DAILY TRAFFIC",
       backgroundColor: "#7377BD",
-      data: [75, 100, 175, 125, 225, 200, 100],
+      data: [75, 100, 175, 125, 225, 200, 100]
     }]
   },
 
@@ -27,8 +27,7 @@ new Chart(document.getElementById("chart-bar"), {
 
       yAxes: [{
         gridLines: {
-          drawTicks: false,
-          // offsetGridLines: true,
+          drawTicks: false
         },
 
 
@@ -36,10 +35,11 @@ new Chart(document.getElementById("chart-bar"), {
           // Min: 0,
           stepSize: 50,
           beginAtZero: true,
-          callback: function(value, index, values) {
+          callback: function(value) {
+
             if(value != 0) return value
           }
-        },
+        }
 
 
 
@@ -47,15 +47,15 @@ new Chart(document.getElementById("chart-bar"), {
 
       xAxes: [{
         gridLines: {
-          drawTicks: false,
+          drawTicks: false
         },
         barPercentage: 0.5,
         
         ticks: {
-          callback: function(value, index, values) {
+          callback: function(value) {
             return value.split("")[0]
           }
-        },
+        }
       }]
 
 
