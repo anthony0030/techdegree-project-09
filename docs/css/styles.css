@@ -102,6 +102,14 @@ label {
   padding-top: 2.5em;
   margin: auto; }
 
+.ui-autocomplete {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+* html .ui-autocomplete {
+  height: 100px; }
+
 .img, .img--logo, .img--frame, .img--avatar, .user_image {
   max-width: 100%;
   margin: 0 auto;
