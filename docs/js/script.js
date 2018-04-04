@@ -259,7 +259,7 @@ function printNewMemberActivity(){
 
   const userTitle = document.createElement("P");
   userTitle.classList.add("user-title");
-  userTitle.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last) + " " +genRandomActivity() ));
+  userTitle.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + genRandomActivity() ));
   userDetails.appendChild(userTitle);
 
   const userSubtitle = document.createElement("P");
