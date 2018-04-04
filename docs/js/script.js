@@ -1,3 +1,16 @@
+const DEBUG = false
+
+// enables or disables the console loggs
+if(!DEBUG){
+  if(!window.console) window.console = {};
+  var methods = ["log", "debug", "warn", "info"];
+  for(var i=0;i<methods.length;i++){
+    console[methods[i]] = function(){};
+  }
+}
+
+
+
 const alertContainer = document.getElementById("alerts");
 const sendMessageButton = document.getElementById("sendMsg");
 const saveButton = document.getElementById("saveBtn");
@@ -448,8 +461,7 @@ $( document ).ready(function() {
   notiGen("Error!", "Server Quota Reached", "error")
   notiGen("", "Your Subscription Has Been Renewed", "success")
 
-    // set the default view of the chart
-
+  // set the default view of the chart
   switch (localStorage.dailyTraficView){
     case "hourly":
       document.getElementById("hourly-option").className = "visits__option--active";
