@@ -4,7 +4,7 @@ new Chart(document.getElementById("chart-doughnut"), {
     labels: [
       "Desctops",
       "Tablets",
-      "Phone",
+      "Phone"
      ],
     datasets: [{
       borderWidth: 0,
@@ -12,13 +12,13 @@ new Chart(document.getElementById("chart-doughnut"), {
       data: [
         70,
         15,
-        15,
+        15
       ],
       backgroundColor: [
         "#7377BD",
         "#82C890",
-        "#75B0BE",
-        ],
+        "#75B0BE"
+        ]
     }]
   },
   options: {
@@ -27,11 +27,11 @@ new Chart(document.getElementById("chart-doughnut"), {
       labels: {
           padding: 25,
           boxWidth: 25,
-          fontSize: 25,
+          fontSize: 25
       },
         position: "right",
         reverse: true,
-        display: true,
+        display: true
       }
     }
 });
