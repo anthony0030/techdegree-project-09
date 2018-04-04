@@ -30,6 +30,24 @@
 		"oAP": "\/docs\/docs",
 		"oF": 0
 		},
+	"\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "\/docs\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/source\/_favicon.jade": {
 		"cB": 0,
 		"cOD": 1,
@@ -1063,7 +1081,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 544558424
+	"lastBuiltDate": 544558614
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
