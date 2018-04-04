@@ -8,19 +8,36 @@
   margin: 20px 0
 
 
-.serarch
-  display: flex
-  // background-color: red
+.search
   background-color: $alabaster
-  justify-content: flex-end
 
-.serarch--box
+.search__form
+  display: flex
+  justify-content: flex-end
+  width: 100%
+
+.search__box
   @extend %no-focus-outline
-  align-self: center
   width: 95%
   height: 40px
   padding: 10px
-  border: none
+  cursor: text
   border: 1px solid $grey--light
-  border-radius: $br--rounded
-  background: url(../svgs/icon-search.svg) no-repeat scroll center right;
+  border-top-left-radius: $br--rounded
+  border-bottom-left-radius: $br--rounded
+  border-right: none
+  align-self: center
+
+
+.search__button
+  @extend %no-focus-outline
+  width: 40px
+  height: 40px
+  padding: 0px
+  cursor: pointer
+  border: 1px solid $grey--light
+  border-top-right-radius: $br--rounded
+  border-bottom-right-radius: $br--rounded
+  border-left: none
+  align-self: center
+  background: url(../svgs/icon-search.svg) #fff no-repeat center
