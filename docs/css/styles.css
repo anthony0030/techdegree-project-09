@@ -834,7 +834,7 @@ h1.logo {
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 8px;
-  background: #4caf50;
+  background: #82c890;
   width: 0%; }
 
 @media (min-width: 1024px) {
