@@ -25,8 +25,9 @@ new Chart(document.getElementById("chart-doughnut"), {
     rotation: 0.06,
     legend: {
       labels: {
-          boxWidth: 13,
-          padding: 40,
+          padding: 25,
+          boxWidth: 25,
+          fontSize: 25,
       },
         position: "right",
         reverse: true,

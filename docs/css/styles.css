@@ -38,6 +38,9 @@ ol, ul, li,
 tr, th {
   overflow-y: hidden; }
 
+h5 {
+  font-size: 20px; }
+
 a {
   cursor: pointer !important; }
 
