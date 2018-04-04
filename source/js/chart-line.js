@@ -41,8 +41,7 @@ function drawLineChartHourly() {
           gridLines: {
             drawTicks: false,
             // offsetGridLines: true,
-          },
-          barPercentage: 0.5,
+          }
         }]
       } //scales
     } //options
@@ -92,8 +91,7 @@ function drawLineChartDaily() {
           gridLines: {
             drawTicks: false,
             // offsetGridLines: true,
-          },
-          barPercentage: 0.5,
+          }
         }]
       } //scales
     } //options
@@ -145,8 +143,7 @@ function drawLineChartWeekly() {
           gridLines: {
             drawTicks: false,
             // offsetGridLines: true,
-          },
-          barPercentage: 0.5,
+          }
         }]
       } //scales
     } //options
@@ -198,8 +195,7 @@ function drawLineChartMonthly() {
           gridLines: {
             drawTicks: false,
             // offsetGridLines: true,
-          },
-          barPercentage: 0.5,
+          }
         }]
       } //scales
     } //options
