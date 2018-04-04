@@ -241,20 +241,20 @@ html(lang='en')
 
             div.row
               label._50(for="email-notifications") Send Email Notifications
-              div.onoffswitch
-                  input.onoffswitch-checkbox(id="email-notifications" type="checkbox" name="onoffswitch") 
-                  label.onoffswitch-label(for="email-notifications")
-                      span.onoffswitch-inner
-                      span.onoffswitch-switch
+              div.onoffswitch--default
+                  input.onoffswitch__checkbox(id="email-notifications" type="checkbox" name="onoffswitch") 
+                  label.onoffswitch__label(for="email-notifications")
+                      span.onoffswitch__inner
+                      span.onoffswitch__switch
             br
             br
             div.row
               label._50(for="public-profile") Set Profile to Public
-              div.onoffswitch
-                  input.onoffswitch-checkbox(id="public-profile" type="checkbox" name="onoffswitch") 
-                  label.onoffswitch-label(for="public-profile")
-                      span.onoffswitch-inner
-                      span.onoffswitch-switch
+              div.onoffswitch--default
+                  input.onoffswitch__checkbox(id="public-profile" type="checkbox" name="onoffswitch") 
+                  label.onoffswitch__label(for="public-profile")
+                      span.onoffswitch__inner
+                      span.onoffswitch__switch
 
             include jade_partials/_timezones
             div.flex

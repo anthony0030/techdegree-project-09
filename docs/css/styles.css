@@ -273,7 +273,7 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
     .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
       width: 9.375em; } }
 
-.onoffswitch {
+.onoffswitch, .onoffswitch--default, .onoffswitch--disabled, .onoffswitch--success, .onoffswitch--error, .onoffswitch--warning, .onoffswitch--info {
   position: relative;
   -ms-flex-item-align: center;
       align-self: center;
@@ -282,15 +282,15 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .onoffswitch-checkbox {
+  .onoffswitch__checkbox {
     display: none; }
-  .onoffswitch-label {
+  .onoffswitch__label {
     display: block;
     overflow: hidden;
     cursor: pointer;
     border: 2px solid #fbfbfb;
     border-radius: 50px; }
-  .onoffswitch-switch {
+  .onoffswitch__switch {
     display: block;
     width: 30px;
     margin: 4px;
@@ -303,13 +303,13 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
     border-radius: 50px;
     -webkit-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s; }
-  .onoffswitch-inner {
+  .onoffswitch__inner {
     display: block;
     width: 200%;
     margin-left: -100%;
     -webkit-transition: margin 0.3s ease-in 0s;
     transition: margin 0.3s ease-in 0s; }
-    .onoffswitch-inner:before, .onoffswitch-inner:after {
+    .onoffswitch__inner:before, .onoffswitch__inner:after {
       display: block;
       float: left;
       width: 50%;
@@ -323,21 +323,33 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       color: #ffffff; }
-    .onoffswitch-inner:before {
+    .onoffswitch__inner:before {
       content: "ON";
       padding-left: 9px;
-      background-color: #7377bd;
+      background-color: #000000;
       text-align: left; }
-    .onoffswitch-inner:after {
+    .onoffswitch__inner:after {
       content: "OFF";
       padding-right: 9px;
       background-color: #b2b2b2;
       text-align: right; }
+  .onoffswitch--default .onoffswitch__inner:before {
+    background-color: #7377bd; }
+  .onoffswitch--disabled .onoffswitch__inner:before {
+    background-color: #b2b2b2; }
+  .onoffswitch--success .onoffswitch__inner:before {
+    background-color: #62cc82; }
+  .onoffswitch--error .onoffswitch__inner:before {
+    background-color: #e4757b; }
+  .onoffswitch--warning .onoffswitch__inner:before {
+    background-color: #ff774e; }
+  .onoffswitch--info .onoffswitch__inner:before {
+    background-color: #39add1; }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+.onoffswitch__checkbox:checked + .onoffswitch__label .onoffswitch__inner {
   margin-left: 0; }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+.onoffswitch__checkbox:checked + .onoffswitch__label .onoffswitch__switch {
   right: 0px;
   background-color: #ffffff; }
 

@@ -5,15 +5,15 @@
   align-self: center
   width: 100px
   user-select: none
-  &-checkbox
+  &__checkbox
     display: none
-  &-label
+  &__label
     display: block
     overflow: hidden
     cursor: pointer
     border: 2px solid $color-shadow
     border-radius: 50px
-  &-switch
+  &__switch
     display: block
     width: 30px
     margin: 4px
@@ -25,7 +25,7 @@
     border: 2px solid $color-shadow
     border-radius: 50px
     transition: all 0.3s ease-in 0s
-  &-inner
+  &__inner
     display: block
     width: 200%
     margin-left: -100%
@@ -46,7 +46,7 @@
     &:before
       content: "ON"
       padding-left: 9px
-      background-color: $color-primary
+      background-color: $black
       text-align: left
     &:after
       content: "OFF"
@@ -54,10 +54,16 @@
       background-color: $grey
       text-align: right
 
+  @each $theam, $color in $ui-colors
+    @include m($theam)
+      @extend .onoffswitch
+      .onoffswitch__inner:before
+        background-color: $color
 
-.onoffswitch-checkbox:checked + .onoffswitch-label
-  .onoffswitch-inner
+
+.onoffswitch__checkbox:checked + .onoffswitch__label
+  .onoffswitch__inner
     margin-left: 0
-  .onoffswitch-switch
+  .onoffswitch__switch
     right: 0px
     background-color: $white
