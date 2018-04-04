@@ -1,4 +1,4 @@
-const DEBUG = false
+const DEBUG = true
 
 // enables or disables the console loggs
 if(!DEBUG){
