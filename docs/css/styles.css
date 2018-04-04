@@ -597,24 +597,15 @@ div.contain {
   border: 1px solid #d1d1d1;
   width: 100%;
   padding: 10px;
-  text-indent: 8px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: '';
   cursor: pointer;
-  margin-bottom: 25px; }
-
-.arrow {
-  cursor: pointer;
-  height: 32px;
-  width: 32px;
-  position: absolute;
-  right: 0px;
+  margin-bottom: 25px;
+  content: "Select Timezone";
+  color: #666666;
   background-color: #FBFBFB;
   background: url("../svgs/icon-arrow-down.svg") no-repeat;
-  background-size: 16px;
-  background-position: 50% 70%; }
+  background-position: 98% 50%;
+  background-size: 16px; }
 
 .logo a {
   color: #fff; }
