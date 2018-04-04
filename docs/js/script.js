@@ -116,6 +116,7 @@ function checkNotifications(){
 
 
 
+// enable the buttons on the settings form when a change is detected to the form
 $( settingsForm ).change(function() {
   saveButton.className = "btn--default";
   saveButton.disabled = false;
@@ -125,6 +126,7 @@ $( settingsForm ).change(function() {
 });
 
 
+// function to disable the buttons on the form
 function disableSettingButtons(){
   saveButton.className = "btn--disabled";
   saveButton.disabled = true;
@@ -154,6 +156,7 @@ cancelButton.addEventListener("click", function(event){
 
 
 
+// load settings from the browser memory
 function setSettings(){
   if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true");
   if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true");
@@ -193,6 +196,7 @@ sendMessageButton.addEventListener("click", function(event){
 
 
 
+// convert a true || false string to boolean 
 function toBoolean(string){
   if(string === "true") return true;
   if(string === "false") return false;
@@ -200,7 +204,8 @@ function toBoolean(string){
 
 
 
-function dateConverter(date){ //converts "2014-12-11 14:35:49" into 11/12/14
+//converts dateformat from "2014-12-11 14:35:49" into 11/12/14
+function dateConverter(date){ 
   const splitDate = date.split("-");
   const year = splitDate[0].substring(2);
   const month = splitDate[1];
@@ -209,17 +214,19 @@ function dateConverter(date){ //converts "2014-12-11 14:35:49" into 11/12/14
   return day + "/" + month + "/" + year;
 }
 
-function capitalizeFirstLetter(string) { // converts anthony into Anthony 
+// capitalize first letter of a string converts anthony into Anthony 
+function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
+// returns a random integer from a max and a min width a default 0 to 10
 function randomNumber(min=0, max=10){
   return Math.round(Math.random() * (max - min) + min);
 }
 
 
-
+// download random user data and useit
 function genRandUsers(){
   return $.ajax({
     url: "https://randomuser.me/api/?results="+numberOfRandomusers,
@@ -241,6 +248,7 @@ function genRandUsers(){
 }
 
 
+// prints a new member
 function printNewMember(){
 
   const li = document.createElement("LI");
@@ -291,6 +299,7 @@ function printNewMember(){
 //     div.user-data-right
 //       p 10/05/15
 
+//prints new activity
 function printNewMemberActivity(){
 
 
@@ -340,6 +349,7 @@ function printNewMemberActivity(){
 //       p.recent_activity-carrot &gt;
 
 
+// generate a random namber in days
 function genRandomDay(){
   days = "Day";
   const number = randomNumber(1,7);
@@ -350,6 +360,7 @@ function genRandomDay(){
 }
 
 
+// generats random activity
 function genRandomActivity(){
   const activityes = ["liked" , "hated", "comented on"];
   const activity = activityes[randomNumber(0, activityes.length-1)];
@@ -364,7 +375,6 @@ function genRandomActivity(){
 
 
 // Generates the curent random user
-
 function randomCurrentUser(){
 
   $randomUserData = $randomUsers.responseJSON.results[0];
@@ -385,6 +395,7 @@ function randomCurrentUser(){
   userCurent.appendChild(a);
 }
 
+// function to make an alert
 function alertFactory(title, say, style){
   var alertContainer = document.createElement("DIV");
   var titleContainer = document.createElement("H4")
@@ -410,13 +421,14 @@ function alertFactory(title, say, style){
   return alertContainer;
 }
 
-// this prints out alerts
+// this prints out alerts in the alerts section
 function alertGen(title, say, style){
   var alert = alertFactory(title, say, style)
   alertContainer.appendChild(alert);
 }
 
 
+// this prints out alerts in the notificatios section
 function notiGen(title, say, style){
   var notification = alertFactory(title, say, style)
   NotificationsContainer.appendChild(notification);
@@ -428,6 +440,7 @@ function notiGen(title, say, style){
 // auto clompleat function for sending a message
 $(userName).autocomplete({source: members});
 
+// check if user exists
 function isValidUser(){
   messageErrors_user.innerHTML= "You need to enter a user name";
   console.log(userName.value);
@@ -455,6 +468,7 @@ function isValidUser(){
 }
 
 
+// check if mesage exists
 function isValidMsg(){
   messageErrors_msg.innerHTML = "The mesage can't be blank";
   console.log(userMsg.value)
