@@ -13,9 +13,9 @@
   height: 100%
   overflow: auto /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4)
-  color: #fff
+  color: $white
   &__content
-    background-color: #fff
+    background-color: $white
     position: relative
     margin: auto
     padding: 0
@@ -26,13 +26,13 @@
     @extend %modal__padding
     display: flex
     justify-content: space-between
-    background-color: #000
+    background-color: $black
   &__body
     padding: 30px 16px 25px 16px
-    color: $steel
+    color: $grey--dark
   &__footer
     @extend %modal__padding
-    background-color: #000
+    background-color: $black
 
 @each $theam, $color in $ui-colors
   .modal--#{$theam}

@@ -33,17 +33,17 @@ div.contain
   margin-left: 0 !important
 
 .grid__row
-  border-bottom: 1px solid $iron
+  border-bottom: 1px solid $grey--light
 
 @include mq(small)
   main
     [class^="grid__col--"] + [class^="grid__col--"]
-      border-top: 1px solid $iron
+      border-top: 1px solid $grey--light
 
 @include mq(large)
   main
     [class^="grid__col--"] + [class^="grid__col--"]
-      border-left: 1px solid $iron
+      border-left: 1px solid $grey--light
       border-top: none
 
     [class^="grid__col--"]:first-child
