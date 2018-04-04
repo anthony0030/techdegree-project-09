@@ -488,7 +488,6 @@ $( document ).ready(function() {
 
   setSettings();
   checkNotifications();
-
 });
 
 
