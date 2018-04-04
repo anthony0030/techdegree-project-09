@@ -105,7 +105,7 @@ modalContainer.addEventListener("click", function(event){
   if (event.target.className.split("--")[0] === "modal") {
     event.target.style.display = "none";
   }
-})
+});
 
 // When the user scrolls the page, execute myFunction to set the progres on the scroll bars
 window.onscroll = function() {
@@ -163,7 +163,7 @@ saveButton.addEventListener("click", function(event){
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
-  disableSettingButtons()
+  disableSettingButtons();
   setSettings();
   alertGen("", "Settings have been reset", "error");
 });
