@@ -448,34 +448,33 @@ $( document ).ready(function() {
   notiGen("Error!", "Server Quota Reached", "error")
   notiGen("", "Your Subscription Has Been Renewed", "success")
 
-    // set the default view of the chart
+  // set the default view of the chart
+  switch (localStorage.dailyTraficView){
+    case "hourly":
+      document.getElementById("hourly-option").className = "visits__option--active";
+      drawLineChartHourly();
+    break;
 
-    switch (localStorage.dailyTraficView){
-      case "hourly":
-        document.getElementById("hourly-option").className = "visits__option--active";
-        drawLineChartHourly();
-      break;
+    case "daily":
+      document.getElementById("daily-option").className = "visits__option--active";
+      drawLineChartDaily();
+    break;
 
-      case "daily":
-        document.getElementById("daily-option").className = "visits__option--active";
-        drawLineChartDaily();
-      break;
+    case "weekly":
+      document.getElementById("weekly-option").className = "visits__option--active";
+      drawLineChartWeekly();
+    break;
 
-      case "weekly":
-        document.getElementById("weekly-option").className = "visits__option--active";
-        drawLineChartWeekly();
-      break;
-
-      case "monthly":
-        document.getElementById("monthly-option").className = "visits__option--active";
-        drawLineChartMonthly();
-      break;
-    }
-
+    case "monthly":
+      document.getElementById("monthly-option").className = "visits__option--active";
+      drawLineChartMonthly();
+    break;
+  }
 
 
-    setSettings();
-    checkNotifications();
+
+  setSettings();
+  checkNotifications();
 });
 
 
