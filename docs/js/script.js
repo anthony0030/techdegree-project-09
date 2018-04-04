@@ -182,7 +182,21 @@ function setSettings(){
 }
 
 $(userName).on("keyup", function() { 
+  console.log("on keyup called isValidUser()");
+  isValidUser();
+});
+
+
+
+$(userName).on("change", function() { 
   console.log("on change called isValidUser()");
+  isValidUser();
+});
+
+
+
+$(userName).on( "click", function() {
+  console.log("autocompleteselect called isValidUser()");
   isValidUser();
 });
 
