@@ -178,17 +178,10 @@ function setSettings(){
   timezoneSelector.value = localStorage.timezone;
 }
 
-$(userName).on("change", function() { 
+$(userName).on("keyup", function() { 
   console.log("on change called isValidUser()");
   isValidUser();
 });
-
-
-$(userName).on( "autocompleteselect", function( event, ui ) {
-  console.log("autocompleteselect called isValidUser()");
-  isValidUser();
-});
-
 
 $(userMsg).on("change", function() { 
   console.log("on change called isValidMsg()");
@@ -459,22 +452,28 @@ function notiGen(title, say, style){
 
 
 // auto clompleat function for sending a message
-$(userName).autocomplete({source: members});
+$(userName).autocomplete({
+  response: isValidUser(true),
+  source: members
+
+});
 
 // check if user exists
-function isValidUser(){
+function isValidUser(autocomplete){
   messageErrors_user.innerHTML= "You need to enter a user name";
   console.log(userName.value);
   console.log(members.indexOf(userName.value));
-  if(members.indexOf(userName.value) >= 0){
+  if((members.indexOf(userName.value) >= 0) || (autocomplete && userName.value !== "")){
     console.log(userName.value + " is a user");
     userName.className = "form__input--valid";
     messageErrors_user.style.display = "none";
     return true;
   }
   else{
+    if (!autocomplete){
       messageErrors_user.style.display = "flex";
       userName.className = "form__input--invalid";
+    }
     if(userName.value.trim() !== ""){
       console.log(userName.value + " is NOT a user");
       messageErrors_user.innerHTML= userName.value + " is NOT a user";
