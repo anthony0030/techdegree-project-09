@@ -106,7 +106,7 @@ function drawLineChartDaily() {
           ticks: {
             Min: 0,
             suggestedMax: 250,
-            stepSize: 50,
+            stepSize: 100,
             beginAtZero: true,
             callback: function(value, index, values) {
               if (value !== 0) {return value;}
