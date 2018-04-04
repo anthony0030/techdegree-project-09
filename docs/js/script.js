@@ -1,4 +1,4 @@
-const DEBUG = true
+const DEBUG = true;
 
 // enables or disables the console loggs
 if(!DEBUG){
@@ -77,7 +77,7 @@ searchGoogleButton.addEventListener("click", function(event){
   else{
     alertGen("Warning", "Search Cant Be Blank", "error");
   }
-})
+});
 
 // Event listener to remove the alerts when the closebutton is pressed
 alertContainer.addEventListener("click", function(event){
@@ -153,7 +153,7 @@ function disableSettingButtons(){
 // event listener foer the save button
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
-  disableSettingButtons()
+  disableSettingButtons();
   localStorage.setItem("SendEmailNotifications", emailNotifications.checked);
   localStorage.setItem("publicProfile", publicProfile.checked);
   localStorage.setItem("timezone", timezoneSelector.value);
@@ -253,7 +253,7 @@ function genRandUsers(){
       newMemberContainer.innerHTML = "";
       newActivityContainer.innerHTML = "";
       userCurent.innerHTML = "";
-      randomCurrentUser()
+      randomCurrentUser();
       for (i = 1; i < numberOfRandomusers; i++){
         $randomUserData = $randomUsers.responseJSON.results[i];
         members.push(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last));
@@ -415,8 +415,8 @@ function randomCurrentUser(){
 // function to make an alert
 function alertFactory(title, say, style){
   var alertContainer = document.createElement("DIV");
-  var titleContainer = document.createElement("H4")
-  var textContainer = document.createElement("P")
+  var titleContainer = document.createElement("H4");
+  var textContainer = document.createElement("P");
 
   var titleText = document.createTextNode(title+" ");
   var alertText = document.createTextNode(say);
@@ -440,7 +440,7 @@ function alertFactory(title, say, style){
 
 // this prints out alerts in the alerts section
 function alertGen(title, say, style){
-  var alert = alertFactory(title, say, style)
+  var alert = alertFactory(title, say, style);
   alertContainer.appendChild(alert);
 }
 
@@ -482,7 +482,7 @@ function isValidUser(autocomplete){
       return false;
     }
     else{
-      console.log("Please enter a user name")
+      console.log("Please enter a user name");
       messageErrors_user.innerHTML= "You need to enter a user name";
       return false;
     }
