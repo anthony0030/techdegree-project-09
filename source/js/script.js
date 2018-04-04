@@ -39,6 +39,8 @@ const publicProfile = document.getElementById("public-profile");
 const timezoneSelector = document.getElementById("timezone-selector");
 
 
+const searchGoogleButton = document.getElementById("search__google--button");
+const searchGoogleQuestion = document.getElementById("search__google--question");
 
 
 // Modal
@@ -55,6 +57,14 @@ const closeButtonText = document.createTextNode(String.fromCharCode(215));
 closeButton.classList.add("closebtn");
 closeButton.appendChild(closeButtonText);
 
+
+// event listener for the search box to search google
+searchGoogleButton.addEventListener("click", function(event){
+  event.preventDefault();
+  const question = searchGoogleQuestion.value.replace(" ", "%20");
+  window.open("https://www.google.com/search?q="+question,'_blank');
+  searchGoogleQuestion.value = "";
+})
 
 // Event listener to remove the alerts when the closebutton is pressed
 alertContainer.addEventListener("click", function(event){
