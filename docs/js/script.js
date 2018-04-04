@@ -71,7 +71,7 @@ searchGoogleButton.addEventListener("click", function(event){
 
   if (searchGoogleQuestion.value.trim() !== ""){
     const question = searchGoogleQuestion.value.replace(" ", "%20");
-    window.open("https://www.google.com/search?q="+question,'_blank');
+    window.open("https://www.google.com/search?q="+question, "_blank");
     searchGoogleQuestion.value = "";
   }
   else{
@@ -573,7 +573,7 @@ $( document ).ready(function() {
 
 
   setSettings();
-  setDailyTraficView()
+  setDailyTraficView();
   checkNotifications();
 });
 
