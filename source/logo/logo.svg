@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7377bb;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 416.667px;
+        fill: #fff;
+        text-anchor: middle;
+      }
+
+      .cls-2 {
+        font-family: "Open Sans";
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        font-family: OpenSans-CondensedLight, "Open Sans";
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" width="1000" height="1000" rx="10" ry="10"/>
+  <text id="Y" class="cls-2" transform="translate(82 271.171) scale(0.954 1.578)"><tspan x="0">Y</tspan></text>
+  <text id="A" class="cls-3" transform="translate(299.437 286.601) scale(1.091 1.465)"><tspan x="0">A</tspan></text>
+</svg>
