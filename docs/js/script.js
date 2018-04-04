@@ -89,14 +89,14 @@ saveButton.addEventListener("click", function(event){
   localStorage.setItem("publicProfile", publicProfile.checked);
   localStorage.setItem("timezone", timezoneSelector.value);
 
-  alertGen("Settings have been saved", "success");
+  alertGen("", "Settings have been saved", "success");
 });
 
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
   setSettings();
-  alertGen("Settings have been reset", "error");
+  alertGen("", "Settings have been reset", "error");
 });
 
 
@@ -132,7 +132,7 @@ $(userMsg).on("change", function() {
 sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   if(isValidUser() && isValidMsg()){
-    alertGen("Mesage Sent Sucsesfully!", "success");
+    alertGen("", "Mesage Sent Sucsesfully!", "success");
     userName.value = "";
     userMsg.value = "";
   }
