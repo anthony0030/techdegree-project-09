@@ -238,28 +238,28 @@ html(lang='en')
         div.grid__col--6
           div#settings-area.contain
             h5 Settings
+            form#settings__form
+              div.row
+                label._50(for="email-notifications") Send Email Notifications
+                div.onoffswitch--default
+                    input.onoffswitch__checkbox(id="email-notifications" type="checkbox" name="onoffswitch") 
+                    label.onoffswitch__label(for="email-notifications")
+                        span.onoffswitch__inner
+                        span.onoffswitch__switch
+              br
+              br
+              div.row
+                label._50(for="public-profile") Set Profile to Public
+                div.onoffswitch--default
+                    input.onoffswitch__checkbox(id="public-profile" type="checkbox" name="onoffswitch") 
+                    label.onoffswitch__label(for="public-profile")
+                        span.onoffswitch__inner
+                        span.onoffswitch__switch
 
-            div.row
-              label._50(for="email-notifications") Send Email Notifications
-              div.onoffswitch--default
-                  input.onoffswitch__checkbox(id="email-notifications" type="checkbox" name="onoffswitch") 
-                  label.onoffswitch__label(for="email-notifications")
-                      span.onoffswitch__inner
-                      span.onoffswitch__switch
-            br
-            br
-            div.row
-              label._50(for="public-profile") Set Profile to Public
-              div.onoffswitch--default
-                  input.onoffswitch__checkbox(id="public-profile" type="checkbox" name="onoffswitch") 
-                  label.onoffswitch__label(for="public-profile")
-                      span.onoffswitch__inner
-                      span.onoffswitch__switch
-
-            include jade_partials/_timezones
-            div.flex
-              button#saveBtn.btn--default SAVE
-              button#cancelBtn.btn--disabled CANCEL
+              include jade_partials/_timezones
+              div.flex
+                button(disabled="true")#saveBtn.btn--disabled SAVE
+                button(disabled="true" type="reset" value="Reset")#cancelBtn.btn--disabled CANCEL
 
 
     div#modals

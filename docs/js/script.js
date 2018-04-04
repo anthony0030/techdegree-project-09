@@ -13,9 +13,14 @@ if(!DEBUG){
 
 const alertContainer = document.getElementById("alerts");
 const sendMessageButton = document.getElementById("sendMsg");
+const notificationCircle = document.getElementsByClassName("notification-circle")[0];
+
+
+const settingsForm = document.getElementById("settings__form");
 const saveButton = document.getElementById("saveBtn");
 const cancelButton = document.getElementById("cancelBtn");
-const notificationCircle = document.getElementsByClassName("notification-circle")[0];
+
+
 
 const newMemberContainer = document.getElementById("new-members");
 const newActivityContainer = document.getElementById("new-activity");
@@ -109,20 +114,40 @@ function checkNotifications(){
 }
 
 
+
+
+$( settingsForm ).change(function() {
+  saveButton.className = "btn--default";
+  saveButton.disabled = false;
+
+  cancelButton.className = "btn--error";
+  cancelButton.disabled = false;
+});
+
+
+function disableSettingButtons(){
+  saveButton.className = "btn--disabled";
+  saveButton.disabled = true;
+
+  cancelButton.className = "btn--disabled";
+  cancelButton.disabled = true;
+}
+
+
 // event listener foer the save button
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
-
+  disableSettingButtons()
   localStorage.setItem("SendEmailNotifications", emailNotifications.checked);
   localStorage.setItem("publicProfile", publicProfile.checked);
   localStorage.setItem("timezone", timezoneSelector.value);
-
   alertGen("", "Settings have been saved", "success");
 });
 
 // event listener foer the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
+  disableSettingButtons()
   setSettings();
   alertGen("", "Settings have been reset", "error");
 });
