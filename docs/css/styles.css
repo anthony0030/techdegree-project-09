@@ -845,59 +845,46 @@ h1.logo {
   background: url(../svgs/icon-search.svg) #ffffff no-repeat center; }
 
 /* Style the header: fixed position (always stay at the top) */
-.scrollProgressBar__header--horizontal, .scrollProgressBar__header--vertical {
+.scrollProgressBar__container--horizontal, .scrollProgressBar__container--vertical {
   position: fixed;
   z-index: 1;
   background-color: #fbfbfb; }
-
-/* The progress container (grey background) */
-.scrollProgressBar__container--horizontal, .scrollProgressBar__container--vertical {
-  background: #fbfbfb; }
 
 /* The progress bar (scroll indicator) */
 .scrollProgressBar__progress--horizontal, .scrollProgressBar__progress--vertical {
   background: #82c890; }
 
-.scrollProgressBar__header--horizontal {
-  width: 100%;
-  top: 227px; }
-
 .scrollProgressBar__container--horizontal {
   width: 100%;
-  height: 8px; }
+  height: 8px;
+  top: 227px; }
 
 .scrollProgressBar__progress--horizontal {
   width: 0%;
   height: 8px; }
 
-.scrollProgressBar__header--vertical {
+.scrollProgressBar__container--vertical {
+  display: none;
+  background-color: #4d4c71;
   height: 250px;
   width: 8px;
   z-index: 10;
-  top: 70px; }
-
-.scrollProgressBar__container--vertical {
-  height: 100%;
+  top: 70px;
   width: 8px; }
 
 .scrollProgressBar__progress--vertical {
+  border-radius: 4px;
   height: 0%;
   width: 8px; }
 
-.scrollProgressBar__header--horizontal {
-  display: block; }
-
-.scrollProgressBar__header--vertical {
-  display: none; }
-
 @media (min-width: 769px) {
-  .scrollProgressBar__header--horizontal {
+  .scrollProgressBar__container--horizontal {
     top: 139px; } }
 
 @media (min-width: 1024px) {
-  .scrollProgressBar__header--horizontal {
+  .scrollProgressBar__container--horizontal {
     display: none; }
-  .scrollProgressBar__header--vertical {
+  .scrollProgressBar__container--vertical {
     display: block; } }
 
 /* The Modal (background) */
