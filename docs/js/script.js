@@ -1,4 +1,6 @@
-const DEBUG = true;
+var DEBUG = false;
+
+// DEBUG = true;
 
 // enables or disables the console loggs
 if(!DEBUG){
