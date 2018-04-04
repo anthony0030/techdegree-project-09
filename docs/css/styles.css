@@ -883,24 +883,18 @@ h1.logo {
     color: #666666; }
   .modal__footer {
     background-color: #000000; }
-
-.modal--default .modal__header, .modal--default .modal__footer {
-  background-color: #7377bd; }
-
-.modal--disabled .modal__header, .modal--disabled .modal__footer {
-  background-color: #b2b2b2; }
-
-.modal--success .modal__header, .modal--success .modal__footer {
-  background-color: #62cc82; }
-
-.modal--error .modal__header, .modal--error .modal__footer {
-  background-color: #e4757b; }
-
-.modal--warning .modal__header, .modal--warning .modal__footer {
-  background-color: #ff774e; }
-
-.modal--info .modal__header, .modal--info .modal__footer {
-  background-color: #39add1; }
+  .modal--default .modal__header, .modal--default .modal__footer {
+    background-color: #7377bd; }
+  .modal--disabled .modal__header, .modal--disabled .modal__footer {
+    background-color: #b2b2b2; }
+  .modal--success .modal__header, .modal--success .modal__footer {
+    background-color: #62cc82; }
+  .modal--error .modal__header, .modal--error .modal__footer {
+    background-color: #e4757b; }
+  .modal--warning .modal__header, .modal--warning .modal__footer {
+    background-color: #ff774e; }
+  .modal--info .modal__header, .modal--info .modal__footer {
+    background-color: #39add1; }
 
 @-webkit-keyframes slideDown {
   from {

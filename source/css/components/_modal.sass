@@ -34,11 +34,11 @@
     @extend %modal__padding
     background-color: $black
 
-@each $theam, $color in $ui-colors
-  .modal--#{$theam}
-    @extend .modal
-    .modal__header, .modal__footer
-      background-color: $color
+  @each $theam, $color in $ui-colors
+    @include m($theam)
+      @extend .modal
+      .modal__header, .modal__footer
+        background-color: $color
 
 
 
