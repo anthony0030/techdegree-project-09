@@ -778,7 +778,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 544554387
+	"lastBuiltDate": 544555396
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2068,7 +2068,7 @@
 			"optionString": "'never'"
 			},
 		"semi": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'always', {'omitLastInOneLineBlock': false}"
 			},
 		"semi-spacing": {

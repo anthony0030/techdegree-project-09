@@ -2,7 +2,7 @@ const DEBUG = true
 
 // enables or disables the console loggs
 if(!DEBUG){
-  if(!window.console) window.console = {};
+  if(!window.console){ window.console = {}; }
   var methods = ["log", "debug", "warn", "info"];
   for(var i=0;i<methods.length;i++){
     console[methods[i]] = function(){};
@@ -74,8 +74,9 @@ searchGoogleButton.addEventListener("click", function(event){
     window.open("https://www.google.com/search?q="+question,'_blank');
     searchGoogleQuestion.value = "";
   }
-  else
-    alertGen("Warning", "Search Cant Be Blank", "error")
+  else{
+    alertGen("Warning", "Search Cant Be Blank", "error");
+  }
 })
 
 // Event listener to remove the alerts when the closebutton is pressed
@@ -89,7 +90,7 @@ alertContainer.addEventListener("click", function(event){
 modalContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
     if(event.target.parentNode.className === "modal__header"){
-      console.log("close modal")
+      console.log("close modal");
       event.target.parentNode.parentNode.parentNode.style.display = "none";
     }
     else{
@@ -118,10 +119,12 @@ window.onscroll = function() {
 
 // if there are alerts make the green circle aprire on the bell
 function checkNotifications(){
-  if(NotificationsContainer.children.length === 0)
+  if(NotificationsContainer.children.length === 0){
     notificationCircle.style.fill="rgba(0,0,0,0)";
-  else
+  }
+  else{
     notificationCircle.style.fill="#82c890";
+  }
 }
 
 
@@ -169,9 +172,9 @@ cancelButton.addEventListener("click", function(event){
 
 // load settings from the browser memory
 function setSettings(){
-  if(localStorage.SendEmailNotifications === undefined) localStorage.setItem("SendEmailNotifications", "true");
-  if(localStorage.publicProfile === undefined) localStorage.setItem("publicProfile", "true");
-  if(localStorage.timezone === undefined) localStorage.setItem("timezone", "");
+  if(localStorage.SendEmailNotifications === undefined){ localStorage.setItem("SendEmailNotifications", "true"); }
+  if(localStorage.publicProfile === undefined){ localStorage.setItem("publicProfile", "true"); }
+  if(localStorage.timezone === undefined){ localStorage.setItem("timezone", ""); }
 
   emailNotifications.checked = toBoolean(localStorage.SendEmailNotifications);
   publicProfile.checked = toBoolean(localStorage.publicProfile);
@@ -212,8 +215,8 @@ listOfDailyTraficViews.addEventListener("click", function(event){
 
 // convert a true || false string to boolean 
 function toBoolean(string){
-  if(string === "true") return true;
-  if(string === "false") return false;
+  if(string === "true"){ return true; }
+  if(string === "false"){ return false; }
 }
 
 
@@ -367,10 +370,10 @@ function printNewMemberActivity(){
 function genRandomDay(){
   days = "Day";
   const number = randomNumber(1,7);
-  if(number > 1) days += "s";
-
+  if(number > 1){
+    days += "s";
+  }
   return number + " " + days + " ago";
-
 }
 
 
@@ -444,7 +447,7 @@ function alertGen(title, say, style){
 
 // this prints out alerts in the notificatios section
 function notiGen(title, say, style){
-  var notification = alertFactory(title, say, style)
+  var notification = alertFactory(title, say, style);
   NotificationsContainer.appendChild(notification);
   checkNotifications();
 }
@@ -455,7 +458,6 @@ function notiGen(title, say, style){
 $(userName).autocomplete({
   response: isValidUser(true),
   source: members
-
 });
 
 // check if user exists
@@ -491,7 +493,7 @@ function isValidUser(autocomplete){
 // check if mesage exists
 function isValidMsg(){
   messageErrors_msg.innerHTML = "The mesage can't be blank";
-  console.log(userMsg.value)
+  console.log(userMsg.value);
   if(userMsg.value.trim() !== ""){
     console.log("is a valid message");
     userMsg.className = "form__input--valid";
@@ -564,8 +566,8 @@ $( document ).ready(function() {
   // alertGen("Alert", "This is a warning alert", "warning");
   // alertGen("Alert", "This is an info alert", "info");
 
-  notiGen("Error!", "Server Quota Reached", "error")
-  notiGen("", "Your Subscription Has Been Renewed", "success")
+  notiGen("Error!", "Server Quota Reached", "error");
+  notiGen("", "Your Subscription Has Been Renewed", "success");
 
 
 

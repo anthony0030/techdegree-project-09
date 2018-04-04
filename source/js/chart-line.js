@@ -28,7 +28,7 @@ const options = {
       } //gridLines
     }] //xAxes
   } //scales
-} //options
+}; //options
 
 
 function drawLineChartHourly() {
