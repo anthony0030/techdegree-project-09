@@ -612,13 +612,13 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/js\/Chart.roundedBarCharts.min.js": {
+	"\/source\/js\/Chart.roundedBarCharts.js": {
 		"ft": 64,
-		"ma": 1,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/docs\/js\/Chart.roundedBarCharts.min.js",
-		"oF": 1,
+		"oAP": "\/docs\/js\/Chart.roundedBarCharts.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
