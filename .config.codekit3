@@ -778,7 +778,7 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 544553192
+	"lastBuiltDate": 544554387
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1248,7 +1248,7 @@
 			"optionString": "{'before': false, 'after': true}"
 			},
 		"comma-style": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'last'"
 			},
 		"complexity": {
@@ -1272,7 +1272,7 @@
 			"optionString": ""
 			},
 		"curly": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'all'"
 			},
 		"default-case": {
@@ -1292,7 +1292,7 @@
 			"optionString": "'always'"
 			},
 		"eqeqeq": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'always', {'null': 'always'}"
 			},
 		"for-direction": {
@@ -1440,7 +1440,7 @@
 			"optionString": "{'ignoreChainWithDepth': 2}"
 			},
 		"no-alert": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-array-constructor": {
@@ -1460,7 +1460,7 @@
 			"optionString": ""
 			},
 		"no-caller": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-case-declarations": {
@@ -1484,7 +1484,7 @@
 			"optionString": "'except-parens'"
 			},
 		"no-confusing-arrow": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'allowParens': false}"
 			},
 		"no-console": {
@@ -1548,7 +1548,7 @@
 			"optionString": ""
 			},
 		"no-empty-function": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'allow': []}"
 			},
 		"no-empty-pattern": {

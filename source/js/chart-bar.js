@@ -37,7 +37,7 @@ new Chart(document.getElementById("chart-bar"), {
           beginAtZero: true,
           callback: function(value) {
 
-            if(value != 0) return value
+            if(value !== 0){ return value; }
           }
         }
 
