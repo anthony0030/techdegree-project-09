@@ -1,9 +1,3 @@
-if(localStorage.dailyTraficView === undefined){
-  localStorage.setItem("dailyTraficView", "weekly");
-  document.getElementById("weekly-option").className = "visits__option--active";
-}
-
-
 document.getElementById("all-options").addEventListener("click", function(event){
   if(event.target.tagName.toLowerCase() === "li"){
     clickedLi = event.target;

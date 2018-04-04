@@ -486,6 +486,39 @@ function isValidMsg(){
   }
 }
 
+function setDailyTraficView(){
+  // if dailyTraficView is not in the local storage set its value to weekly
+  if(localStorage.dailyTraficView === undefined){
+    localStorage.setItem("dailyTraficView", "weekly");
+    document.getElementById("weekly-option").className = "visits__option--active";
+  }
+
+  // set the default view of the chart
+  switch (localStorage.dailyTraficView){
+    case "hourly":
+      document.getElementById("hourly-option").className = "visits__option--active";
+      drawLineChartHourly();
+    break;
+
+    case "daily":
+      document.getElementById("daily-option").className = "visits__option--active";
+      drawLineChartDaily();
+    break;
+
+    case "weekly":
+      document.getElementById("weekly-option").className = "visits__option--active";
+      drawLineChartWeekly();
+    break;
+
+    case "monthly":
+      document.getElementById("monthly-option").className = "visits__option--active";
+      drawLineChartMonthly();
+    break;
+  }
+}
+
+
+
 
 $( document ).ready(function() {
 
@@ -514,32 +547,11 @@ $( document ).ready(function() {
   notiGen("Error!", "Server Quota Reached", "error")
   notiGen("", "Your Subscription Has Been Renewed", "success")
 
-  // set the default view of the chart
-  switch (localStorage.dailyTraficView){
-    case "hourly":
-      document.getElementById("hourly-option").className = "visits__option--active";
-      drawLineChartHourly();
-    break;
-
-    case "daily":
-      document.getElementById("daily-option").className = "visits__option--active";
-      drawLineChartDaily();
-    break;
-
-    case "weekly":
-      document.getElementById("weekly-option").className = "visits__option--active";
-      drawLineChartWeekly();
-    break;
-
-    case "monthly":
-      document.getElementById("monthly-option").className = "visits__option--active";
-      drawLineChartMonthly();
-    break;
-  }
 
 
 
   setSettings();
+  setDailyTraficView()
   checkNotifications();
 });
 
