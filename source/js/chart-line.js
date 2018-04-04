@@ -7,7 +7,6 @@ function drawLineChartHourly() {
       datasets: [{
         label: "Users",
         data: [0, 75, 125, 100, 150, 200, 150, 175, 125, 175, 200, 175, 200, 75, 125, 100, 150, 200, 150, 175, 125, 175, 200, 175],
-        fill: true,
         borderColor: "rgb(115, 119, 189)",
         backgroundColor: "rgba(115, 119, 189, 0.2)",
         lineTension: 0,
@@ -19,8 +18,6 @@ function drawLineChartHourly() {
       }]
     },
     options: {
-      cornerRadius: 7,
-      fullCornerRadius: false,
       legend: {
         display: false
       },
@@ -61,7 +58,6 @@ function drawLineChartDaily() {
       datasets: [{
         label: "Users",
         data: [0, 200, 500, 50, 300, 800, 1000],
-        fill: true,
         borderColor: "rgb(115, 119, 189)",
         backgroundColor: "rgba(115, 119, 189, 0.2)",
         lineTension: 0,
@@ -73,8 +69,6 @@ function drawLineChartDaily() {
       }]
     },
     options: {
-      cornerRadius: 7,
-      fullCornerRadius: false,
       legend: {
         display: false
       },
@@ -117,7 +111,6 @@ function drawLineChartWeekly() {
       datasets: [{
         label: "Users",
         data: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2000],
-        fill: true,
         borderColor: "rgb(115, 119, 189)",
         backgroundColor: "rgba(115, 119, 189, 0.2)",
         lineTension: 0,
@@ -129,8 +122,6 @@ function drawLineChartWeekly() {
       }]
     },
     options: {
-      cornerRadius: 7,
-      fullCornerRadius: false,
       legend: {
         display: false
       },
@@ -173,7 +164,6 @@ function drawLineChartMonthly() {
       datasets: [{
         label: "Users",
         data: [0, 75, 125, 100, 150, 200, 150, 175, 125, 175, 200, 175],
-        fill: true,
         borderColor: "rgb(115, 119, 189)",
         backgroundColor: "rgba(115, 119, 189, 0.2)",
         lineTension: 0,
@@ -185,8 +175,6 @@ function drawLineChartMonthly() {
       }]
     },
     options: {
-      cornerRadius: 7,
-      fullCornerRadius: false,
       legend: {
         display: false
       },
