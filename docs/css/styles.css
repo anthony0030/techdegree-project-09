@@ -234,6 +234,8 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
   text-align: center;
   padding: 0.625em;
   margin: 0.625em; }
+  .btn[disabled="true"], [disabled="true"].btn--default, [disabled="true"].btn--disabled, [disabled="true"].btn--success, [disabled="true"].btn--error, [disabled="true"].btn--warning, [disabled="true"].btn--info {
+    cursor: not-allowed; }
   .btn[type="submit"], [type="submit"].btn--default, [type="submit"].btn--disabled, [type="submit"].btn--success, [type="submit"].btn--error, [type="submit"].btn--warning, [type="submit"].btn--info {
     width: 100%;
     margin: 0.625em 0; }
