@@ -34,15 +34,12 @@ html(lang='en')
 
     main
 
-      div.nav__side--bg
-        ul
-          li
-            a(onclick="displayModal(modalNotifications);").hidden-bell
-              svg.bell
-                use(xlink:href="#bell")
-
       nav.nav__side
         ul
+          li.bell__li
+            a(onclick="displayModal(modalNotifications);")
+              svg.bell
+                use(xlink:href="#bell")
           li
             a(href="#dashboard-area")
               include svgs/icon-dashboard.svg
@@ -55,10 +52,6 @@ html(lang='en')
           li
             a(href="#settings-area")
               include svgs/icon-settings.svg
-          li.notification-small
-            a(onclick="displayModal(modalNotifications);")
-              svg.bell
-                use(xlink:href="#bell")
 
         div.headergrid__row
           div.progress-container

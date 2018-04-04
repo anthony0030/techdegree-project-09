@@ -35,14 +35,8 @@ svg.bell
   width: 33.219px
   height: 33.219px
 
-
-.hidden-bell
-  @extend .bell
-  position: fixed
-  top: 15px
-  z-index: 2
-  svg
-    fill: #FFF !important
+.bell__li
+  order: 1
 
 
 .nav
@@ -83,13 +77,6 @@ svg.bell
       fill: #FFF
 
 
-.nav__side--bg
-  @extend .nav__side
-  display: none
-  position: absolute
-
-
-
 // --------------------------
 //  Media Queries
 //---------------------------
@@ -104,6 +91,8 @@ svg.bell
   main
     margin-top: 0
 
+  .bell__li
+    order: 0
 
   .notification-big
     display: block
@@ -121,19 +110,14 @@ svg.bell
     justify-content: flex-end
 
   .nav__side
-    top: 70px
+    top: 0
     margin-top: 0
     width: 60px
-    height: 250vh
+    height: 100%
     ul
       flex-direction: column
     .notification-small
       display: none
-
-  .nav__side--bg
-    display: block
-    position: absolute
-    height: 300vh
 
   .menu--row
     height: 70px
