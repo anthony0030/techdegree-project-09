@@ -462,7 +462,7 @@ $(userName).autocomplete({
 
 // check if user exists
 function isValidUser(autocomplete){
-  messageErrors_user.innerHTML= "You need to enter a user name";
+  messageErrors_user.textContent = "You need to enter a user name";
   console.log(userName.value);
   console.log(members.indexOf(userName.value));
   if((members.indexOf(userName.value) >= 0) || (autocomplete && userName.value !== "")){
@@ -478,12 +478,12 @@ function isValidUser(autocomplete){
     }
     if(userName.value.trim() !== ""){
       console.log(userName.value + " is NOT a user");
-      messageErrors_user.innerHTML= userName.value + " is NOT a user";
+      messageErrors_user.textContent = userName.value + " is NOT a user";
       return false;
     }
     else{
       console.log("Please enter a user name");
-      messageErrors_user.innerHTML= "You need to enter a user name";
+      messageErrors_user.textContent = "You need to enter a user name";
       return false;
     }
   }
@@ -492,7 +492,7 @@ function isValidUser(autocomplete){
 
 // check if mesage exists
 function isValidMsg(){
-  messageErrors_msg.innerHTML = "The mesage can't be blank";
+  messageErrors_msg.textContent = "The mesage can't be blank";
   console.log(userMsg.value);
   if(userMsg.value.trim() !== ""){
     console.log("is a valid message");
