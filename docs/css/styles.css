@@ -397,8 +397,6 @@ svg.bell {
   background-color: #4d4c71;
   position: fixed;
   top: 158px; }
-  .nav__side .notification-small svg {
-    fill: #FFF; }
   .nav__side svg {
     height: 33px;
     margin-top: 18px;
@@ -453,8 +451,6 @@ svg.bell {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-    .nav__side .notification-small {
-      display: none; }
   .menu--row {
     height: 70px; } }
 
