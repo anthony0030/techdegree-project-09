@@ -643,7 +643,7 @@ h1.logo {
   text-align: center; }
 
 .logo--col {
-  z-index: 3;
+  z-index: 11;
   background-color: #7377bd;
   justify-content: left; }
   @media (min-width: 769px) {
