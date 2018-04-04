@@ -233,7 +233,7 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
   cursor: pointer;
   text-align: center;
   padding: 0.625em;
-  margin: 0.625em; }
+  margin: 10px 0px; }
   .btn[disabled="true"], [disabled="true"].btn--default, [disabled="true"].btn--disabled, [disabled="true"].btn--success, [disabled="true"].btn--error, [disabled="true"].btn--warning, [disabled="true"].btn--info {
     cursor: not-allowed; }
   .btn[type="submit"], [type="submit"].btn--default, [type="submit"].btn--disabled, [type="submit"].btn--success, [type="submit"].btn--error, [type="submit"].btn--warning, [type="submit"].btn--info {
@@ -241,6 +241,12 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
     margin: 0.625em 0; }
   .btn:focus, .btn--default:focus, .btn--disabled:focus, .btn--success:focus, .btn--error:focus, .btn--warning:focus, .btn--info:focus {
     outline: none; }
+  @media (min-width: 769px) {
+    .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
+      margin: 0.625em; } }
+  @media (min-width: 1024px) {
+    .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
+      width: 9.375em; } }
   .btn--default {
     background-color: #7377bd; }
     .btn--default:active {
@@ -271,9 +277,6 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
     .btn--info:active {
       -webkit-box-shadow: inset 0 0 10px #1f6d85;
               box-shadow: inset 0 0 10px #1f6d85; }
-  @media (min-width: 1024px) {
-    .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
-      width: 9.375em; } }
 
 .onoffswitch, .onoffswitch--default, .onoffswitch--disabled, .onoffswitch--success, .onoffswitch--error, .onoffswitch--warning, .onoffswitch--info {
   position: relative;
