@@ -20,7 +20,7 @@ const options = {
         callback: function(value, index, values) {
           if (value !== 0) {return value;}
         } //callback
-      }, //ticks
+      } //ticks
     }], //yAxes
     xAxes: [{
       gridLines: {
