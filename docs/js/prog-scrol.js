@@ -1,2 +1,2 @@
-window.onscroll=function(){var e=document.body.scrollTop||document.documentElement.scrollTop,t=document.documentElement.scrollHeight-document.documentElement.clientHeight,o=e/t*100;document.getElementById("myBar").style.width=o+"%"};
+window.onscroll=function(){var e=document.body.scrollTop||document.documentElement.scrollTop,t=document.documentElement.scrollHeight-document.documentElement.clientHeight,o=e/t*100;document.getElementById("myHorizontalBar").style.width=o+"%",document.getElementById("myVerticalBar").style.height=o+"%"};
 //# sourceMappingURL=./prog-scrol.js.map

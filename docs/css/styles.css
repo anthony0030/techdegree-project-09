@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 @import url(../bower_components/normalize-css/normalize.css);
+html {
+  /* ----------------------------*/
+  /* Screen size indicator Start */
+  /* ----------------------------*/
+  /* ----------------------------*/
+  /* Screen size indicator end   */
+  /* ----------------------------*/ }
+  html body::before {
+    z-index: 99999;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    @media (min-width: 320px) {
+      html body::before {
+        content: "MOBILE"; } }
+    @media (min-width: 768px) {
+      html body::before {
+        content: "TABLET"; } }
+    @media (min-width: 1024px) {
+      html body::before {
+        content: "DESKTOP"; } }
+
 .grid:after {
   content: "";
   display: table;
@@ -822,28 +845,60 @@ h1.logo {
   background: url(../svgs/icon-search.svg) #ffffff no-repeat center; }
 
 /* Style the header: fixed position (always stay at the top) */
-.header {
+.scrollProgressBar__header--horizontal, .scrollProgressBar__header--vertical {
   position: fixed;
-  top: 0;
   z-index: 1;
-  width: 100%;
   background-color: #fbfbfb; }
 
 /* The progress container (grey background) */
-.progress-container {
-  width: 100%;
-  height: 8px;
+.scrollProgressBar__container--horizontal, .scrollProgressBar__container--vertical {
   background: #fbfbfb; }
 
 /* The progress bar (scroll indicator) */
-.progress-bar {
-  height: 8px;
-  background: #82c890;
-  width: 0%; }
+.scrollProgressBar__progress--horizontal, .scrollProgressBar__progress--vertical {
+  background: #82c890; }
+
+.scrollProgressBar__header--horizontal {
+  width: 100%;
+  top: 227px; }
+
+.scrollProgressBar__container--horizontal {
+  width: 100%;
+  height: 8px; }
+
+.scrollProgressBar__progress--horizontal {
+  width: 0%;
+  height: 8px; }
+
+.scrollProgressBar__header--vertical {
+  height: 250px;
+  width: 8px;
+  z-index: 10;
+  top: 70px; }
+
+.scrollProgressBar__container--vertical {
+  height: 100%;
+  width: 8px; }
+
+.scrollProgressBar__progress--vertical {
+  height: 0%;
+  width: 8px; }
+
+.scrollProgressBar__header--horizontal {
+  display: block; }
+
+.scrollProgressBar__header--vertical {
+  display: none; }
+
+@media (min-width: 769px) {
+  .scrollProgressBar__header--horizontal {
+    top: 139px; } }
 
 @media (min-width: 1024px) {
-  .header, .progress-container, .progress-bar {
-    display: none; } }
+  .scrollProgressBar__header--horizontal {
+    display: none; }
+  .scrollProgressBar__header--vertical {
+    display: block; } }
 
 /* The Modal (background) */
 .modal__header, .modal__footer {
