@@ -61,9 +61,14 @@ closeButton.appendChild(closeButtonText);
 // event listener for the search box to search google
 searchGoogleButton.addEventListener("click", function(event){
   event.preventDefault();
-  const question = searchGoogleQuestion.value.replace(" ", "%20");
-  window.open("https://www.google.com/search?q="+question,'_blank');
-  searchGoogleQuestion.value = "";
+
+  if (searchGoogleQuestion.value.trim() !== ""){
+    const question = searchGoogleQuestion.value.replace(" ", "%20");
+    window.open("https://www.google.com/search?q="+question,'_blank');
+    searchGoogleQuestion.value = "";
+  }
+  else
+    alertGen("Warning", "Search Cant Be Blank", "error")
 })
 
 // Event listener to remove the alerts when the closebutton is pressed
