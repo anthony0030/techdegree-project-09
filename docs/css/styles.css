@@ -161,6 +161,8 @@ label {
   .user {
     padding-bottom: 20px;
     border-bottom: 1px solid #d1d1d1; }
+  .user_curent--col {
+    width: 30% !important; }
   .recent_activity-data {
     max-width: 500px; }
   .recent_activity-carrot {
