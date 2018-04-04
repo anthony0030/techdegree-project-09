@@ -186,7 +186,7 @@ $(userName).on("keyup", function() {
   isValidUser();
 });
 
-$(userMsg).on("change", function() { 
+$(userMsg).on("keyup", function() { 
   console.log("on change called isValidMsg()");
   isValidMsg();
 });
