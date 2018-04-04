@@ -304,8 +304,9 @@ function genRandomActivity(){
   const things = ["Post", "Comment", "Photo", "Status"];
   const thing = things[randomNumber(0, things.length-1)];
   const thatPerson = members[randomNumber(0, members.length-1)];
+  const thatPersonFirst = thatPerson.split(" ")[0];
 
-  return activity + " " + thatPerson + "'s " + thing;
+  return activity + " " + thatPersonFirst + "'s " + thing;
 }
 
 
