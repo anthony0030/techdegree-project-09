@@ -1,7 +1,7 @@
 new Chart(document.getElementById("chart-bar"), {
   type: "bar",
   data: {
-    labels: ["S", "M", "T", "W", "T", "F", "S"],
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     datasets: [{
       label: "DAILY TRAFFIC",
       backgroundColor: "#7377BD",
@@ -50,6 +50,13 @@ new Chart(document.getElementById("chart-bar"), {
           drawTicks: false,
         },
         barPercentage: 0.5,
+        
+        ticks: {
+          callback: function(value, index, values) {
+            console.log(value.split(""))
+            return value.split("")[0]
+          }
+        },
       }]
 
 
