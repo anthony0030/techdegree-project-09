@@ -218,7 +218,6 @@ function genRandUsers(){
 
 function printNewMember(){
 
-  console.log("print newe memb")
   const li = document.createElement("LI");
 
   const a = document.createElement("A");

@@ -53,7 +53,6 @@ new Chart(document.getElementById("chart-bar"), {
         
         ticks: {
           callback: function(value, index, values) {
-            console.log(value.split(""))
             return value.split("")[0]
           }
         },
