@@ -766,6 +766,7 @@ h1.logo {
       align-self: flex-end; }
 
 .visits__option, .visits__option--active {
+  cursor: pointer;
   color: #b2b2b2;
   -webkit-text-decoration: bold;
           text-decoration: bold;
