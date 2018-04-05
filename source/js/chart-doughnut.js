@@ -2,7 +2,7 @@ new Chart(document.getElementById("chart-doughnut"), {
   type: "doughnut",
   data: {
     labels: [
-      "Desctops",
+      "Desktops",
       "Tablets",
       "Phone"
      ],
