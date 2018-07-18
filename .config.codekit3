@@ -7,7 +7,7 @@
 		"uuidString": "9A13AC89-A095-490D-A799-72F858D9CC5C"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -197,6 +197,15 @@
 		"oA": 2,
 		"oAP": "\/docs\/bower_components\/normalize-css\/test.html",
 		"oF": 0
+		},
+	"\/source\/components.jade": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/docs\/components.html",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/source\/css\/base\/_base.sass": {
 		"aP": 0,
@@ -1081,7 +1090,8 @@
 	"displayValue": "techdegree-project-09",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
-	"lastBuiltDate": 544601557
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 553606053
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2884,6 +2894,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
