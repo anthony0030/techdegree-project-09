@@ -16,7 +16,7 @@
   @extend %scrollProgressBar__container
   width: 100%
   height: 8px
-  top: 227px
+  top: 203px
 
 .scrollProgressBar__progress--horizontal
   @extend %scrollProgressBar__progress
@@ -44,6 +44,9 @@
   height: 0%
   width: 8px
 
+@include mq(small)
+  .scrollProgressBar__container--horizontal
+    top: 227px
 
 @include mq(medium)
   .scrollProgressBar__container--horizontal

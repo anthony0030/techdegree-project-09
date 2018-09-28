@@ -58,7 +58,7 @@ svg.bell
   width: 100%
   background-color: $color-secondary
   position: fixed
-  top: 158px
+  top: 134px
   svg
     height: 33px
     margin-top: 18px
@@ -71,6 +71,10 @@ svg.bell
 // --------------------------
 //  Media Queries
 //---------------------------
+
+@include mq(small)
+  .nav__side
+    top: 159px
 
 @include mq(medium)
   .nav__side
