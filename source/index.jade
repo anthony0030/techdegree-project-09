@@ -41,14 +41,14 @@ html(lang='en')
               svg.bell
                 use(xlink:href="#bell")
           li
+            a(href="#visits-area")
+              include svgs/icon-visits.svg
+          li
             a(href="#dashboard-area")
               include svgs/icon-dashboard.svg
           li
             a(onClick="document.getElementById('members-area').scrollIntoView(true);")
               include svgs/icon-members.svg
-          li
-            a(href="#visits-area")
-              include svgs/icon-visits.svg
           li
             a(href="#settings-area")
               include svgs/icon-settings.svg
@@ -77,7 +77,7 @@ html(lang='en')
 
 
 
-      div.grid__row
+      div#visits-area.grid__row
         div.grid__col--12
           div.contain
             h5 Daily Traffic
