@@ -7,8 +7,10 @@
   "license": "UNLICENSED",
   "repository": {},
   "dependencies": {
+    "chart.js": "^2.9.3",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
+    "moment": "2.21.0",
     "normalize.css": "^8.0.1"
   }
 }

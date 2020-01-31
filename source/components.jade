@@ -4,10 +4,10 @@ html(lang='en')
     meta(charset='utf-8')
     title YourApp&trade;
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="node_modules/jquery/dist/jquery.min.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     link(rel='stylesheet', href='node_modules/normalize.css/normalize.css')
-    link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    link(rel="stylesheet", href="node_modules/jquery-ui/themes/base/all.css")
     link(rel='stylesheet', href='css/styles.css')
     include _favicon
   body
@@ -15,14 +15,8 @@ html(lang='en')
     main
 
     footer
-    script( src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"
-            integrity="sha256-9YAuB2VnFZNJ+lKfpaQ3dKQT9/C0j3VUla76hHbiVF8="
-            crossorigin="anonymous"
-          )
-    script( src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
-            integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ="
-            crossorigin="anonymous"
-          )
+    script(src="node_modules/moment/min/moment.min.js")
+    script(src="node_modules/chart.js/dist/Chart.bundle.min.js")
     script(src="js/Chart.roundedBarCharts.js")
     script(src="js/script.js")
     script(src="js/chart-line.js")
