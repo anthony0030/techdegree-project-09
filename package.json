@@ -7,6 +7,8 @@
   "license": "UNLICENSED",
   "repository": {},
   "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
     "normalize.css": "^8.0.1"
   }
 }
