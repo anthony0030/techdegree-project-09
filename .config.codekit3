@@ -17,11 +17,25 @@
 		"oAP": "/docs/.gitignore",
 		"oF": 0
 		},
+	"/.vscode/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/docs/.vscode/settings.json",
+		"oF": 1,
+		"oO": 0,
+		"oS": 1
+		},
 	"/docs": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "/docs/docs",
 		"oF": 0
+		},
+	"/mockups": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/docs/mockups",
+		"oF": 1
 		},
 	"/node_modules": {
 		"ft": 65536,
@@ -830,12 +844,6 @@
 		"oAP": "/docs/logo",
 		"oF": 0
 		},
-	"/source/mockups": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/docs/mockups",
-		"oF": 0
-		},
 	"/source/svgs/icon-arrow-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -965,6 +973,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/yarn.lock",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -977,7 +993,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-ive",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 602177856.35942698
+	"lastBuiltDate": 602696434.83160102
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
