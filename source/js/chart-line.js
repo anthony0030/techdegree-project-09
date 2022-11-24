@@ -32,7 +32,7 @@ const options = {
 
 
 function drawLineChartHourly() {
-  localStorage.setItem("dailyTraficView", "hourly");
+  localStorage.setItem("dailyTrafficView", "hourly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -47,7 +47,7 @@ function drawLineChartHourly() {
 }
 
 function drawLineChartDaily() {
-  localStorage.setItem("dailyTraficView", "daily");
+  localStorage.setItem("dailyTrafficView", "daily");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -62,7 +62,7 @@ function drawLineChartDaily() {
 }
 
 function drawLineChartWeekly() {
-  localStorage.setItem("dailyTraficView", "weekly");
+  localStorage.setItem("dailyTrafficView", "weekly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {
@@ -77,7 +77,7 @@ function drawLineChartWeekly() {
 }
 
 function drawLineChartMonthly() {
-  localStorage.setItem("dailyTraficView", "monthly");
+  localStorage.setItem("dailyTrafficView", "monthly");
   new Chart(document.getElementById("chart-line"), {
     type: "line",
     data: {

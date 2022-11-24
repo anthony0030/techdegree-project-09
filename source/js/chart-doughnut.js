@@ -5,7 +5,7 @@ new Chart(document.getElementById("chart-doughnut"), {
       "Desktops",
       "Tablets",
       "Phone"
-     ],
+    ],
     datasets: [{
       borderWidth: 0,
       hoverBorderWidth: 2,

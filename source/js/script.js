@@ -1,8 +1,8 @@
 var DEBUG = false;
-
+// ? enables or disables the console logs
 // DEBUG = true;
 
-// enables or disables the console loggs
+
 if(!DEBUG){
   if(!window.console){ window.console = {}; }
   var methods = ["log", "debug", "warn", "info"];
@@ -26,7 +26,7 @@ const cancelButton = document.getElementById("cancelBtn");
 
 const newMemberContainer = document.getElementById("new-members");
 const newActivityContainer = document.getElementById("new-activity");
-const userCurent = document.getElementById("user_curent");
+const userCurrent = document.getElementById("user_current");
 const members = [];
 
 const userName = document.getElementById("userName");
@@ -50,24 +50,24 @@ const searchGoogleButton = document.getElementById("search__google--button");
 const searchGoogleQuestion = document.getElementById("search__google--question");
 
 
-// Modal
+// ? Modal
 const modalContainer = document.getElementById("modals");
 const modalNotifications = document.getElementById("notifications");
 const NotificationsContainer = document.getElementById("notifications__container");
-//  onclick="displayModal(modalNotifications);"
+// onclick="displayModal(modalNotifications);"
 function displayModal(modalToDisplay){ modalToDisplay.style.display = "block"; }
 
 
-//Close Button
+// ? Close Button
 const closeButton = document.createElement("SPAN");
 const closeButtonText = document.createTextNode(String.fromCharCode(215));
 closeButton.classList.add("closebtn");
 closeButton.appendChild(closeButtonText);
 
 
-const listOfDailyTraficViews = document.getElementById("all-options");
+const listOfDailyTrafficViews = document.getElementById("all-options");
 
-// event listener for the search box to search google
+// ? event listener for the search box to search google
 searchGoogleButton.addEventListener("click", function(event){
   event.preventDefault();
 
@@ -81,14 +81,14 @@ searchGoogleButton.addEventListener("click", function(event){
   }
 });
 
-// Event listener to remove the alerts when the closebutton is pressed
+// ? Event listener to remove the alerts when the closebutton is pressed
 alertContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   }
 });
 
-// Event listener to hide the modal when the closebutton is pressed
+// ? Event listener to hide the modal when the closebutton is pressed
 modalContainer.addEventListener("click", function(event){
   if(event.target.className === "closebtn"){
     if(event.target.parentNode.className === "modal__header"){
@@ -102,14 +102,14 @@ modalContainer.addEventListener("click", function(event){
   }
 });
 
-// Hide modal when a user clicks out side of the modal
+// ? Hide modal when a user clicks out side of the modal
 modalContainer.addEventListener("click", function(event){
   if (event.target.className.split("--")[0] === "modal") {
     event.target.style.display = "none";
   }
 });
 
-// When the user scrolls the page, execute myFunction to set the progres on the scroll bars
+// ? When the user scrolls the page, execute myFunction to set the progres on the scroll bars
 window.onscroll = function() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -119,7 +119,7 @@ window.onscroll = function() {
 };
 
 
-// if there are alerts make the green circle aprire on the bell
+// ? if there are alerts make the green circle aprire on the bell
 function checkNotifications(){
   if(NotificationsContainer.children.length === 0){
     notificationCircle.style.fill="rgba(0,0,0,0)";
@@ -129,10 +129,7 @@ function checkNotifications(){
   }
 }
 
-
-
-
-// enable the buttons on the settings form when a change is detected to the form
+// ? enable the buttons on the settings form when a change is detected to the form
 $( settingsForm ).change(function() {
   saveButton.className = "btn--default";
   saveButton.disabled = false;
@@ -142,7 +139,7 @@ $( settingsForm ).change(function() {
 });
 
 
-// function to disable the buttons on the form
+// ? function to disable the buttons on the form
 function disableSettingButtons(){
   saveButton.className = "btn--disabled";
   saveButton.disabled = true;
@@ -152,7 +149,7 @@ function disableSettingButtons(){
 }
 
 
-// event listener foer the save button
+// ? event listener for the save button
 saveButton.addEventListener("click", function(event){
   event.preventDefault();
   disableSettingButtons();
@@ -162,7 +159,7 @@ saveButton.addEventListener("click", function(event){
   alertGen("", "Settings have been saved", "success");
 });
 
-// event listener foer the cancel button
+// ? event listener for the cancel button
 cancelButton.addEventListener("click", function(event){
   event.preventDefault();
   disableSettingButtons();
@@ -172,7 +169,7 @@ cancelButton.addEventListener("click", function(event){
 
 
 
-// load settings from the browser memory
+// ? load settings from the browser memory
 function setSettings(){
   if(localStorage.SendEmailNotifications === undefined){ localStorage.setItem("SendEmailNotifications", "true"); }
   if(localStorage.publicProfile === undefined){ localStorage.setItem("publicProfile", "true"); }
@@ -183,14 +180,14 @@ function setSettings(){
   timezoneSelector.value = localStorage.timezone;
 }
 
-$(userName).on("keyup", function() { 
+$(userName).on("keyup", function() {
   console.log("on keyup called isValidUser()");
   isValidUser();
 });
 
 
 
-$(userName).on("change", function() { 
+$(userName).on("change", function() {
   console.log("on change called isValidUser()");
   isValidUser();
 });
@@ -202,34 +199,34 @@ $(userName).on( "click", function() {
   isValidUser();
 });
 
-$(userMsg).on("keyup", function() { 
+$(userMsg).on("keyup", function() {
   console.log("on change called isValidMsg()");
   isValidMsg();
 });
 
-// event listener for the send message button
+// ? event listener for the send message button
 sendMessageButton.addEventListener("click", function(event){
   event.preventDefault();
   if(isValidUser() && isValidMsg()){
-    alertGen("", "Mesage Sent Sucsesfully!", "success");
+    alertGen("", "Mesage Sent Successfully!", "success");
     userName.value = "";
     userMsg.value = "";
   }
 });
 
 
-// sets the class on the dayly trafic view that is cliked
-listOfDailyTraficViews.addEventListener("click", function(event){
+// ? sets the class on the daily traffic view that is cliked
+listOfDailyTrafficViews.addEventListener("click", function(event){
   if(event.target.tagName.toLowerCase() === "li"){
     clickedLi = event.target;
-    var curentActive = listOfDailyTraficViews.getElementsByClassName("visits__option--active")[0];
-    curentActive.className = "visits__option";
+    var currentActive = listOfDailyTrafficViews.getElementsByClassName("visits__option--active")[0];
+    currentActive.className = "visits__option";
     clickedLi.className = "visits__option--active";
   }
 });
 
 
-// convert a true || false string to boolean 
+// ? convert a true || false string to boolean
 function toBoolean(string){
   if(string === "true"){ return true; }
   if(string === "false"){ return false; }
@@ -237,8 +234,8 @@ function toBoolean(string){
 
 
 
-//converts dateformat from "2014-12-11 14:35:49" into 11/12/14
-function dateConverter(date){ 
+// ? converts dateformat from "2014-12-11 14:35:49" into 11/12/14
+function dateConverter(date){
   const splitDate = date.date.split("-");
   const year = splitDate[0].substring(2);
   const month = splitDate[1];
@@ -247,19 +244,19 @@ function dateConverter(date){
   return day + "/" + month + "/" + year;
 }
 
-// capitalize first letter of a string converts anthony into Anthony 
+// ? capitalize first letter of a string converts anthony into Anthony
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
-// returns a random integer from a max and a min width a default 0 to 10
+// ? returns a random integer from a max and a min width a default 0 to 10
 function randomNumber(min=0, max=10){
   return Math.round(Math.random() * (max - min) + min);
 }
 
 
-// download random user data and useit
+// ? download random user data and use it
 function genRandUsers(){
   return $.ajax({
     url: "https://randomuser.me/api/?results="+numberOfRandomusers,
@@ -268,7 +265,7 @@ function genRandUsers(){
       // console.log(data);
       newMemberContainer.innerHTML = "";
       newActivityContainer.innerHTML = "";
-      userCurent.innerHTML = "";
+      userCurrent.innerHTML = "";
       randomCurrentUser();
       for (i = 1; i < numberOfRandomusers; i++){
         $randomUserData = $randomUsers.responseJSON.results[i];
@@ -281,7 +278,7 @@ function genRandUsers(){
 }
 
 
-// prints a new member
+// ? prints a new member
 function printNewMember(){
 
   const li = document.createElement("LI");
@@ -323,14 +320,14 @@ function printNewMember(){
 }
 
 
-// li
-//   a.user
-//     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-//     div.user-details
-//       p.user-title Dale Byrd
-//       p.user-subtitle.email dalebyrd52@example.com
-//     div.user-data-right
-//       p 10/05/15
+// ? li
+// ?   a.user
+// ?     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+// ?     div.user-details
+// ?       p.user-title Dale Byrd
+// ?       p.user-subtitle.email dalebyrd52@example.com
+// ?     div.user-data-right
+// ?       p 10/05/15
 
 //prints new activity
 function printNewMemberActivity(){
@@ -372,17 +369,17 @@ function printNewMemberActivity(){
 
   newActivityContainer.appendChild(li);
 }
-// li
-//   a.user
-//     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
-//     div.user-details
-//       p.user-title Victoria Chambers likes somthing
-//       p.user-subtitle 1 month ago
-//     div.user-data-right
-//       p.recent_activity-carrot &gt;
+// ? li
+// ?   a.user
+// ?     img.user_image(src="https://randomuser.me/api/portraits/men/86.jpg")
+// ?     div.user-details
+// ?       p.user-title Victoria Chambers likes somthing
+// ?       p.user-subtitle 1 month ago
+// ?     div.user-data-right
+// ?       p.recent_activity-carrot &gt;
 
 
-// generate a random namber in days
+// ? generate a random number in days
 function genRandomDay(){
   days = "Day";
   const number = randomNumber(1,7);
@@ -393,10 +390,10 @@ function genRandomDay(){
 }
 
 
-// generats random activity
+// ? generats random activity
 function genRandomActivity(){
-  const activityes = ["liked" , "hated", "comented on"];
-  const activity = activityes[randomNumber(0, activityes.length-1)];
+  const activities = ["liked" , "hated", "commented on"];
+  const activity = activities[randomNumber(0, activities.length-1)];
   const things = ["Post", "Comment", "Photo", "Status"];
   const thing = things[randomNumber(0, things.length-1)];
   const thatPerson = members[randomNumber(0, members.length-1)];
@@ -407,13 +404,13 @@ function genRandomActivity(){
 
 
 
-// Generates the curent random user
+// ? Generates the current random user
 function randomCurrentUser(){
 
   $randomUserData = $randomUsers.responseJSON.results[0];
 
   const a = document.createElement("A");
-  a.classList.add("user_curent");
+  a.classList.add("user_current");
 
   const img = document.createElement("IMG");
   img.setAttribute("src", $randomUserData.picture.large);
@@ -425,10 +422,10 @@ function randomCurrentUser(){
   userName.appendChild(document.createTextNode(capitalizeFirstLetter($randomUserData.name.first) + " " + capitalizeFirstLetter($randomUserData.name.last)));
   a.appendChild(userName);
 
-  userCurent.appendChild(a);
+  userCurrent.appendChild(a);
 }
 
-// function to make an alert
+// ? function to make an alert
 function alertFactory(title, say, style){
   var alertContainer = document.createElement("DIV");
   var titleContainer = document.createElement("H4");
@@ -454,14 +451,14 @@ function alertFactory(title, say, style){
   return alertContainer;
 }
 
-// this prints out alerts in the alerts section
+// ? this prints out alerts in the alerts section
 function alertGen(title, say, style){
   var alert = alertFactory(title, say, style);
   alertContainer.appendChild(alert);
 }
 
 
-// this prints out alerts in the notificatios section
+// ? this prints out alerts in the notifications section
 function notiGen(title, say, style){
   var notification = alertFactory(title, say, style);
   NotificationsContainer.appendChild(notification);
@@ -470,13 +467,13 @@ function notiGen(title, say, style){
 
 
 
-// auto clompleat function for sending a message
+// ? auto compleat function for sending a message
 $(userName).autocomplete({
   response: isValidUser(true),
   source: members
 });
 
-// check if user exists
+// ? check if user exists
 function isValidUser(autocomplete){
   messageErrors_user.textContent = "You need to enter a user name";
   console.log(userName.value);
@@ -506,7 +503,7 @@ function isValidUser(autocomplete){
 }
 
 
-// check if mesage exists
+// ? check if mesage exists
 function isValidMsg(){
   messageErrors_msg.textContent = "The mesage can't be blank";
   console.log(userMsg.value);
@@ -524,15 +521,15 @@ function isValidMsg(){
   }
 }
 
-function setDailyTraficView(){
-  // if dailyTraficView is not in the local storage set its value to weekly
-  if(localStorage.dailyTraficView === undefined){
-    localStorage.setItem("dailyTraficView", "weekly");
+function setDailyTrafficView(){
+  // ? if dailyTrafficView is not in the local storage set its value to weekly
+  if(localStorage.dailyTrafficView === undefined){
+    localStorage.setItem("dailyTrafficView", "weekly");
     document.getElementById("weekly-option").className = "visits__option--active";
   }
 
-  // set the default view of the chart
-  switch (localStorage.dailyTraficView){
+  // ? set the default view of the chart
+  switch (localStorage.dailyTrafficView){
     case "hourly":
       document.getElementById("hourly-option").className = "visits__option--active";
       drawLineChartHourly();
@@ -560,20 +557,21 @@ function setDailyTraficView(){
 
 $( document ).ready(function() {
 
-  // add the X button to the alerts that have benn added with jade
+  // ? add the X button to the alerts that have ben added with jade
   var alerts = document.querySelectorAll("[class^='alert']");
   for (var i = 0; i < alerts.length; i++) {
     alerts[i].appendChild(closeButton.cloneNode(true));
   }
 
-  // add the X button to the modals that have benn added with jade
+  // ? add the X button to the modals that have been added with jade
   const models = document.querySelectorAll("[class='modal__header']");
   for (var i = 0; i < models.length; i++) {
     models[i].appendChild(closeButton.cloneNode(true));
   }
 
 
-  alertGen("Alert", "Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id doloro id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.", "default");
+  alertGen("Alert", "Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id doloro id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.", "default"); // cspell:disable-line
+
   // alertGen("Alert", "This is an alert");
   // alertGen("Alert", "This is a default alert", "default");
   // alertGen("Alert", "This is a disabled alert", "disabled");
@@ -589,7 +587,7 @@ $( document ).ready(function() {
 
 
   setSettings();
-  setDailyTraficView();
+  setDailyTrafficView();
   checkNotifications();
 });
 
