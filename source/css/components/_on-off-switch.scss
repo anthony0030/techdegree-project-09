@@ -1,0 +1,82 @@
+//? https://proto.io/freebies/onoff
+
+.onoffswitch {
+  position: relative;
+  align-self: center;
+  width: 100px;
+  user-select: none;
+  &__checkbox {
+    display: none;
+  }
+  &__label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid $color-shadow;
+    border-radius: 50px;
+  }
+  &__switch {
+    display: block;
+    width: 30px;
+    margin: 4px;
+    background: $white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 62px;
+    border: 2px solid $color-shadow;
+    border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+  }
+  &__inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    &:before,
+    &:after {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 34px;
+      padding: 0;
+      line-height: 34px;
+      font-size: 19px;
+      color: white;
+      font-family: Trebuchet, Arial, sans-serif;
+      font-weight: bold;
+      box-sizing: border-box;
+      color: $white;
+    }
+    &:before {
+      content: "ON";
+      padding-left: 9px;
+      background-color: $black;
+      text-align: left;
+    }
+    &:after {
+      content: "OFF";
+      padding-right: 9px;
+      background-color: $grey;
+      text-align: right;
+    }
+  }
+  @each $theme, $color in $ui-colors {
+    @include m($theme) {
+      @extend .onoffswitch;
+      .onoffswitch__inner:before {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+.onoffswitch__checkbox:checked + .onoffswitch__label {
+  .onoffswitch__inner {
+    margin-left: 0;
+  }
+  .onoffswitch__switch {
+    right: 0px;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,76 @@
+// ? Social icons
+.all-social-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@include mq(medium) {
+  .all-social-stats {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .social-stats-col {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .social-stats-title {
+    margin: 0;
+  }
+}
+
+.social-stat-container {
+  border: 1px solid $grey--light;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: $color-shadow;
+  margin-top: 15px;
+  @include mq(large) {
+    margin-left: 15px;
+  }
+}
+
+.social-icon-name {
+  font-size: 16px;
+  width: 130px;
+  text-align: left;
+  color: $color-primary;
+  padding-bottom: 0;
+}
+
+.social-icon-data {
+  font-size: 30px;
+  color: $grey--dark;
+  padding-bottom: 10px;
+}
+
+%social-icon {
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-size: 60%;
+  background-position: 50% 50%;
+  width: 50px;
+  height: 50px;
+  margin: 11px;
+}
+
+.social-icon--twitter {
+  @extend %social-icon;
+  background-image: url(../svg/icon-twitter.svg);
+  background-color: $twitter-blue;
+  background-position: 50% 65%;
+}
+
+.social-icon--facebook {
+  @extend %social-icon;
+  background-image: url(../svg/icon-facebook.svg);
+  background-color: $facebook-blue;
+}
+
+.social-icon--google {
+  @extend %social-icon;
+  background-image: url(../svg/icon-google-plus.svg);
+  background-color: $google-red;
+}

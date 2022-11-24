@@ -1,0 +1,91 @@
+// ? ==========================================================================
+// ? Variabless
+// ? ==========================================================================
+
+// ? create variables for fonts, breakpoints, and colors.
+
+// ? Font Stacks
+$font-url--google:           "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800";
+$font-family--primary:       "Open Sans", sans-serif;
+$font-family--secondary:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// ? Font Weights
+$font-weight--thin:          300;
+$font-weight--light:         400;
+$font-weight--medium:        600;
+$font-weight--bold:          700;
+$font-weight--ultra-bold:    800;
+
+// ? Descriptive Base Colors
+$white:                      #FFFFFF;
+$white--dark:                #FBFBFB;
+$grey--light:                #D0D0D0;
+$grey:                       #B2B2B2;
+$grey--dark:                 #666666;
+$black:                      #000000;
+
+$fountain-blue:              #51DDFC;
+$emerald:                    #62CC82;
+$sunglo:                     #E4757B;
+$coral:                      #FF774E;
+$purple-majesty:             #9278C3;
+$scooter:                    #39ADD1;
+$viking:                     #58E1C1;
+
+// ? Google colors
+$google-red:                 #E24335;
+$google-yellow:              #F0B629;
+$google-green:               #2FA04E;
+$google-blue:                #3D7CE9;
+
+// ? Facebook colors
+$facebook-blue:              #3B5998;
+
+// ? Twitter colors
+$twitter-blue:               #25A0EF;
+
+// ? project 9 colors
+$glacier:                    #75B0BE;
+$de-york:                    #82C890;
+$toolbox:                    #7377BD;
+$east-bay:                   #4D4C71;
+
+
+// ? Color Usage
+$color-primary:              $toolbox;
+$color-secondary:            $east-bay;
+$color-accent:               $de-york;
+$color-shadow:               $white--dark;
+
+
+// ? UI Colors
+$ui-colors: (
+  default: $toolbox,
+  disabled: $grey,
+  success: $emerald,
+  error: $sunglo,
+  warning: $coral,
+  info: $scooter
+);
+
+
+// ? Text
+$base__font-size:            16px;
+$base__line:                 24px;
+$letter-space:               1px;
+
+// ? Border radius
+$br--default:                0.4em;
+$br--round:                  50%;
+$br--rounded:                4px;
+
+// ? Grid
+$g-col-width:                65px;
+$g-gutter-width:             20px;
+$g-col-count:                12;
+$g-cont-max-w:               1050px;
+
+// ? Breakpoints
+$brkpoint-sm:                320px;
+$brkpoint-md:                768px;
+$brkpoint-lg:                1024px;

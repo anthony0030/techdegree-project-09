@@ -1,0 +1,17 @@
+.timezone-selector {
+  @extend %no-focus-outline;
+  appearance: none;
+  height: 40px;
+  border: 1px solid $grey--light;
+  width: 100%;
+  padding: 10px;
+  text-indent: 1px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  content: "Select Timezone";
+  color: $grey--dark;
+  background-color: $color-shadow;
+  background: url('../svg/icon-arrow-down.svg') no-repeat;
+  background-position: 98% 50%;
+  background-size: 16px;
+}

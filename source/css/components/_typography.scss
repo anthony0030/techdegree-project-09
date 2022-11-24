@@ -1,0 +1,26 @@
+// ? ==========================================================================
+// ? Typography
+// ? ==========================================================================
+body {
+  font-family: $font-family--primary;
+  font-weight: 100;
+}
+
+p {
+  font-family: $font-family--primary;
+}
+
+h1 {
+  margin: 5px;
+  font-size: 30px;
+}
+
+h5 {
+  text-transform: uppercase;
+  color: $grey--dark;
+}
+
+.email {
+  color: $color-primary;
+  user-select: text;
+}

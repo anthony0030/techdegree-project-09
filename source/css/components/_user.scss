@@ -1,0 +1,77 @@
+.user_current--col {
+  justify-content: unset !important;
+}
+
+.user_current {
+  align-self: center;
+}
+
+.user {
+  align-self: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.user_name {
+  display: inline-block;
+  color: $white;
+  vertical-align: middle;
+}
+
+.user_image {
+  @extend .img--avatar;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.recent_activity-carrot {
+  transform: scale(1, 1.5);
+  font-size: 30px;
+  font-size: 20px;
+  font-weight: $font-weight--light;
+  display: none;
+  margin: 0;
+}
+
+.user-details {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.new_members li:last-child .user,
+.recent_activity li:last-child .user {
+  border-bottom: none;
+}
+
+.user-data-right {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+.recent_activity-data,
+.recent_activity-time,
+.user-title,
+.user-subtitle {
+  margin: 0;
+}
+
+.recent_activity {
+  margin-bottom: 15px;
+}
+
+@include mq(large) {
+  .user {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey--light;
+  }
+  .user_current--col {
+    width: 30% !important;
+  }
+  .recent_activity-data {
+    max-width: 500px;
+  }
+  .recent_activity-carrot {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,16 @@
+.logo a {
+  color: $white;
+}
+
+h1.logo {
+  text-align: center;
+}
+
+.logo--col {
+  z-index: 11;
+  background-color: $color-primary;
+  justify-content: left;
+
+  @include mq(medium) { width: 180px; }
+  @include mq(large) { width: 100%; }
+}
