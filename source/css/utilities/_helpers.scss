@@ -31,12 +31,12 @@
 }
 
 // ? Center alignment
-center-align {
+%center-align {
   text-align: center;
 }
 
 // ? For pseudo-elements
-pseudos {
+%pseudos {
   display: block;
   content: '';
   position: absolute;

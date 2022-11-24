@@ -20,14 +20,6 @@
   position: absolute;
   width: 1px; }
 
-center-align {
-  text-align: center; }
-
-pseudos {
-  display: block;
-  content: '';
-  position: absolute; }
-
 .search__button:focus, .search__box:focus, .timezone-selector:focus, .form__input:focus, .form__input--invalid:focus, .form__input--valid:focus {
   outline: none; }
 
@@ -36,7 +28,10 @@ pseudos {
   overflow-x: hidden;
   user-select: none; }
 
-h1, h2, h3, h4, h5, a, div, p, label, ol, ul, li, tr, th {
+h1, h2, h3, h4, h5,
+a, div, p, label,
+ol, ul, li,
+tr, th {
   overflow-y: hidden; }
 
 h5 {
@@ -86,12 +81,6 @@ label {
 
 * html .ui-autocomplete {
   height: 100px; }
-
-div.contain {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  flex-direction: column; }
 
 .img, .img--avatar, .user_image, .img--frame, .img--logo {
   max-width: 100%;
@@ -430,17 +419,6 @@ svg.bell {
   .menu--row {
     height: 70px; } }
 
-panel-default {
-  padding-top: 1.875em; }
-  @media (min-width: 769px) {
-    panel-default {
-      padding-bottom: 1.25em; } }
-panel-padding {
-  padding-top: 2.125em; }
-  @media (min-width: 769px) {
-    panel-padding {
-      padding-top: 5em;
-      padding-bottom: 2.125em; } }
 .grid {
   width: 90%; }
   [class*="grid__col--"] > .grid {
