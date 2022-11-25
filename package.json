@@ -9,7 +9,7 @@
   "license": "UNLICENSED",
   "homepage": "https://anthony0030.github.io/techdegree-project-09",
   "dependencies": {
-    "chart.js": "^2.9.4",
+    "chart.js": "^4.0.1",
     "jquery": "^3.6.1",
     "jquery-ui": "^1.13.2",
     "moment": "2.29.4",
